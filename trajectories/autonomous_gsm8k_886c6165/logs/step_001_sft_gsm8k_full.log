@@ -1,0 +1,2430 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+INFO:__main__:Starting training at 2026-09-01T17:15:29.079349
+INFO:__main__:Args: {'model_path': '/home/user/models/Qwen3-1.7B-Base', 'data_path': 'artifacts/training_data/train.jsonl', 'output_dir': 'artifacts/steps/step_001_sft_gsm8k_full/output', 'num_epochs': 3.0, 'batch_size': 4, 'gradient_accumulation': 4, 'learning_rate': 2e-05, 'max_seq_length': 2048, 'warmup_ratio': 0.05, 'lr_scheduler': 'cosine', 'weight_decay': 0.01, 'bf16': True, 'gradient_checkpointing': True, 'logging_steps': 10, 'save_steps': 500, 'seed': 42, 'use_lora': False, 'lora_r': 64, 'lora_alpha': 128}
+INFO:__main__:Loading tokenizer...
+INFO:__main__:Starting training at 2026-09-01T17:15:29.261581
+INFO:__main__:Args: {'model_path': '/home/user/models/Qwen3-1.7B-Base', 'data_path': 'artifacts/training_data/train.jsonl', 'output_dir': 'artifacts/steps/step_001_sft_gsm8k_full/output', 'num_epochs': 3.0, 'batch_size': 4, 'gradient_accumulation': 4, 'learning_rate': 2e-05, 'max_seq_length': 2048, 'warmup_ratio': 0.05, 'lr_scheduler': 'cosine', 'weight_decay': 0.01, 'bf16': True, 'gradient_checkpointing': True, 'logging_steps': 10, 'save_steps': 500, 'seed': 42, 'use_lora': False, 'lora_r': 64, 'lora_alpha': 128}
+INFO:__main__:Loading tokenizer...
+INFO:__main__:Loading model...
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO:__main__:Loading dataset from artifacts/training_data/train.jsonl...
+INFO:__main__:Loading model...
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO:__main__:Loading dataset from artifacts/training_data/train.jsonl...
+INFO:__main__:Starting training at 2026-09-01T17:15:32.589692
+INFO:__main__:Args: {'model_path': '/home/user/models/Qwen3-1.7B-Base', 'data_path': 'artifacts/training_data/train.jsonl', 'output_dir': 'artifacts/steps/step_001_sft_gsm8k_full/output', 'num_epochs': 3.0, 'batch_size': 4, 'gradient_accumulation': 4, 'learning_rate': 2e-05, 'max_seq_length': 2048, 'warmup_ratio': 0.05, 'lr_scheduler': 'cosine', 'weight_decay': 0.01, 'bf16': True, 'gradient_checkpointing': True, 'logging_steps': 10, 'save_steps': 500, 'seed': 42, 'use_lora': False, 'lora_r': 64, 'lora_alpha': 128}
+INFO:__main__:Loading tokenizer...
+INFO:__main__:Loading model...
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO:__main__:Loading dataset from artifacts/training_data/train.jsonl...
+INFO:__main__:Starting training at 2026-09-01T17:15:33.427784
+INFO:__main__:Args: {'model_path': '/home/user/models/Qwen3-1.7B-Base', 'data_path': 'artifacts/training_data/train.jsonl', 'output_dir': 'artifacts/steps/step_001_sft_gsm8k_full/output', 'num_epochs': 3.0, 'batch_size': 4, 'gradient_accumulation': 4, 'learning_rate': 2e-05, 'max_seq_length': 2048, 'warmup_ratio': 0.05, 'lr_scheduler': 'cosine', 'weight_decay': 0.01, 'bf16': True, 'gradient_checkpointing': True, 'logging_steps': 10, 'save_steps': 500, 'seed': 42, 'use_lora': False, 'lora_r': 64, 'lora_alpha': 128}
+INFO:__main__:Loading tokenizer...
+INFO:__main__:Loading model...
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO:__main__:Dataset size: 29892
+INFO:__main__:Loading dataset from artifacts/training_data/train.jsonl...
+INFO:__main__:Creating trainer...
+INFO:__main__:Dataset size: 29892
+INFO:__main__:Dataset size: 29892
+INFO:__main__:Creating trainer...
+INFO:__main__:Creating trainer...
+
+Tokenizing train dataset:   0%|          | 0/29892 [00:00<?, ? examples/s]
+Tokenizing train dataset:   0%|          | 28/29892 [00:00<02:16, 219.00 examples/s]
+Tokenizing train dataset:   0%|          | 78/29892 [00:00<01:21, 366.10 examples/s]
+Tokenizing train dataset:   0%|          | 137/29892 [00:00<01:05, 454.95 examples/s]
+Tokenizing train dataset:   1%|          | 201/29892 [00:00<01:08, 430.76 examples/s]
+Tokenizing train dataset:   1%|          | 260/29892 [00:00<01:12, 406.15 examples/s]
+Tokenizing train dataset:   1%|          | 306/29892 [00:00<01:10, 417.42 examples/s]
+Tokenizing train dataset:   1%|          | 360/29892 [00:00<01:05, 448.67 examples/s]
+Tokenizing train dataset:   1%|▏         | 429/29892 [00:01<01:05, 450.36 examples/s]
+Tokenizing train dataset:   2%|▏         | 480/29892 [00:01<01:03, 461.15 examples/s]
+Tokenizing train dataset:   2%|▏         | 551/29892 [00:01<01:03, 463.69 examples/s]
+Tokenizing train dataset:   2%|▏         | 614/29892 [00:01<01:05, 444.90 examples/s]
+Tokenizing train dataset:   2%|▏         | 675/29892 [00:01<01:01, 478.51 examples/s]
+Tokenizing train dataset:   2%|▏         | 725/29892 [00:01<01:00, 480.16 examples/s]INFO:__main__:Dataset size: 29892
+
+Tokenizing train dataset:   3%|▎         | 783/29892 [00:01<01:08, 426.65 examples/s]
+Tokenizing train dataset:   3%|▎         | 839/29892 [00:01<01:03, 456.88 examples/s]INFO:__main__:Creating trainer...
+
+Tokenizing train dataset:   3%|▎         | 901/29892 [00:02<00:58, 494.48 examples/s]
+Tokenizing train dataset:   3%|▎         | 975/29892 [00:02<00:58, 492.23 examples/s]
+Tokenizing train dataset:   3%|▎         | 1045/29892 [00:02<01:14, 387.11 examples/s]
+Tokenizing train dataset:   4%|▎         | 1113/29892 [00:02<01:11, 403.87 examples/s]
+Tokenizing train dataset:   4%|▍         | 1164/29892 [00:02<01:08, 420.36 examples/s]
+Tokenizing train dataset:   4%|▍         | 1215/29892 [00:02<01:05, 438.95 examples/s]
+Tokenizing train dataset:   4%|▍         | 1265/29892 [00:02<01:03, 448.26 examples/s]
+Tokenizing train dataset:   4%|▍         | 1313/29892 [00:02<01:02, 453.95 examples/s]
+Tokenizing train dataset:   5%|▍         | 1377/29892 [00:03<01:04, 438.84 examples/s]
+Tokenizing train dataset:   5%|▍         | 1431/29892 [00:03<01:01, 459.43 examples/s]
+Tokenizing train dataset:   5%|▍         | 1481/29892 [00:03<01:00, 465.93 examples/s]
+Tokenizing train dataset:   5%|▌         | 1529/29892 [00:03<01:00, 466.75 examples/s]
+Tokenizing train dataset:   5%|▌         | 1593/29892 [00:03<01:03, 448.27 examples/s]
+Tokenizing train dataset:   5%|▌         | 1641/29892 [00:03<01:02, 451.80 examples/s]
+Tokenizing train dataset:   6%|▌         | 1696/29892 [00:03<00:59, 473.51 examples/s]
+Tokenizing train dataset:   6%|▌         | 1747/29892 [00:03<00:58, 481.39 examples/s]
+Tokenizing train dataset:   6%|▌         | 1800/29892 [00:04<00:57, 488.96 examples/s]
+Tokenizing train dataset:   6%|▌         | 1868/29892 [00:04<00:59, 469.58 examples/s]
+Tokenizing train dataset:   7%|▋         | 1945/29892 [00:04<00:57, 481.92 examples/s]
+Tokenizing train dataset:   7%|▋         | 2000/29892 [00:04<01:12, 383.80 examples/s]
+Tokenizing train dataset:   7%|▋         | 2042/29892 [00:04<01:11, 387.35 examples/s]
+Tokenizing train dataset:   7%|▋         | 2097/29892 [00:04<01:06, 420.56 examples/s]
+Tokenizing train dataset:   7%|▋         | 2143/29892 [00:04<01:04, 430.03 examples/s]
+Tokenizing train dataset:   7%|▋         | 2213/29892 [00:05<01:02, 439.89 examples/s]
+Tokenizing train dataset:   8%|▊         | 2264/29892 [00:05<01:00, 454.11 examples/s]
+Tokenizing train dataset:   8%|▊         | 2332/29892 [00:05<01:01, 447.06 examples/s]
+Tokenizing train dataset:   8%|▊         | 2399/29892 [00:05<01:01, 444.93 examples/s]
+Tokenizing train dataset:   8%|▊         | 2469/29892 [00:05<01:01, 447.69 examples/s]
+Tokenizing train dataset:   8%|▊         | 2524/29892 [00:05<00:58, 467.78 examples/s]
+Tokenizing train dataset:   9%|▊         | 2572/29892 [00:05<00:58, 466.30 examples/s]
+Tokenizing train dataset:   9%|▉         | 2627/29892 [00:05<00:56, 486.51 examples/s]
+Tokenizing train dataset:   9%|▉         | 2684/29892 [00:05<00:54, 501.58 examples/s]
+Tokenizing train dataset:   9%|▉         | 2754/29892 [00:06<00:56, 484.33 examples/s]
+Tokenizing train dataset:   9%|▉         | 2832/29892 [00:06<00:54, 494.20 examples/s]
+Tokenizing train dataset:  10%|▉         | 2883/29892 [00:06<00:54, 494.25 examples/s]
+Tokenizing train dataset:  10%|▉         | 2938/29892 [00:06<00:53, 501.65 examples/s]
+Tokenizing train dataset:  10%|█         | 3000/29892 [00:06<01:07, 399.23 examples/s]
+Tokenizing train dataset:  10%|█         | 3051/29892 [00:06<01:03, 422.47 examples/s]
+Tokenizing train dataset:  10%|█         | 3102/29892 [00:06<01:00, 441.42 examples/s]
+Tokenizing train dataset:  11%|█         | 3167/29892 [00:07<01:01, 434.62 examples/s]
+Tokenizing train dataset:  11%|█         | 3220/29892 [00:07<00:58, 456.81 examples/s]
+Tokenizing train dataset:  11%|█         | 3276/29892 [00:07<00:55, 479.41 examples/s]
+Tokenizing train dataset:  11%|█         | 3346/29892 [00:07<00:57, 465.59 examples/s]
+Tokenizing train dataset:  11%|█▏        | 3396/29892 [00:07<00:56, 470.00 examples/s]
+Tokenizing train dataset:  12%|█▏        | 3463/29892 [00:07<00:57, 456.20 examples/s]
+Tokenizing train dataset:  12%|█▏        | 3511/29892 [00:07<00:57, 457.43 examples/s]
+Tokenizing train dataset:  12%|█▏        | 3564/29892 [00:07<00:55, 474.94 examples/s]
+Tokenizing train dataset:  12%|█▏        | 3635/29892 [00:08<00:55, 471.34 examples/s]
+Tokenizing train dataset:  12%|█▏        | 3693/29892 [00:08<00:53, 493.21 examples/s]
+Tokenizing train dataset:  13%|█▎        | 3748/29892 [00:08<00:51, 507.58 examples/s]
+Tokenizing train dataset:  13%|█▎        | 3826/29892 [00:08<00:51, 503.91 examples/s]
+Tokenizing train dataset:  13%|█▎        | 3898/29892 [00:08<00:53, 488.73 examples/s]
+Tokenizing train dataset:  13%|█▎        | 3950/29892 [00:08<00:53, 488.25 examples/s]
+Tokenizing train dataset:  13%|█▎        | 4000/29892 [00:08<00:59, 436.82 examples/s]
+Tokenizing train dataset:  14%|█▎        | 4067/29892 [00:08<00:52, 490.16 examples/s]
+Tokenizing train dataset:  14%|█▍        | 4146/29892 [00:09<00:45, 563.25 examples/s]
+Tokenizing train dataset:  14%|█▍        | 4211/29892 [00:09<00:44, 578.67 examples/s]
+Tokenizing train dataset:  14%|█▍        | 4278/29892 [00:09<00:42, 601.32 examples/s]
+Tokenizing train dataset:  15%|█▍        | 4355/29892 [00:09<00:39, 642.68 examples/s]
+Tokenizing train dataset:  15%|█▍        | 4422/29892 [00:09<00:39, 638.59 examples/s]
+Tokenizing train dataset:  15%|█▌        | 4528/29892 [00:09<00:38, 657.69 examples/s]
+Tokenizing train dataset:  15%|█▌        | 4630/29892 [00:09<00:38, 657.68 examples/s]
+Tokenizing train dataset:  16%|█▌        | 4702/29892 [00:09<00:37, 668.31 examples/s]
+Tokenizing train dataset:  16%|█▌        | 4787/29892 [00:10<00:39, 628.97 examples/s]
+Tokenizing train dataset:  16%|█▋        | 4875/29892 [00:10<00:45, 552.41 examples/s]
+Tokenizing train dataset:  17%|█▋        | 4935/29892 [00:10<00:44, 556.20 examples/s]
+Tokenizing train dataset:  17%|█▋        | 5000/29892 [00:10<00:55, 446.81 examples/s]
+Tokenizing train dataset:  17%|█▋        | 5053/29892 [00:10<00:59, 415.84 examples/s]
+Tokenizing train dataset:  17%|█▋        | 5100/29892 [00:10<00:58, 424.05 examples/s]
+Tokenizing train dataset:  17%|█▋        | 5147/29892 [00:10<00:57, 433.46 examples/s]
+Tokenizing train dataset:  17%|█▋        | 5219/29892 [00:11<00:55, 441.63 examples/s]
+Tokenizing train dataset:  18%|█▊        | 5288/29892 [00:11<00:55, 445.70 examples/s]
+Tokenizing train dataset:  18%|█▊        | 5335/29892 [00:11<00:55, 442.40 examples/s]
+Tokenizing train dataset:  18%|█▊        | 5385/29892 [00:11<00:53, 454.05 examples/s]
+Tokenizing train dataset:  18%|█▊        | 5435/29892 [00:11<00:52, 461.69 examples/s]
+Tokenizing train dataset:  18%|█▊        | 5513/29892 [00:11<00:50, 480.15 examples/s]
+Tokenizing train dataset:  19%|█▊        | 5568/29892 [00:11<00:49, 491.65 examples/s]
+Tokenizing train dataset:  19%|█▉        | 5638/29892 [00:11<00:50, 479.88 examples/s]
+Tokenizing train dataset:  19%|█▉        | 5707/29892 [00:12<00:51, 466.17 examples/s]
+Tokenizing train dataset:  19%|█▉        | 5772/29892 [00:12<00:53, 447.30 examples/s]
+Tokenizing train dataset:  20%|█▉        | 5830/29892 [00:12<00:50, 475.28 examples/s]
+Tokenizing train dataset:  20%|█▉        | 5893/29892 [00:12<00:53, 447.74 examples/s]
+Tokenizing train dataset:  20%|█▉        | 5945/29892 [00:12<00:52, 457.38 examples/s]
+Tokenizing train dataset:  20%|██        | 5998/29892 [00:12<00:50, 471.65 examples/s]
+Tokenizing train dataset:  20%|██        | 6070/29892 [00:12<01:03, 377.44 examples/s]
+Tokenizing train dataset:  20%|██        | 6112/29892 [00:13<01:01, 384.74 examples/s]
+Tokenizing train dataset:  21%|██        | 6163/29892 [00:13<00:57, 411.62 examples/s]
+Tokenizing train dataset:  21%|██        | 6209/29892 [00:13<00:56, 415.53 examples/s]
+Tokenizing train dataset:  21%|██        | 6262/29892 [00:13<00:53, 438.69 examples/s]
+Tokenizing train dataset:  21%|██        | 6329/29892 [00:13<00:53, 438.89 examples/s]
+Tokenizing train dataset:  21%|██▏       | 6384/29892 [00:13<00:50, 464.36 examples/s]
+Tokenizing train dataset:  22%|██▏       | 6437/29892 [00:13<00:49, 477.82 examples/s]
+Tokenizing train dataset:  22%|██▏       | 6500/29892 [00:13<00:51, 451.08 examples/s]
+Tokenizing train dataset:  22%|██▏       | 6554/29892 [00:14<00:49, 467.30 examples/s]
+Tokenizing train dataset:  22%|██▏       | 6613/29892 [00:14<00:47, 493.96 examples/s]
+Tokenizing train dataset:  22%|██▏       | 6676/29892 [00:14<00:43, 529.01 examples/s]
+Tokenizing train dataset:  23%|██▎       | 6752/29892 [00:14<00:44, 515.04 examples/s]
+Tokenizing train dataset:  23%|██▎       | 6826/29892 [00:14<00:46, 498.74 examples/s]
+Tokenizing train dataset:  23%|██▎       | 6907/29892 [00:14<00:45, 509.42 examples/s]
+Tokenizing train dataset:  23%|██▎       | 6982/29892 [00:14<00:45, 504.31 examples/s]
+Tokenizing train dataset:  24%|██▎       | 7054/29892 [00:15<00:54, 420.23 examples/s]
+Tokenizing train dataset:  24%|██▍       | 7104/29892 [00:15<00:52, 435.15 examples/s]
+Tokenizing train dataset:  24%|██▍       | 7168/29892 [00:15<00:53, 424.84 examples/s]
+Tokenizing train dataset:  24%|██▍       | 7217/29892 [00:15<00:52, 435.56 examples/s]
+Tokenizing train dataset:  24%|██▍       | 7287/29892 [00:15<00:51, 438.43 examples/s]
+Tokenizing train dataset:  25%|██▍       | 7336/29892 [00:15<00:50, 445.01 examples/s]
+Tokenizing train dataset:  25%|██▍       | 7383/29892 [00:15<00:50, 447.01 examples/s]
+Tokenizing train dataset:  25%|██▍       | 7430/29892 [00:15<00:49, 451.99 examples/s]
+Tokenizing train dataset:  25%|██▌       | 7477/29892 [00:16<00:49, 454.07 examples/s]
+Tokenizing train dataset:  25%|██▌       | 7529/29892 [00:16<00:47, 466.01 examples/s]
+Tokenizing train dataset:  25%|██▌       | 7582/29892 [00:16<00:46, 480.91 examples/s]
+Tokenizing train dataset:  26%|██▌       | 7647/29892 [00:16<00:48, 457.26 examples/s]
+Tokenizing train dataset:  26%|██▌       | 7700/29892 [00:16<00:47, 469.45 examples/s]
+Tokenizing train dataset:  26%|██▌       | 7772/29892 [00:16<00:47, 466.77 examples/s]
+Tokenizing train dataset:  26%|██▌       | 7827/29892 [00:16<00:45, 480.45 examples/s]
+Tokenizing train dataset:  26%|██▋       | 7898/29892 [00:16<00:47, 466.97 examples/s]
+Tokenizing train dataset:  27%|██▋       | 7963/29892 [00:17<00:48, 447.85 examples/s]
+Tokenizing train dataset:  27%|██▋       | 8031/29892 [00:17<00:54, 403.33 examples/s]
+Tokenizing train dataset:  27%|██▋       | 8099/29892 [00:17<00:47, 459.44 examples/s]
+Tokenizing train dataset:  27%|██▋       | 8185/29892 [00:17<00:39, 547.94 examples/s]
+Tokenizing train dataset:  28%|██▊       | 8255/29892 [00:17<00:37, 581.65 examples/s]
+Tokenizing train dataset:  28%|██▊       | 8345/29892 [00:17<00:32, 661.90 examples/s]
+Tokenizing train dataset:  28%|██▊       | 8422/29892 [00:17<00:31, 684.96 examples/s]
+Tokenizing train dataset:  28%|██▊       | 8499/29892 [00:17<00:30, 707.27 examples/s]
+Tokenizing train dataset:  29%|██▊       | 8586/29892 [00:17<00:28, 746.77 examples/s]
+Tokenizing train dataset:  29%|██▉       | 8701/29892 [00:18<00:28, 752.40 examples/s]
+Tokenizing train dataset:  29%|██▉       | 8787/29892 [00:18<00:27, 774.11 examples/s]
+Tokenizing train dataset:  30%|██▉       | 8887/29892 [00:18<00:28, 732.46 examples/s]
+Tokenizing train dataset:  30%|███       | 8997/29892 [00:18<00:28, 726.75 examples/s]
+Tokenizing train dataset:  30%|███       | 9107/29892 [00:18<00:32, 636.97 examples/s]
+Tokenizing train dataset:  31%|███       | 9175/29892 [00:18<00:32, 640.40 examples/s]
+Tokenizing train dataset:  31%|███       | 9277/29892 [00:19<00:31, 648.23 examples/s]
+Tokenizing train dataset:  31%|███▏      | 9348/29892 [00:19<00:31, 656.01 examples/s]
+Tokenizing train dataset:  32%|███▏      | 9422/29892 [00:19<00:30, 674.69 examples/s]
+Tokenizing train dataset:  32%|███▏      | 9504/29892 [00:19<00:28, 709.45 examples/s]
+Tokenizing train dataset:  32%|███▏      | 9577/29892 [00:19<00:28, 709.78 examples/s]
+Tokenizing train dataset:  32%|███▏      | 9683/29892 [00:19<00:28, 702.04 examples/s]
+Tokenizing train dataset:  33%|███▎      | 9788/29892 [00:19<00:28, 696.48 examples/s]
+Tokenizing train dataset:  33%|███▎      | 9863/29892 [00:19<00:28, 701.68 examples/s]
+Tokenizing train dataset:  33%|███▎      | 9946/29892 [00:19<00:27, 726.50 examples/s]
+Tokenizing train dataset:  34%|███▎      | 10036/29892 [00:20<00:31, 639.77 examples/s]
+Tokenizing train dataset:  34%|███▍      | 10121/29892 [00:20<00:28, 688.62 examples/s]
+Tokenizing train dataset:  34%|███▍      | 10195/29892 [00:20<00:28, 699.21 examples/s]
+Tokenizing train dataset:  34%|███▍      | 10270/29892 [00:20<00:27, 705.29 examples/s]
+Tokenizing train dataset:  35%|███▍      | 10353/29892 [00:20<00:26, 730.57 examples/s]
+Tokenizing train dataset:  35%|███▍      | 10457/29892 [00:20<00:27, 709.57 examples/s]
+Tokenizing train dataset:  35%|███▌      | 10533/29892 [00:20<00:27, 716.58 examples/s]
+Tokenizing train dataset:  36%|███▌      | 10617/29892 [00:20<00:25, 743.29 examples/s]
+Tokenizing train dataset:  36%|███▌      | 10731/29892 [00:21<00:25, 747.17 examples/s]
+Tokenizing train dataset:  36%|███▋      | 10842/29892 [00:21<00:25, 739.55 examples/s]
+Tokenizing train dataset:  37%|███▋      | 10923/29892 [00:21<00:25, 754.76 examples/s]
+Tokenizing train dataset:  37%|███▋      | 11000/29892 [00:21<00:29, 634.87 examples/s]
+Tokenizing train dataset:  37%|███▋      | 11072/29892 [00:21<00:28, 654.19 examples/s]
+Tokenizing train dataset:  37%|███▋      | 11151/29892 [00:21<00:27, 685.10 examples/s]
+Tokenizing train dataset:  38%|███▊      | 11223/29892 [00:21<00:26, 692.26 examples/s]
+Tokenizing train dataset:  38%|███▊      | 11298/29892 [00:21<00:26, 703.41 examples/s]
+Tokenizing train dataset:  38%|███▊      | 11370/29892 [00:21<00:26, 698.33 examples/s]
+Tokenizing train dataset:  38%|███▊      | 11453/29892 [00:22<00:25, 733.42 examples/s]
+Tokenizing train dataset:  39%|███▊      | 11564/29892 [00:22<00:25, 727.72 examples/s]
+Tokenizing train dataset:  39%|███▉      | 11674/29892 [00:22<00:25, 725.18 examples/s]
+Tokenizing train dataset:  39%|███▉      | 11754/29892 [00:22<00:24, 733.96 examples/s]
+Tokenizing train dataset:  40%|███▉      | 11838/29892 [00:22<00:23, 760.03 examples/s]
+Tokenizing train dataset:  40%|███▉      | 11939/29892 [00:22<00:24, 724.48 examples/s]
+Tokenizing train dataset:  40%|████      | 12038/29892 [00:22<00:27, 652.02 examples/s]
+Tokenizing train dataset:  41%|████      | 12109/29892 [00:23<00:26, 664.17 examples/s]
+Tokenizing train dataset:  41%|████      | 12189/29892 [00:23<00:25, 697.41 examples/s]
+Tokenizing train dataset:  41%|████      | 12288/29892 [00:23<00:25, 680.77 examples/s]
+Tokenizing train dataset:  41%|████▏     | 12369/29892 [00:23<00:24, 707.97 examples/s]
+Tokenizing train dataset:  42%|████▏     | 12448/29892 [00:23<00:24, 725.89 examples/s]
+Tokenizing train dataset:  42%|████▏     | 12553/29892 [00:23<00:24, 713.84 examples/s]
+Tokenizing train dataset:  42%|████▏     | 12628/29892 [00:23<00:24, 715.57 examples/s]
+Tokenizing train dataset:  43%|████▎     | 12732/29892 [00:23<00:24, 702.10 examples/s]
+Tokenizing train dataset:  43%|████▎     | 12807/29892 [00:24<00:23, 712.72 examples/s]
+Tokenizing train dataset:  43%|████▎     | 12911/29892 [00:24<00:24, 698.52 examples/s]
+Tokenizing train dataset:  43%|████▎     | 13000/29892 [00:24<00:28, 590.12 examples/s]
+Tokenizing train dataset:  44%|████▎     | 13063/29892 [00:24<00:28, 597.76 examples/s]
+Tokenizing train dataset:  44%|████▍     | 13156/29892 [00:24<00:27, 601.05 examples/s]
+Tokenizing train dataset:  44%|████▍     | 13232/29892 [00:24<00:26, 636.90 examples/s]
+Tokenizing train dataset:  45%|████▍     | 13308/29892 [00:24<00:24, 664.56 examples/s]
+Tokenizing train dataset:  45%|████▍     | 13398/29892 [00:24<00:26, 634.29 examples/s]
+Tokenizing train dataset:  45%|████▌     | 13479/29892 [00:25<00:24, 670.00 examples/s]
+Tokenizing train dataset:  45%|████▌     | 13554/29892 [00:25<00:23, 683.33 examples/s]
+Tokenizing train dataset:  46%|████▌     | 13628/29892 [00:25<00:23, 694.08 examples/s]
+Tokenizing train dataset:  46%|████▌     | 13701/29892 [00:25<00:23, 698.34 examples/s]
+Tokenizing train dataset:  46%|████▌     | 13803/29892 [00:25<00:23, 682.96 examples/s]
+Tokenizing train dataset:  46%|████▋     | 13886/29892 [00:25<00:22, 714.88 examples/s]
+Tokenizing train dataset:  47%|████▋     | 13997/29892 [00:25<00:22, 720.16 examples/s]
+Tokenizing train dataset:  47%|████▋     | 14096/29892 [00:26<00:26, 598.02 examples/s]
+Tokenizing train dataset:  47%|████▋     | 14173/29892 [00:26<00:24, 632.64 examples/s]
+Tokenizing train dataset:  48%|████▊     | 14273/29892 [00:26<00:24, 637.09 examples/s]
+Tokenizing train dataset:  48%|████▊     | 14358/29892 [00:26<00:25, 607.19 examples/s]
+Tokenizing train dataset:  48%|████▊     | 14442/29892 [00:26<00:23, 657.84 examples/s]
+Tokenizing train dataset:  49%|████▊     | 14541/29892 [00:26<00:23, 654.84 examples/s]
+Tokenizing train dataset:  49%|████▉     | 14613/29892 [00:26<00:22, 668.23 examples/s]
+Tokenizing train dataset:  49%|████▉     | 14685/29892 [00:26<00:22, 678.04 examples/s]
+Tokenizing train dataset:  49%|████▉     | 14757/29892 [00:27<00:22, 686.57 examples/s]
+Tokenizing train dataset:  50%|████▉     | 14829/29892 [00:27<00:21, 686.83 examples/s]
+Tokenizing train dataset:  50%|████▉     | 14941/29892 [00:27<00:21, 706.23 examples/s]
+Tokenizing train dataset:  50%|█████     | 15039/29892 [00:27<00:23, 623.27 examples/s]
+Tokenizing train dataset:  51%|█████     | 15137/29892 [00:27<00:23, 624.57 examples/s]
+Tokenizing train dataset:  51%|█████     | 15214/29892 [00:27<00:22, 653.53 examples/s]
+Tokenizing train dataset:  51%|█████     | 15317/29892 [00:27<00:21, 663.28 examples/s]
+Tokenizing train dataset:  51%|█████▏    | 15388/29892 [00:27<00:21, 671.71 examples/s]
+Tokenizing train dataset:  52%|█████▏    | 15472/29892 [00:28<00:20, 713.36 examples/s]
+Tokenizing train dataset:  52%|█████▏    | 15551/29892 [00:28<00:19, 728.46 examples/s]
+Tokenizing train dataset:  52%|█████▏    | 15630/29892 [00:28<00:19, 743.57 examples/s]
+Tokenizing train dataset:  53%|█████▎    | 15739/29892 [00:28<00:19, 729.62 examples/s]
+Tokenizing train dataset:  53%|█████▎    | 15825/29892 [00:28<00:18, 762.44 examples/s]
+Tokenizing train dataset:  53%|█████▎    | 15937/29892 [00:28<00:18, 753.38 examples/s]
+Tokenizing train dataset:  54%|█████▎    | 16036/29892 [00:28<00:21, 636.54 examples/s]
+Tokenizing train dataset:  54%|█████▍    | 16130/29892 [00:29<00:21, 628.47 examples/s]
+Tokenizing train dataset:  54%|█████▍    | 16206/29892 [00:29<00:20, 656.15 examples/s]
+Tokenizing train dataset:  55%|█████▍    | 16295/29892 [00:29<00:21, 629.80 examples/s]
+Tokenizing train dataset:  55%|█████▍    | 16391/29892 [00:29<00:21, 627.12 examples/s]
+Tokenizing train dataset:  55%|█████▌    | 16470/29892 [00:29<00:20, 656.78 examples/s]
+Tokenizing train dataset:  55%|█████▌    | 16539/29892 [00:29<00:20, 661.86 examples/s]
+Tokenizing train dataset:  56%|█████▌    | 16607/29892 [00:29<00:20, 662.44 examples/s]
+Tokenizing train dataset:  56%|█████▌    | 16679/29892 [00:29<00:19, 675.75 examples/s]
+Tokenizing train dataset:  56%|█████▌    | 16763/29892 [00:29<00:18, 719.03 examples/s]
+Tokenizing train dataset:  56%|█████▋    | 16870/29892 [00:30<00:18, 714.17 examples/s]
+Tokenizing train dataset:  57%|█████▋    | 16949/29892 [00:30<00:17, 730.27 examples/s]
+Tokenizing train dataset:  57%|█████▋    | 17029/29892 [00:30<00:21, 591.92 examples/s]
+Tokenizing train dataset:  57%|█████▋    | 17112/29892 [00:30<00:20, 637.05 examples/s]
+Tokenizing train dataset:  58%|█████▊    | 17205/29892 [00:30<00:20, 622.66 examples/s]
+Tokenizing train dataset:  58%|█████▊    | 17281/29892 [00:30<00:19, 652.40 examples/s]
+Tokenizing train dataset:  58%|█████▊    | 17351/29892 [00:30<00:19, 658.25 examples/s]
+Tokenizing train dataset:  58%|█████▊    | 17444/29892 [00:31<00:19, 638.26 examples/s]
+Tokenizing train dataset:  59%|█████▊    | 17520/29892 [00:31<00:18, 667.73 examples/s]
+Tokenizing train dataset:  59%|█████▉    | 17627/29892 [00:31<00:18, 676.65 examples/s]
+Tokenizing train dataset:  59%|█████▉    | 17704/29892 [00:31<00:17, 698.47 examples/s]
+Tokenizing train dataset:  60%|█████▉    | 17805/29892 [00:31<00:17, 683.53 examples/s]
+Tokenizing train dataset:  60%|█████▉    | 17910/29892 [00:31<00:17, 683.45 examples/s]
+Tokenizing train dataset:  60%|██████    | 17993/29892 [00:31<00:16, 716.37 examples/s]
+Tokenizing train dataset:  60%|██████    | 18068/29892 [00:31<00:19, 604.21 examples/s]
+Tokenizing train dataset:  61%|██████    | 18135/29892 [00:32<00:19, 615.66 examples/s]
+Tokenizing train dataset:  61%|██████    | 18206/29892 [00:32<00:18, 632.17 examples/s]
+Tokenizing train dataset:  61%|██████    | 18302/29892 [00:32<00:18, 630.13 examples/s]
+Tokenizing train dataset:  61%|██████▏   | 18379/29892 [00:32<00:17, 664.03 examples/s]
+Tokenizing train dataset:  62%|██████▏   | 18487/29892 [00:32<00:16, 681.46 examples/s]
+Tokenizing train dataset:  62%|██████▏   | 18559/29892 [00:32<00:16, 689.27 examples/s]
+Tokenizing train dataset:  62%|██████▏   | 18634/29892 [00:32<00:16, 700.83 examples/s]
+Tokenizing train dataset:  63%|██████▎   | 18710/29892 [00:32<00:15, 711.04 examples/s]
+Tokenizing train dataset:  63%|██████▎   | 18813/29892 [00:33<00:15, 694.56 examples/s]
+Tokenizing train dataset:  63%|██████▎   | 18897/29892 [00:33<00:15, 728.64 examples/s]
+Tokenizing train dataset:  64%|██████▎   | 19000/29892 [00:33<00:17, 618.65 examples/s]
+Tokenizing train dataset:  64%|██████▍   | 19070/29892 [00:33<00:17, 632.77 examples/s]
+Tokenizing train dataset:  64%|██████▍   | 19162/29892 [00:33<00:17, 621.14 examples/s]
+Tokenizing train dataset:  64%|██████▍   | 19240/29892 [00:33<00:16, 652.21 examples/s]
+Tokenizing train dataset:  65%|██████▍   | 19309/29892 [00:33<00:16, 657.95 examples/s]
+Tokenizing train dataset:  65%|██████▍   | 19387/29892 [00:33<00:15, 684.49 examples/s]
+Tokenizing train dataset:  65%|██████▌   | 19492/29892 [00:34<00:15, 684.78 examples/s]
+Tokenizing train dataset:  66%|██████▌   | 19595/29892 [00:34<00:15, 676.26 examples/s]
+Tokenizing train dataset:  66%|██████▌   | 19666/29892 [00:34<00:15, 680.17 examples/s]
+Tokenizing train dataset:  66%|██████▌   | 19740/29892 [00:34<00:14, 692.81 examples/s]
+Tokenizing train dataset:  66%|██████▋   | 19812/29892 [00:34<00:14, 694.91 examples/s]
+Tokenizing train dataset:  67%|██████▋   | 19892/29892 [00:34<00:13, 721.25 examples/s]
+Tokenizing train dataset:  67%|██████▋   | 19988/29892 [00:34<00:14, 684.12 examples/s]
+Tokenizing train dataset:  67%|██████▋   | 20069/29892 [00:35<00:17, 576.73 examples/s]
+Tokenizing train dataset:  67%|██████▋   | 20150/29892 [00:35<00:15, 627.86 examples/s]
+Tokenizing train dataset:  68%|██████▊   | 20251/29892 [00:35<00:15, 635.29 examples/s]
+Tokenizing train dataset:  68%|██████▊   | 20351/29892 [00:35<00:14, 638.26 examples/s]
+Tokenizing train dataset:  68%|██████▊   | 20427/29892 [00:35<00:14, 665.11 examples/s]
+Tokenizing train dataset:  69%|██████▊   | 20534/29892 [00:35<00:13, 678.39 examples/s]
+Tokenizing train dataset:  69%|██████▉   | 20609/29892 [00:35<00:13, 693.87 examples/s]
+Tokenizing train dataset:  69%|██████▉   | 20703/29892 [00:35<00:13, 668.48 examples/s]
+Tokenizing train dataset:  70%|██████▉   | 20783/29892 [00:36<00:13, 694.44 examples/s]
+Tokenizing train dataset:  70%|██████▉   | 20857/29892 [00:36<00:12, 705.41 examples/s]
+Tokenizing train dataset:  70%|███████   | 20934/29892 [00:36<00:12, 716.89 examples/s]
+Tokenizing train dataset:  70%|███████   | 21029/29892 [00:36<00:14, 599.65 examples/s]
+Tokenizing train dataset:  71%|███████   | 21123/29892 [00:36<00:14, 606.09 examples/s]
+Tokenizing train dataset:  71%|███████   | 21223/29892 [00:36<00:13, 619.27 examples/s]
+Tokenizing train dataset:  71%|███████   | 21290/29892 [00:36<00:13, 629.41 examples/s]
+Tokenizing train dataset:  71%|███████▏  | 21364/29892 [00:36<00:13, 654.92 examples/s]
+Tokenizing train dataset:  72%|███████▏  | 21441/29892 [00:37<00:12, 681.47 examples/s]
+Tokenizing train dataset:  72%|███████▏  | 21511/29892 [00:37<00:12, 680.51 examples/s]
+Tokenizing train dataset:  72%|███████▏  | 21615/29892 [00:37<00:12, 681.94 examples/s]
+Tokenizing train dataset:  73%|███████▎  | 21699/29892 [00:37<00:11, 714.15 examples/s]
+Tokenizing train dataset:  73%|███████▎  | 21778/29892 [00:37<00:11, 733.21 examples/s]
+Tokenizing train dataset:  73%|███████▎  | 21859/29892 [00:37<00:10, 746.81 examples/s]
+Tokenizing train dataset:  73%|███████▎  | 21936/29892 [00:37<00:10, 748.59 examples/s]
+Tokenizing train dataset:  74%|███████▎  | 22030/29892 [00:37<00:12, 636.52 examples/s]
+Tokenizing train dataset:  74%|███████▍  | 22122/29892 [00:38<00:12, 619.92 examples/s]
+Tokenizing train dataset:  74%|███████▍  | 22208/29892 [00:38<00:11, 673.53 examples/s]
+Tokenizing train dataset:  75%|███████▍  | 22284/29892 [00:38<00:11, 689.81 examples/s]
+Tokenizing train dataset:  75%|███████▍  | 22371/29892 [00:38<00:10, 734.93 examples/s]
+Tokenizing train dataset:  75%|███████▌  | 22467/29892 [00:38<00:10, 696.62 examples/s]
+Tokenizing train dataset:  75%|███████▌  | 22568/29892 [00:38<00:10, 688.01 examples/s]
+Tokenizing train dataset:  76%|███████▌  | 22669/29892 [00:38<00:10, 678.25 examples/s]
+Tokenizing train dataset:  76%|███████▌  | 22766/29892 [00:38<00:10, 664.06 examples/s]
+Tokenizing train dataset:  76%|███████▋  | 22844/29892 [00:39<00:10, 687.14 examples/s]
+Tokenizing train dataset:  77%|███████▋  | 22920/29892 [00:39<00:09, 702.06 examples/s]
+Tokenizing train dataset:  77%|███████▋  | 23000/29892 [00:39<00:11, 589.71 examples/s]
+Tokenizing train dataset:  77%|███████▋  | 23105/29892 [00:39<00:10, 618.91 examples/s]
+Tokenizing train dataset:  78%|███████▊  | 23177/29892 [00:39<00:10, 641.08 examples/s]
+Tokenizing train dataset:  78%|███████▊  | 23252/29892 [00:39<00:10, 662.07 examples/s]
+Tokenizing train dataset:  78%|███████▊  | 23346/29892 [00:39<00:10, 645.63 examples/s]
+Tokenizing train dataset:  78%|███████▊  | 23427/29892 [00:39<00:09, 683.76 examples/s]
+Tokenizing train dataset:  79%|███████▊  | 23520/29892 [00:40<00:09, 656.72 examples/s]
+Tokenizing train dataset:  79%|███████▉  | 23619/29892 [00:40<00:09, 652.86 examples/s]
+Tokenizing train dataset:  79%|███████▉  | 23710/29892 [00:40<00:09, 632.18 examples/s]
+Tokenizing train dataset:  80%|███████▉  | 23787/29892 [00:40<00:09, 662.31 examples/s]
+Tokenizing train dataset:  80%|███████▉  | 23864/29892 [00:40<00:08, 680.27 examples/s]
+Tokenizing train dataset:  80%|████████  | 23940/29892 [00:40<00:08, 694.53 examples/s]
+Tokenizing train dataset:  80%|████████  | 24030/29892 [00:40<00:09, 593.24 examples/s]
+Tokenizing train dataset:  81%|████████  | 24104/29892 [00:41<00:09, 618.16 examples/s]
+Tokenizing train dataset:  81%|████████  | 24174/29892 [00:41<00:08, 636.23 examples/s]
+Tokenizing train dataset:  81%|████████  | 24256/29892 [00:41<00:08, 683.35 examples/s]
+Tokenizing train dataset:  81%|████████▏ | 24359/29892 [00:41<00:08, 682.45 examples/s]
+Tokenizing train dataset:  82%|████████▏ | 24432/29892 [00:41<00:07, 692.47 examples/s]
+Tokenizing train dataset:  82%|████████▏ | 24515/29892 [00:41<00:07, 724.00 examples/s]
+Tokenizing train dataset:  82%|████████▏ | 24610/29892 [00:41<00:07, 685.36 examples/s]
+Tokenizing train dataset:  83%|████████▎ | 24724/29892 [00:41<00:07, 708.96 examples/s]
+Tokenizing train dataset:  83%|████████▎ | 24801/29892 [00:42<00:07, 719.97 examples/s]
+Tokenizing train dataset:  83%|████████▎ | 24898/29892 [00:42<00:07, 693.63 examples/s]
+Tokenizing train dataset:  84%|████████▎ | 25000/29892 [00:42<00:08, 594.38 examples/s]
+Tokenizing train dataset:  84%|████████▍ | 25074/29892 [00:42<00:07, 624.65 examples/s]
+Tokenizing train dataset:  84%|████████▍ | 25180/29892 [00:42<00:07, 648.66 examples/s]
+Tokenizing train dataset:  85%|████████▍ | 25274/29892 [00:42<00:07, 637.53 examples/s]
+Tokenizing train dataset:  85%|████████▍ | 25357/29892 [00:42<00:06, 674.84 examples/s]
+Tokenizing train dataset:  85%|████████▌ | 25457/29892 [00:43<00:06, 664.55 examples/s]
+Tokenizing train dataset:  85%|████████▌ | 25528/29892 [00:43<00:06, 671.79 examples/s]
+Tokenizing train dataset:  86%|████████▌ | 25607/29892 [00:43<00:06, 696.34 examples/s]
+Tokenizing train dataset:  86%|████████▌ | 25723/29892 [00:43<00:05, 719.34 examples/s]
+Tokenizing train dataset:  86%|████████▋ | 25798/29892 [00:43<00:05, 726.59 examples/s]
+Tokenizing train dataset:  87%|████████▋ | 25912/29892 [00:43<00:05, 736.29 examples/s]
+Tokenizing train dataset:  87%|████████▋ | 26000/29892 [00:43<00:06, 625.74 examples/s]
+Tokenizing train dataset:  87%|████████▋ | 26070/29892 [00:43<00:05, 641.96 examples/s]
+Tokenizing train dataset:  87%|████████▋ | 26148/29892 [00:44<00:05, 674.39 examples/s]
+Tokenizing train dataset:  88%|████████▊ | 26228/29892 [00:44<00:05, 704.59 examples/s]
+Tokenizing train dataset:  88%|████████▊ | 26326/29892 [00:44<00:05, 682.51 examples/s]
+Tokenizing train dataset:  88%|████████▊ | 26402/29892 [00:44<00:04, 698.90 examples/s]
+Tokenizing train dataset:  89%|████████▊ | 26504/29892 [00:44<00:04, 685.18 examples/s]
+Tokenizing train dataset:  89%|████████▉ | 26575/29892 [00:44<00:04, 690.11 examples/s]
+Tokenizing train dataset:  89%|████████▉ | 26647/29892 [00:44<00:04, 693.24 examples/s]
+Tokenizing train dataset:  89%|████████▉ | 26752/29892 [00:44<00:04, 691.88 examples/s]
+Tokenizing train dataset:  90%|████████▉ | 26835/29892 [00:45<00:04, 722.46 examples/s]
+Tokenizing train dataset:  90%|█████████ | 26928/29892 [00:45<00:04, 683.23 examples/s]
+Tokenizing train dataset:  90%|█████████ | 26999/29892 [00:45<00:04, 686.31 examples/s]
+Tokenizing train dataset:  91%|█████████ | 27074/29892 [00:45<00:04, 600.14 examples/s]
+Tokenizing train dataset:  91%|█████████ | 27152/29892 [00:45<00:04, 641.10 examples/s]
+Tokenizing train dataset:  91%|█████████ | 27223/29892 [00:45<00:04, 657.49 examples/s]
+Tokenizing train dataset:  91%|█████████▏| 27303/29892 [00:45<00:03, 691.52 examples/s]
+Tokenizing train dataset:  92%|█████████▏| 27409/29892 [00:45<00:03, 690.96 examples/s]
+Tokenizing train dataset:  92%|█████████▏| 27488/29892 [00:46<00:03, 712.35 examples/s]
+Tokenizing train dataset:  92%|█████████▏| 27586/29892 [00:46<00:03, 686.05 examples/s]
+Tokenizing train dataset:  93%|█████████▎| 27689/29892 [00:46<00:03, 684.27 examples/s]
+Tokenizing train dataset:  93%|█████████▎| 27773/29892 [00:46<00:02, 718.97 examples/s]
+Tokenizing train dataset:  93%|█████████▎| 27879/29892 [00:46<00:02, 710.08 examples/s]
+Tokenizing train dataset:  94%|█████████▎| 27958/29892 [00:46<00:02, 723.38 examples/s]
+Tokenizing train dataset:  94%|█████████▍| 28035/29892 [00:46<00:02, 635.71 examples/s]
+Tokenizing train dataset:  94%|█████████▍| 28105/29892 [00:46<00:02, 647.19 examples/s]
+Tokenizing train dataset:  94%|█████████▍| 28186/29892 [00:47<00:02, 683.31 examples/s]
+Tokenizing train dataset:  95%|█████████▍| 28267/29892 [00:47<00:02, 710.53 examples/s]
+Tokenizing train dataset:  95%|█████████▍| 28372/29892 [00:47<00:02, 699.41 examples/s]
+Tokenizing train dataset:  95%|█████████▌| 28444/29892 [00:47<00:02, 695.65 examples/s]
+Tokenizing train dataset:  96%|█████████▌| 28556/29892 [00:47<00:01, 706.94 examples/s]
+Tokenizing train dataset:  96%|█████████▌| 28657/29892 [00:47<00:01, 683.21 examples/s]
+Tokenizing train dataset:  96%|█████████▌| 28731/29892 [00:47<00:01, 691.02 examples/s]
+Tokenizing train dataset:  96%|█████████▋| 28818/29892 [00:47<00:01, 647.71 examples/s]
+Tokenizing train dataset:  97%|█████████▋| 28894/29892 [00:48<00:01, 668.58 examples/s]
+Tokenizing train dataset:  97%|█████████▋| 28964/29892 [00:48<00:01, 671.76 examples/s]
+Tokenizing train dataset:  97%|█████████▋| 29057/29892 [00:48<00:01, 560.13 examples/s]
+Tokenizing train dataset:  97%|█████████▋| 29129/29892 [00:48<00:01, 590.95 examples/s]
+Tokenizing train dataset:  98%|█████████▊| 29223/29892 [00:48<00:01, 594.27 examples/s]
+Tokenizing train dataset:  98%|█████████▊| 29293/29892 [00:48<00:00, 616.55 examples/s]
+Tokenizing train dataset:  98%|█████████▊| 29369/29892 [00:48<00:00, 645.39 examples/s]
+Tokenizing train dataset:  99%|█████████▊| 29468/29892 [00:49<00:00, 643.69 examples/s]
+Tokenizing train dataset:  99%|█████████▉| 29542/29892 [00:49<00:00, 664.76 examples/s]
+Tokenizing train dataset:  99%|█████████▉| 29613/29892 [00:49<00:00, 673.47 examples/s]
+Tokenizing train dataset:  99%|█████████▉| 29723/29892 [00:49<00:00, 690.84 examples/s]
+Tokenizing train dataset: 100%|█████████▉| 29801/29892 [00:49<00:00, 709.11 examples/s]
+Tokenizing train dataset: 100%|██████████| 29892/29892 [00:49<00:00, 601.13 examples/s]
+Tokenizing train dataset: 100%|██████████| 29892/29892 [00:49<00:00, 601.48 examples/s]
+
+Truncating train dataset:   0%|          | 0/29892 [00:00<?, ? examples/s]
+Truncating train dataset:  47%|████▋     | 14000/29892 [00:00<00:00, 130105.21 examples/s]
+Truncating train dataset: 100%|██████████| 29892/29892 [00:00<00:00, 140314.35 examples/s]
+Truncating train dataset: 100%|██████████| 29892/29892 [00:00<00:00, 134407.23 examples/s]
+NCCL version 2.27.3+cuda12.9
+WARNING:accelerate.utils.other:Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+INFO:__main__:Starting training...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+INFO:__main__:Starting training...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+INFO:__main__:Starting training...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+INFO:__main__:Starting training...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+
+  0%|          | 0/1404 [00:00<?, ?it/s]
+  0%|          | 1/1404 [00:04<1:42:48,  4.40s/it]
+  0%|          | 2/1404 [00:07<1:30:30,  3.87s/it]
+  0%|          | 3/1404 [00:11<1:26:29,  3.70s/it]
+  0%|          | 4/1404 [00:14<1:23:50,  3.59s/it]
+  0%|          | 5/1404 [00:18<1:22:20,  3.53s/it]
+  0%|          | 6/1404 [00:21<1:21:26,  3.50s/it]
+  0%|          | 7/1404 [00:24<1:15:54,  3.26s/it]
+  1%|          | 8/1404 [00:27<1:17:13,  3.32s/it]
+  1%|          | 9/1404 [00:32<1:25:58,  3.70s/it]
+  1%|          | 10/1404 [00:35<1:23:11,  3.58s/it]
+                                                   
+{'loss': 1.0964, 'grad_norm': 32.25, 'learning_rate': 2.535211267605634e-06, 'entropy': 0.8115249052643776, 'num_tokens': 429492.0, 'mean_token_accuracy': 0.7867166221141815, 'epoch': 0.02}
+
+  1%|          | 10/1404 [00:35<1:23:11,  3.58s/it]
+  1%|          | 11/1404 [00:38<1:18:08,  3.37s/it]
+  1%|          | 12/1404 [00:41<1:15:50,  3.27s/it]
+  1%|          | 13/1404 [00:44<1:15:17,  3.25s/it]
+  1%|          | 14/1404 [00:48<1:16:18,  3.29s/it]
+  1%|          | 15/1404 [00:51<1:16:20,  3.30s/it]
+  1%|          | 16/1404 [00:55<1:17:22,  3.34s/it]
+  1%|          | 17/1404 [00:58<1:21:34,  3.53s/it]
+  1%|▏         | 18/1404 [01:02<1:21:09,  3.51s/it]
+  1%|▏         | 19/1404 [01:06<1:21:32,  3.53s/it]
+  1%|▏         | 20/1404 [01:09<1:20:12,  3.48s/it]
+                                                   
+{'loss': 0.9693, 'grad_norm': 11.6875, 'learning_rate': 5.352112676056338e-06, 'entropy': 0.9607549980282784, 'num_tokens': 844540.0, 'mean_token_accuracy': 0.7964507207274437, 'epoch': 0.04}
+
+  1%|▏         | 20/1404 [01:09<1:20:12,  3.48s/it]
+  1%|▏         | 21/1404 [01:12<1:19:19,  3.44s/it]
+  2%|▏         | 22/1404 [01:16<1:18:55,  3.43s/it]
+  2%|▏         | 23/1404 [01:19<1:17:30,  3.37s/it]
+  2%|▏         | 24/1404 [01:23<1:20:38,  3.51s/it]
+  2%|▏         | 25/1404 [01:26<1:18:37,  3.42s/it]
+  2%|▏         | 26/1404 [01:29<1:15:23,  3.28s/it]
+  2%|▏         | 27/1404 [01:32<1:17:06,  3.36s/it]
+  2%|▏         | 28/1404 [01:36<1:17:09,  3.36s/it]
+  2%|▏         | 29/1404 [01:39<1:17:33,  3.38s/it]
+  2%|▏         | 30/1404 [01:43<1:18:48,  3.44s/it]
+                                                   
+{'loss': 0.8241, 'grad_norm': 5.84375, 'learning_rate': 8.169014084507043e-06, 'entropy': 0.9364693194627762, 'num_tokens': 1243955.0, 'mean_token_accuracy': 0.8263865754008293, 'epoch': 0.06}
+
+  2%|▏         | 30/1404 [01:43<1:18:48,  3.44s/it]
+  2%|▏         | 31/1404 [01:47<1:22:01,  3.58s/it]
+  2%|▏         | 32/1404 [01:50<1:19:47,  3.49s/it]
+  2%|▏         | 33/1404 [01:53<1:18:04,  3.42s/it]
+  2%|▏         | 34/1404 [01:57<1:17:14,  3.38s/it]
+  2%|▏         | 35/1404 [01:59<1:13:56,  3.24s/it]
+  3%|▎         | 36/1404 [02:03<1:13:56,  3.24s/it]
+  3%|▎         | 37/1404 [02:06<1:13:56,  3.25s/it]
+  3%|▎         | 38/1404 [02:09<1:14:19,  3.26s/it]
+  3%|▎         | 39/1404 [02:12<1:12:07,  3.17s/it]
+  3%|▎         | 40/1404 [02:16<1:16:50,  3.38s/it]
+                                                   
+{'loss': 0.585, 'grad_norm': 3.546875, 'learning_rate': 1.0985915492957748e-05, 'entropy': 0.6724853083491326, 'num_tokens': 1645541.0, 'mean_token_accuracy': 0.873721468448639, 'epoch': 0.09}
+
+  3%|▎         | 40/1404 [02:16<1:16:50,  3.38s/it]
+  3%|▎         | 41/1404 [02:19<1:15:32,  3.33s/it]
+  3%|▎         | 42/1404 [02:23<1:14:53,  3.30s/it]
+  3%|▎         | 43/1404 [02:26<1:16:19,  3.36s/it]
+  3%|▎         | 44/1404 [02:29<1:16:18,  3.37s/it]
+  3%|▎         | 45/1404 [02:33<1:17:09,  3.41s/it]
+  3%|▎         | 46/1404 [02:36<1:15:06,  3.32s/it]
+  3%|▎         | 47/1404 [02:40<1:16:29,  3.38s/it]
+  3%|▎         | 48/1404 [02:43<1:18:32,  3.48s/it]
+  3%|▎         | 49/1404 [02:46<1:15:08,  3.33s/it]
+  4%|▎         | 50/1404 [02:50<1:15:20,  3.34s/it]
+                                                   
+{'loss': 0.4498, 'grad_norm': 2.71875, 'learning_rate': 1.380281690140845e-05, 'entropy': 0.5049692757427693, 'num_tokens': 2059229.0, 'mean_token_accuracy': 0.8966201722621918, 'epoch': 0.11}
+
+  4%|▎         | 50/1404 [02:50<1:15:20,  3.34s/it]
+  4%|▎         | 51/1404 [02:53<1:15:11,  3.33s/it]
+  4%|▎         | 52/1404 [02:56<1:15:30,  3.35s/it]
+  4%|▍         | 53/1404 [03:00<1:15:34,  3.36s/it]
+  4%|▍         | 54/1404 [03:03<1:15:12,  3.34s/it]
+  4%|▍         | 55/1404 [03:06<1:15:48,  3.37s/it]
+  4%|▍         | 56/1404 [03:10<1:19:24,  3.53s/it]
+  4%|▍         | 57/1404 [03:14<1:19:23,  3.54s/it]
+  4%|▍         | 58/1404 [03:17<1:18:34,  3.50s/it]
+  4%|▍         | 59/1404 [03:21<1:18:38,  3.51s/it]
+  4%|▍         | 60/1404 [03:24<1:16:35,  3.42s/it]
+                                                   
+{'loss': 0.3865, 'grad_norm': 1.8515625, 'learning_rate': 1.6619718309859155e-05, 'entropy': 0.42515989691019057, 'num_tokens': 2460051.0, 'mean_token_accuracy': 0.9065125167369843, 'epoch': 0.13}
+
+  4%|▍         | 60/1404 [03:24<1:16:35,  3.42s/it]
+  4%|▍         | 61/1404 [03:27<1:14:25,  3.33s/it]
+  4%|▍         | 62/1404 [03:31<1:15:13,  3.36s/it]
+  4%|▍         | 63/1404 [03:34<1:18:32,  3.51s/it]
+  5%|▍         | 64/1404 [03:38<1:17:50,  3.49s/it]
+  5%|▍         | 65/1404 [03:41<1:16:08,  3.41s/it]
+  5%|▍         | 66/1404 [03:45<1:16:07,  3.41s/it]
+  5%|▍         | 67/1404 [03:48<1:16:13,  3.42s/it]
+  5%|▍         | 68/1404 [03:51<1:15:50,  3.41s/it]
+  5%|▍         | 69/1404 [03:55<1:14:39,  3.36s/it]
+  5%|▍         | 70/1404 [03:58<1:15:27,  3.39s/it]
+                                                   
+{'loss': 0.356, 'grad_norm': 1.375, 'learning_rate': 1.943661971830986e-05, 'entropy': 0.40260119512677195, 'num_tokens': 2870169.0, 'mean_token_accuracy': 0.9086463883519172, 'epoch': 0.15}
+
+  5%|▍         | 70/1404 [03:58<1:15:27,  3.39s/it]
+  5%|▌         | 71/1404 [04:01<1:15:27,  3.40s/it]
+  5%|▌         | 72/1404 [04:05<1:15:50,  3.42s/it]
+  5%|▌         | 73/1404 [04:08<1:16:00,  3.43s/it]
+  5%|▌         | 74/1404 [04:12<1:14:46,  3.37s/it]
+  5%|▌         | 75/1404 [04:15<1:13:25,  3.31s/it]
+  5%|▌         | 76/1404 [04:18<1:13:35,  3.32s/it]
+  5%|▌         | 77/1404 [04:22<1:14:22,  3.36s/it]
+  6%|▌         | 78/1404 [04:25<1:15:18,  3.41s/it]
+  6%|▌         | 79/1404 [04:29<1:16:34,  3.47s/it]
+  6%|▌         | 80/1404 [04:32<1:18:16,  3.55s/it]
+                                                   
+{'loss': 0.3325, 'grad_norm': 1.765625, 'learning_rate': 1.9998222635263118e-05, 'entropy': 0.3947444811463356, 'num_tokens': 3278575.0, 'mean_token_accuracy': 0.9124431341886521, 'epoch': 0.17}
+
+  6%|▌         | 80/1404 [04:33<1:18:16,  3.55s/it]
+  6%|▌         | 81/1404 [04:36<1:16:35,  3.47s/it]
+  6%|▌         | 82/1404 [04:39<1:15:06,  3.41s/it]
+  6%|▌         | 83/1404 [04:42<1:15:10,  3.41s/it]
+  6%|▌         | 84/1404 [04:46<1:15:19,  3.42s/it]
+  6%|▌         | 85/1404 [04:49<1:12:01,  3.28s/it]
+  6%|▌         | 86/1404 [04:52<1:09:55,  3.18s/it]
+  6%|▌         | 87/1404 [04:56<1:14:14,  3.38s/it]
+  6%|▋         | 88/1404 [04:59<1:14:31,  3.40s/it]
+  6%|▋         | 89/1404 [05:02<1:13:55,  3.37s/it]
+  6%|▋         | 90/1404 [05:06<1:12:54,  3.33s/it]
+                                                   
+{'loss': 0.3095, 'grad_norm': 1.3125, 'learning_rate': 1.9991003173835898e-05, 'entropy': 0.38182440102100373, 'num_tokens': 3651610.0, 'mean_token_accuracy': 0.9170323327183724, 'epoch': 0.19}
+
+  6%|▋         | 90/1404 [05:06<1:12:54,  3.33s/it]
+  6%|▋         | 91/1404 [05:09<1:13:40,  3.37s/it]
+  7%|▋         | 92/1404 [05:13<1:14:52,  3.42s/it]
+  7%|▋         | 93/1404 [05:16<1:14:50,  3.42s/it]
+  7%|▋         | 94/1404 [05:20<1:16:00,  3.48s/it]
+  7%|▋         | 95/1404 [05:23<1:15:02,  3.44s/it]
+  7%|▋         | 96/1404 [05:26<1:14:38,  3.42s/it]
+  7%|▋         | 97/1404 [05:30<1:14:12,  3.41s/it]
+  7%|▋         | 98/1404 [05:33<1:12:43,  3.34s/it]
+  7%|▋         | 99/1404 [05:36<1:13:29,  3.38s/it]
+  7%|▋         | 100/1404 [05:40<1:12:37,  3.34s/it]
+                                                    
+{'loss': 0.2992, 'grad_norm': 1.3203125, 'learning_rate': 1.997823453715038e-05, 'entropy': 0.3490338258445263, 'num_tokens': 4065085.0, 'mean_token_accuracy': 0.9183850735425949, 'epoch': 0.21}
+
+  7%|▋         | 100/1404 [05:40<1:12:37,  3.34s/it]
+  7%|▋         | 101/1404 [05:43<1:12:55,  3.36s/it]
+  7%|▋         | 102/1404 [05:47<1:14:52,  3.45s/it]
+  7%|▋         | 103/1404 [05:51<1:17:01,  3.55s/it]
+  7%|▋         | 104/1404 [05:54<1:16:16,  3.52s/it]
+  7%|▋         | 105/1404 [05:57<1:14:29,  3.44s/it]
+  8%|▊         | 106/1404 [06:01<1:14:28,  3.44s/it]
+  8%|▊         | 107/1404 [06:04<1:14:04,  3.43s/it]
+  8%|▊         | 108/1404 [06:08<1:14:27,  3.45s/it]
+  8%|▊         | 109/1404 [06:11<1:14:20,  3.44s/it]
+  8%|▊         | 110/1404 [06:14<1:13:14,  3.40s/it]
+                                                    
+{'loss': 0.2901, 'grad_norm': 1.3046875, 'learning_rate': 1.9959923817127326e-05, 'entropy': 0.320276790112257, 'num_tokens': 4475354.0, 'mean_token_accuracy': 0.9185684606432915, 'epoch': 0.24}
+
+  8%|▊         | 110/1404 [06:14<1:13:14,  3.40s/it]
+  8%|▊         | 111/1404 [06:18<1:13:34,  3.41s/it]
+  8%|▊         | 112/1404 [06:21<1:13:16,  3.40s/it]
+  8%|▊         | 113/1404 [06:25<1:13:56,  3.44s/it]
+  8%|▊         | 114/1404 [06:28<1:13:31,  3.42s/it]
+  8%|▊         | 115/1404 [06:31<1:12:38,  3.38s/it]
+  8%|▊         | 116/1404 [06:35<1:13:13,  3.41s/it]
+  8%|▊         | 117/1404 [06:38<1:12:31,  3.38s/it]
+  8%|▊         | 118/1404 [06:41<1:09:57,  3.26s/it]
+  8%|▊         | 119/1404 [06:45<1:13:14,  3.42s/it]
+  9%|▊         | 120/1404 [06:48<1:13:24,  3.43s/it]
+                                                    
+{'loss': 0.2784, 'grad_norm': 1.1640625, 'learning_rate': 1.993608118385604e-05, 'entropy': 0.3038217730820179, 'num_tokens': 4862664.0, 'mean_token_accuracy': 0.9202986195683479, 'epoch': 0.26}
+
+  9%|▊         | 120/1404 [06:48<1:13:24,  3.43s/it]
+  9%|▊         | 121/1404 [06:52<1:12:40,  3.40s/it]
+  9%|▊         | 122/1404 [06:55<1:13:42,  3.45s/it]
+  9%|▉         | 123/1404 [06:59<1:13:51,  3.46s/it]
+  9%|▉         | 124/1404 [07:02<1:13:52,  3.46s/it]
+  9%|▉         | 125/1404 [07:06<1:15:42,  3.55s/it]
+  9%|▉         | 126/1404 [07:10<1:16:49,  3.61s/it]
+  9%|▉         | 127/1404 [07:13<1:15:39,  3.56s/it]
+  9%|▉         | 128/1404 [07:16<1:14:28,  3.50s/it]
+  9%|▉         | 129/1404 [07:20<1:14:37,  3.51s/it]
+  9%|▉         | 130/1404 [07:23<1:12:40,  3.42s/it]
+                                                    
+{'loss': 0.2829, 'grad_norm': 1.3046875, 'learning_rate': 1.9906719879945733e-05, 'entropy': 0.3050581641495228, 'num_tokens': 5280509.0, 'mean_token_accuracy': 0.9199960872530937, 'epoch': 0.28}
+
+  9%|▉         | 130/1404 [07:23<1:12:40,  3.42s/it]
+  9%|▉         | 131/1404 [07:27<1:12:44,  3.43s/it]
+  9%|▉         | 132/1404 [07:30<1:12:31,  3.42s/it]
+  9%|▉         | 133/1404 [07:34<1:13:46,  3.48s/it]
+ 10%|▉         | 134/1404 [07:37<1:15:13,  3.55s/it]
+ 10%|▉         | 135/1404 [07:41<1:14:33,  3.53s/it]
+ 10%|▉         | 136/1404 [07:43<1:07:15,  3.18s/it]
+ 10%|▉         | 137/1404 [07:47<1:09:19,  3.28s/it]
+ 10%|▉         | 138/1404 [07:50<1:11:39,  3.40s/it]
+ 10%|▉         | 139/1404 [07:54<1:11:38,  3.40s/it]
+ 10%|▉         | 140/1404 [07:57<1:11:56,  3.41s/it]
+                                                    
+{'loss': 0.2827, 'grad_norm': 1.140625, 'learning_rate': 1.987185621317034e-05, 'entropy': 0.30690857470035554, 'num_tokens': 5741692.0, 'mean_token_accuracy': 0.9211164534091949, 'epoch': 0.3}
+
+ 10%|▉         | 140/1404 [07:57<1:11:56,  3.41s/it]
+ 10%|█         | 141/1404 [08:01<1:12:30,  3.44s/it]
+ 10%|█         | 142/1404 [08:04<1:12:31,  3.45s/it]
+ 10%|█         | 143/1404 [08:08<1:12:42,  3.46s/it]
+ 10%|█         | 144/1404 [08:11<1:12:39,  3.46s/it]
+ 10%|█         | 145/1404 [08:15<1:12:33,  3.46s/it]
+ 10%|█         | 146/1404 [08:18<1:13:00,  3.48s/it]
+ 10%|█         | 147/1404 [08:22<1:12:15,  3.45s/it]
+ 11%|█         | 148/1404 [08:25<1:12:27,  3.46s/it]
+ 11%|█         | 149/1404 [08:29<1:13:36,  3.52s/it]
+ 11%|█         | 150/1404 [08:32<1:12:09,  3.45s/it]
+                                                    
+{'loss': 0.2683, 'grad_norm': 1.2421875, 'learning_rate': 1.9831509547410922e-05, 'entropy': 0.2943943329155445, 'num_tokens': 6169199.0, 'mean_token_accuracy': 0.9258873775601387, 'epoch': 0.32}
+
+ 11%|█         | 150/1404 [08:32<1:12:09,  3.45s/it]
+ 11%|█         | 151/1404 [08:35<1:11:17,  3.41s/it]
+ 11%|█         | 152/1404 [08:39<1:11:40,  3.43s/it]
+ 11%|█         | 153/1404 [08:42<1:07:18,  3.23s/it]
+ 11%|█         | 154/1404 [08:45<1:08:18,  3.28s/it]
+ 11%|█         | 155/1404 [08:48<1:08:21,  3.28s/it]
+ 11%|█         | 156/1404 [08:52<1:11:35,  3.44s/it]
+ 11%|█         | 157/1404 [08:56<1:13:07,  3.52s/it]
+ 11%|█▏        | 158/1404 [08:59<1:11:54,  3.46s/it]
+ 11%|█▏        | 159/1404 [09:02<1:10:54,  3.42s/it]
+ 11%|█▏        | 160/1404 [09:06<1:11:01,  3.43s/it]
+                                                    
+{'loss': 0.267, 'grad_norm': 1.390625, 'learning_rate': 1.9785702291900616e-05, 'entropy': 0.2921620845794678, 'num_tokens': 6575022.0, 'mean_token_accuracy': 0.9270867556333542, 'epoch': 0.34}
+
+ 11%|█▏        | 160/1404 [09:06<1:11:01,  3.43s/it]
+ 11%|█▏        | 161/1404 [09:09<1:11:06,  3.43s/it]
+ 12%|█▏        | 162/1404 [09:13<1:11:21,  3.45s/it]
+ 12%|█▏        | 163/1404 [09:16<1:08:35,  3.32s/it]
+ 12%|█▏        | 164/1404 [09:19<1:09:27,  3.36s/it]
+ 12%|█▏        | 165/1404 [09:22<1:07:50,  3.29s/it]
+ 12%|█▏        | 166/1404 [09:26<1:10:22,  3.41s/it]
+ 12%|█▏        | 167/1404 [09:30<1:10:26,  3.42s/it]
+ 12%|█▏        | 168/1404 [09:33<1:10:21,  3.42s/it]
+ 12%|█▏        | 169/1404 [09:36<1:10:49,  3.44s/it]
+ 12%|█▏        | 170/1404 [09:40<1:09:32,  3.38s/it]
+                                                    
+{'loss': 0.2618, 'grad_norm': 1.15625, 'learning_rate': 1.973445988877816e-05, 'entropy': 0.287418482452631, 'num_tokens': 7005394.0, 'mean_token_accuracy': 0.9280822351574898, 'epoch': 0.36}
+
+ 12%|█▏        | 170/1404 [09:40<1:09:32,  3.38s/it]
+ 12%|█▏        | 171/1404 [09:43<1:09:38,  3.39s/it]
+ 12%|█▏        | 172/1404 [09:46<1:09:37,  3.39s/it]
+ 12%|█▏        | 173/1404 [09:50<1:12:53,  3.55s/it]
+ 12%|█▏        | 174/1404 [09:54<1:14:20,  3.63s/it]
+ 12%|█▏        | 175/1404 [09:58<1:13:13,  3.57s/it]
+ 13%|█▎        | 176/1404 [10:01<1:12:39,  3.55s/it]
+ 13%|█▎        | 177/1404 [10:04<1:10:51,  3.47s/it]
+ 13%|█▎        | 178/1404 [10:08<1:10:34,  3.45s/it]
+ 13%|█▎        | 179/1404 [10:11<1:09:03,  3.38s/it]
+ 13%|█▎        | 180/1404 [10:14<1:09:08,  3.39s/it]
+                                                    
+{'loss': 0.2626, 'grad_norm': 1.1640625, 'learning_rate': 1.9677810798956906e-05, 'entropy': 0.2849115088582039, 'num_tokens': 7424455.0, 'mean_token_accuracy': 0.9278102606534958, 'epoch': 0.39}
+
+ 13%|█▎        | 180/1404 [10:14<1:09:08,  3.39s/it]
+ 13%|█▎        | 181/1404 [10:18<1:10:02,  3.44s/it]
+ 13%|█▎        | 182/1404 [10:22<1:10:26,  3.46s/it]
+ 13%|█▎        | 183/1404 [10:25<1:09:33,  3.42s/it]
+ 13%|█▎        | 184/1404 [10:28<1:09:32,  3.42s/it]
+ 13%|█▎        | 185/1404 [10:32<1:08:51,  3.39s/it]
+ 13%|█▎        | 186/1404 [10:35<1:09:11,  3.41s/it]
+ 13%|█▎        | 187/1404 [10:38<1:07:43,  3.34s/it]
+ 13%|█▎        | 188/1404 [10:42<1:10:04,  3.46s/it]
+ 13%|█▎        | 189/1404 [10:45<1:09:49,  3.45s/it]
+ 14%|█▎        | 190/1404 [10:48<1:06:59,  3.31s/it]
+                                                    
+{'loss': 0.2505, 'grad_norm': 1.359375, 'learning_rate': 1.9615786486317124e-05, 'entropy': 0.26983939968049525, 'num_tokens': 7822670.0, 'mean_token_accuracy': 0.9314751625061035, 'epoch': 0.41}
+
+ 14%|█▎        | 190/1404 [10:48<1:06:59,  3.31s/it]
+ 14%|█▎        | 191/1404 [10:52<1:07:37,  3.35s/it]
+ 14%|█▎        | 192/1404 [10:55<1:08:24,  3.39s/it]
+ 14%|█▎        | 193/1404 [10:59<1:08:14,  3.38s/it]
+ 14%|█▍        | 194/1404 [11:01<1:04:28,  3.20s/it]
+ 14%|█▍        | 195/1404 [11:05<1:05:19,  3.24s/it]
+ 14%|█▍        | 196/1404 [11:09<1:09:10,  3.44s/it]
+ 14%|█▍        | 197/1404 [11:12<1:09:46,  3.47s/it]
+ 14%|█▍        | 198/1404 [11:16<1:09:28,  3.46s/it]
+ 14%|█▍        | 199/1404 [11:19<1:09:52,  3.48s/it]
+ 14%|█▍        | 200/1404 [11:23<1:10:33,  3.52s/it]
+                                                    
+{'loss': 0.2536, 'grad_norm': 1.53125, 'learning_rate': 1.9548421400230418e-05, 'entropy': 0.27250427156686785, 'num_tokens': 8243166.0, 'mean_token_accuracy': 0.9291853368282318, 'epoch': 0.43}
+
+ 14%|█▍        | 200/1404 [11:23<1:10:33,  3.52s/it]
+ 14%|█▍        | 201/1404 [11:26<1:10:11,  3.50s/it]
+ 14%|█▍        | 202/1404 [11:30<1:09:23,  3.46s/it]
+ 14%|█▍        | 203/1404 [11:33<1:09:57,  3.49s/it]
+ 15%|█▍        | 204/1404 [11:37<1:11:45,  3.59s/it]
+ 15%|█▍        | 205/1404 [11:41<1:12:53,  3.65s/it]
+ 15%|█▍        | 206/1404 [11:44<1:11:36,  3.59s/it]
+ 15%|█▍        | 207/1404 [11:48<1:10:18,  3.52s/it]
+ 15%|█▍        | 208/1404 [11:51<1:08:52,  3.46s/it]
+ 15%|█▍        | 209/1404 [11:54<1:08:25,  3.44s/it]
+ 15%|█▍        | 210/1404 [11:58<1:08:04,  3.42s/it]
+                                                    
+{'loss': 0.2518, 'grad_norm': 1.1484375, 'learning_rate': 1.9475752956425978e-05, 'entropy': 0.26531398482620716, 'num_tokens': 8660457.0, 'mean_token_accuracy': 0.9300725430250167, 'epoch': 0.45}
+
+ 15%|█▍        | 210/1404 [11:58<1:08:04,  3.42s/it]
+ 15%|█▌        | 211/1404 [12:01<1:07:58,  3.42s/it]
+ 15%|█▌        | 212/1404 [12:05<1:10:00,  3.52s/it]
+ 15%|█▌        | 213/1404 [12:09<1:11:05,  3.58s/it]
+ 15%|█▌        | 214/1404 [12:12<1:09:22,  3.50s/it]
+ 15%|█▌        | 215/1404 [12:15<1:09:21,  3.50s/it]
+ 15%|█▌        | 216/1404 [12:19<1:08:48,  3.47s/it]
+ 15%|█▌        | 217/1404 [12:22<1:09:04,  3.49s/it]
+ 16%|█▌        | 218/1404 [12:26<1:08:46,  3.48s/it]
+ 16%|█▌        | 219/1404 [12:30<1:12:29,  3.67s/it]
+ 16%|█▌        | 220/1404 [12:33<1:11:09,  3.61s/it]
+                                                    
+{'loss': 0.253, 'grad_norm': 1.09375, 'learning_rate': 1.9397821516209207e-05, 'entropy': 0.2682294763624668, 'num_tokens': 9107198.0, 'mean_token_accuracy': 0.9283964201807976, 'epoch': 0.47}
+
+ 16%|█▌        | 220/1404 [12:33<1:11:09,  3.61s/it]
+ 16%|█▌        | 221/1404 [12:37<1:10:07,  3.56s/it]
+ 16%|█▌        | 222/1404 [12:40<1:07:23,  3.42s/it]
+ 16%|█▌        | 223/1404 [12:43<1:06:44,  3.39s/it]
+ 16%|█▌        | 224/1404 [12:47<1:07:21,  3.42s/it]
+ 16%|█▌        | 225/1404 [12:50<1:06:39,  3.39s/it]
+ 16%|█▌        | 226/1404 [12:54<1:07:35,  3.44s/it]
+ 16%|█▌        | 227/1404 [12:57<1:07:42,  3.45s/it]
+ 16%|█▌        | 228/1404 [13:01<1:08:10,  3.48s/it]
+ 16%|█▋        | 229/1404 [13:04<1:08:27,  3.50s/it]
+ 16%|█▋        | 230/1404 [13:08<1:08:44,  3.51s/it]
+                                                    
+{'loss': 0.2437, 'grad_norm': 1.2734375, 'learning_rate': 1.9314670364044374e-05, 'entropy': 0.25803872384130955, 'num_tokens': 9561650.0, 'mean_token_accuracy': 0.9316240936517716, 'epoch': 0.49}
+
+ 16%|█▋        | 230/1404 [13:08<1:08:44,  3.51s/it]
+ 16%|█▋        | 231/1404 [13:11<1:08:04,  3.48s/it]
+ 17%|█▋        | 232/1404 [13:14<1:07:12,  3.44s/it]
+ 17%|█▋        | 233/1404 [13:18<1:06:02,  3.38s/it]
+ 17%|█▋        | 234/1404 [13:21<1:05:13,  3.34s/it]
+ 17%|█▋        | 235/1404 [13:24<1:05:58,  3.39s/it]
+ 17%|█▋        | 236/1404 [13:28<1:06:48,  3.43s/it]
+ 17%|█▋        | 237/1404 [13:32<1:08:01,  3.50s/it]
+ 17%|█▋        | 238/1404 [13:35<1:07:20,  3.47s/it]
+ 17%|█▋        | 239/1404 [13:38<1:05:42,  3.38s/it]
+ 17%|█▋        | 240/1404 [13:41<1:04:41,  3.33s/it]
+                                                    
+{'loss': 0.2452, 'grad_norm': 1.1796875, 'learning_rate': 1.922634568351367e-05, 'entropy': 0.26161779575049876, 'num_tokens': 9965562.0, 'mean_token_accuracy': 0.931322768330574, 'epoch': 0.51}
+
+ 17%|█▋        | 240/1404 [13:41<1:04:41,  3.33s/it]
+ 17%|█▋        | 241/1404 [13:45<1:04:53,  3.35s/it]
+ 17%|█▋        | 242/1404 [13:48<1:05:13,  3.37s/it]
+ 17%|█▋        | 243/1404 [13:52<1:05:37,  3.39s/it]
+ 17%|█▋        | 244/1404 [13:55<1:07:26,  3.49s/it]
+ 17%|█▋        | 245/1404 [13:59<1:06:53,  3.46s/it]
+ 18%|█▊        | 246/1404 [14:02<1:05:17,  3.38s/it]
+ 18%|█▊        | 247/1404 [14:05<1:05:55,  3.42s/it]
+ 18%|█▊        | 248/1404 [14:09<1:05:28,  3.40s/it]
+ 18%|█▊        | 249/1404 [14:12<1:05:34,  3.41s/it]
+ 18%|█▊        | 250/1404 [14:16<1:08:51,  3.58s/it]
+                                                    
+{'loss': 0.2348, 'grad_norm': 1.484375, 'learning_rate': 1.9132896531666067e-05, 'entropy': 0.24733112417161465, 'num_tokens': 10374093.0, 'mean_token_accuracy': 0.9334819614887238, 'epoch': 0.54}
+
+ 18%|█▊        | 250/1404 [14:16<1:08:51,  3.58s/it]
+ 18%|█▊        | 251/1404 [14:20<1:10:16,  3.66s/it]
+ 18%|█▊        | 252/1404 [14:23<1:08:29,  3.57s/it]
+ 18%|█▊        | 253/1404 [14:27<1:07:27,  3.52s/it]
+ 18%|█▊        | 254/1404 [14:30<1:05:54,  3.44s/it]
+ 18%|█▊        | 255/1404 [14:34<1:06:10,  3.46s/it]
+ 18%|█▊        | 256/1404 [14:37<1:06:29,  3.48s/it]
+ 18%|█▊        | 257/1404 [14:40<1:05:55,  3.45s/it]
+ 18%|█▊        | 258/1404 [14:44<1:05:46,  3.44s/it]
+ 18%|█▊        | 259/1404 [14:48<1:07:34,  3.54s/it]
+ 19%|█▊        | 260/1404 [14:51<1:09:01,  3.62s/it]
+                                                    
+{'loss': 0.2403, 'grad_norm': 1.359375, 'learning_rate': 1.9034374811770163e-05, 'entropy': 0.2538193970918655, 'num_tokens': 10809836.0, 'mean_token_accuracy': 0.9326455131173134, 'epoch': 0.56}
+
+ 19%|█▊        | 260/1404 [14:52<1:09:01,  3.62s/it]
+ 19%|█▊        | 261/1404 [14:54<1:04:29,  3.39s/it]
+ 19%|█▊        | 262/1404 [14:58<1:03:35,  3.34s/it]
+ 19%|█▊        | 263/1404 [15:01<1:04:11,  3.38s/it]
+ 19%|█▉        | 264/1404 [15:04<1:04:34,  3.40s/it]
+ 19%|█▉        | 265/1404 [15:08<1:05:03,  3.43s/it]
+ 19%|█▉        | 266/1404 [15:11<1:05:17,  3.44s/it]
+ 19%|█▉        | 267/1404 [15:15<1:08:23,  3.61s/it]
+ 19%|█▉        | 268/1404 [15:19<1:08:35,  3.62s/it]
+ 19%|█▉        | 269/1404 [15:23<1:07:50,  3.59s/it]
+ 19%|█▉        | 270/1404 [15:26<1:06:40,  3.53s/it]
+                                                    
+{'loss': 0.2355, 'grad_norm': 1.3515625, 'learning_rate': 1.8930835244486232e-05, 'entropy': 0.24546405486762524, 'num_tokens': 11232240.0, 'mean_token_accuracy': 0.9341208323836326, 'epoch': 0.58}
+
+ 19%|█▉        | 270/1404 [15:26<1:06:40,  3.53s/it]
+ 19%|█▉        | 271/1404 [15:29<1:05:34,  3.47s/it]
+ 19%|█▉        | 272/1404 [15:33<1:05:47,  3.49s/it]
+ 19%|█▉        | 273/1404 [15:36<1:06:06,  3.51s/it]
+ 20%|█▉        | 274/1404 [15:40<1:06:38,  3.54s/it]
+ 20%|█▉        | 275/1404 [15:44<1:09:29,  3.69s/it]
+ 20%|█▉        | 276/1404 [15:47<1:07:49,  3.61s/it]
+ 20%|█▉        | 277/1404 [15:51<1:07:30,  3.59s/it]
+ 20%|█▉        | 278/1404 [15:54<1:03:25,  3.38s/it]
+ 20%|█▉        | 279/1404 [15:57<1:04:12,  3.42s/it]
+ 20%|█▉        | 280/1404 [16:01<1:04:04,  3.42s/it]
+                                                    
+{'loss': 0.2292, 'grad_norm': 1.3203125, 'learning_rate': 1.8822335337473413e-05, 'entropy': 0.24139474593102933, 'num_tokens': 11652903.0, 'mean_token_accuracy': 0.9356941878795624, 'epoch': 0.6}
+
+ 20%|█▉        | 280/1404 [16:01<1:04:04,  3.42s/it]
+ 20%|██        | 281/1404 [16:04<1:04:09,  3.43s/it]
+ 20%|██        | 282/1404 [16:08<1:04:06,  3.43s/it]
+ 20%|██        | 283/1404 [16:11<1:03:42,  3.41s/it]
+ 20%|██        | 284/1404 [16:15<1:03:44,  3.41s/it]
+ 20%|██        | 285/1404 [16:18<1:02:38,  3.36s/it]
+ 20%|██        | 286/1404 [16:21<1:00:12,  3.23s/it]
+ 20%|██        | 287/1404 [16:24<1:00:37,  3.26s/it]
+ 21%|██        | 288/1404 [16:27<1:00:53,  3.27s/it]
+ 21%|██        | 289/1404 [16:31<1:01:18,  3.30s/it]
+ 21%|██        | 290/1404 [16:35<1:05:43,  3.54s/it]
+                                                    
+{'loss': 0.2226, 'grad_norm': 1.4609375, 'learning_rate': 1.8708935353448982e-05, 'entropy': 0.2327298890799284, 'num_tokens': 12031208.0, 'mean_token_accuracy': 0.9376158058643341, 'epoch': 0.62}
+
+ 21%|██        | 290/1404 [16:35<1:05:43,  3.54s/it]
+ 21%|██        | 291/1404 [16:38<1:06:34,  3.59s/it]
+ 21%|██        | 292/1404 [16:42<1:05:34,  3.54s/it]
+ 21%|██        | 293/1404 [16:45<1:04:32,  3.49s/it]
+ 21%|██        | 294/1404 [16:49<1:04:22,  3.48s/it]
+ 21%|██        | 295/1404 [16:52<1:03:46,  3.45s/it]
+ 21%|██        | 296/1404 [16:56<1:04:02,  3.47s/it]
+ 21%|██        | 297/1404 [16:59<1:04:13,  3.48s/it]
+ 21%|██        | 298/1404 [17:03<1:06:34,  3.61s/it]
+ 21%|██▏       | 299/1404 [17:07<1:08:52,  3.74s/it]
+ 21%|██▏       | 300/1404 [17:10<1:06:08,  3.59s/it]
+                                                    
+{'loss': 0.2284, 'grad_norm': 1.3515625, 'learning_rate': 1.8590698276717386e-05, 'entropy': 0.23857950121164323, 'num_tokens': 12490523.0, 'mean_token_accuracy': 0.9362169668078423, 'epoch': 0.64}
+
+ 21%|██▏       | 300/1404 [17:10<1:06:08,  3.59s/it]
+ 21%|██▏       | 301/1404 [17:14<1:05:36,  3.57s/it]
+ 22%|██▏       | 302/1404 [17:17<1:04:16,  3.50s/it]
+ 22%|██▏       | 303/1404 [17:20<1:03:05,  3.44s/it]
+ 22%|██▏       | 304/1404 [17:24<1:02:39,  3.42s/it]
+ 22%|██▏       | 305/1404 [17:27<1:02:11,  3.40s/it]
+ 22%|██▏       | 306/1404 [17:31<1:05:11,  3.56s/it]
+ 22%|██▏       | 307/1404 [17:35<1:04:15,  3.51s/it]
+ 22%|██▏       | 308/1404 [17:37<1:00:59,  3.34s/it]
+ 22%|██▏       | 309/1404 [17:41<1:01:42,  3.38s/it]
+ 22%|██▏       | 310/1404 [17:44<1:01:12,  3.36s/it]
+                                                    
+{'loss': 0.2219, 'grad_norm': 1.4375, 'learning_rate': 1.8467689778187684e-05, 'entropy': 0.23203262612223624, 'num_tokens': 12892013.0, 'mean_token_accuracy': 0.9374272018671036, 'epoch': 0.66}
+
+ 22%|██▏       | 310/1404 [17:44<1:01:12,  3.36s/it]
+ 22%|██▏       | 311/1404 [17:48<1:01:45,  3.39s/it]
+ 22%|██▏       | 312/1404 [17:51<1:01:37,  3.39s/it]
+ 22%|██▏       | 313/1404 [17:55<1:02:50,  3.46s/it]
+ 22%|██▏       | 314/1404 [17:58<1:02:30,  3.44s/it]
+ 22%|██▏       | 315/1404 [18:01<1:01:38,  3.40s/it]
+ 23%|██▎       | 316/1404 [18:05<1:02:11,  3.43s/it]
+ 23%|██▎       | 317/1404 [18:08<59:57,  3.31s/it]  
+ 23%|██▎       | 318/1404 [18:11<59:46,  3.30s/it]
+ 23%|██▎       | 319/1404 [18:15<1:01:09,  3.38s/it]
+ 23%|██▎       | 320/1404 [18:18<1:01:28,  3.40s/it]
+                                                    
+{'loss': 0.2186, 'grad_norm': 1.2109375, 'learning_rate': 1.833997817889878e-05, 'entropy': 0.22953241430222987, 'num_tokens': 13320849.0, 'mean_token_accuracy': 0.9384818941354751, 'epoch': 0.68}
+
+ 23%|██▎       | 320/1404 [18:18<1:01:28,  3.40s/it]
+ 23%|██▎       | 321/1404 [18:22<1:03:36,  3.52s/it]
+ 23%|██▎       | 322/1404 [18:26<1:05:06,  3.61s/it]
+ 23%|██▎       | 323/1404 [18:29<1:04:18,  3.57s/it]
+ 23%|██▎       | 324/1404 [18:33<1:03:14,  3.51s/it]
+ 23%|██▎       | 325/1404 [18:36<1:02:07,  3.45s/it]
+ 23%|██▎       | 326/1404 [18:39<1:01:30,  3.42s/it]
+ 23%|██▎       | 327/1404 [18:43<1:01:37,  3.43s/it]
+ 23%|██▎       | 328/1404 [18:46<1:00:50,  3.39s/it]
+ 23%|██▎       | 329/1404 [18:50<1:01:25,  3.43s/it]
+ 24%|██▎       | 330/1404 [18:53<1:03:11,  3.53s/it]
+                                                    
+{'loss': 0.2199, 'grad_norm': 1.7734375, 'learning_rate': 1.8207634412072765e-05, 'entropy': 0.23053606264293194, 'num_tokens': 13744076.0, 'mean_token_accuracy': 0.9386514320969581, 'epoch': 0.71}
+
+ 24%|██▎       | 330/1404 [18:53<1:03:11,  3.53s/it]
+ 24%|██▎       | 331/1404 [18:57<1:05:04,  3.64s/it]
+ 24%|██▎       | 332/1404 [19:01<1:02:49,  3.52s/it]
+ 24%|██▎       | 333/1404 [19:04<1:02:46,  3.52s/it]
+ 24%|██▍       | 334/1404 [19:08<1:02:28,  3.50s/it]
+ 24%|██▍       | 335/1404 [19:11<1:00:40,  3.41s/it]
+ 24%|██▍       | 336/1404 [19:14<1:01:11,  3.44s/it]
+ 24%|██▍       | 337/1404 [19:17<59:54,  3.37s/it]  
+ 24%|██▍       | 338/1404 [19:21<1:02:01,  3.49s/it]
+ 24%|██▍       | 339/1404 [19:25<1:02:11,  3.50s/it]
+ 24%|██▍       | 340/1404 [19:28<1:01:23,  3.46s/it]
+                                                    
+{'loss': 0.2176, 'grad_norm': 1.6484375, 'learning_rate': 1.8070731983717357e-05, 'entropy': 0.2277662057429552, 'num_tokens': 14177544.0, 'mean_token_accuracy': 0.9385942086577416, 'epoch': 0.73}
+
+ 24%|██▍       | 340/1404 [19:28<1:01:23,  3.46s/it]
+ 24%|██▍       | 341/1404 [19:32<1:01:10,  3.45s/it]
+ 24%|██▍       | 342/1404 [19:35<1:01:03,  3.45s/it]
+ 24%|██▍       | 343/1404 [19:39<1:01:24,  3.47s/it]
+ 25%|██▍       | 344/1404 [19:42<1:01:08,  3.46s/it]
+ 25%|██▍       | 345/1404 [19:46<1:02:46,  3.56s/it]
+ 25%|██▍       | 346/1404 [19:49<1:01:52,  3.51s/it]
+ 25%|██▍       | 347/1404 [19:53<1:01:17,  3.48s/it]
+ 25%|██▍       | 348/1404 [19:55<58:01,  3.30s/it]  
+ 25%|██▍       | 349/1404 [19:59<58:47,  3.34s/it]
+ 25%|██▍       | 350/1404 [20:02<56:36,  3.22s/it]
+                                                  
+{'loss': 0.2146, 'grad_norm': 1.328125, 'learning_rate': 1.792934693179942e-05, 'entropy': 0.2268131248652935, 'num_tokens': 14602193.0, 'mean_token_accuracy': 0.9392023399472237, 'epoch': 0.75}
+
+ 25%|██▍       | 350/1404 [20:02<56:36,  3.22s/it]
+ 25%|██▌       | 351/1404 [20:05<57:22,  3.27s/it]
+ 25%|██▌       | 352/1404 [20:08<57:21,  3.27s/it]
+ 25%|██▌       | 353/1404 [20:12<1:00:26,  3.45s/it]
+ 25%|██▌       | 354/1404 [20:16<1:00:26,  3.45s/it]
+ 25%|██▌       | 355/1404 [20:19<1:00:26,  3.46s/it]
+ 25%|██▌       | 356/1404 [20:23<1:00:16,  3.45s/it]
+ 25%|██▌       | 357/1404 [20:26<1:00:52,  3.49s/it]
+ 25%|██▌       | 358/1404 [20:29<59:08,  3.39s/it]  
+ 26%|██▌       | 359/1404 [20:33<58:42,  3.37s/it]
+ 26%|██▌       | 360/1404 [20:36<59:02,  3.39s/it]
+                                                  
+{'loss': 0.2105, 'grad_norm': 1.203125, 'learning_rate': 1.7783557784012154e-05, 'entropy': 0.2215432569384575, 'num_tokens': 15001678.0, 'mean_token_accuracy': 0.9411342188715934, 'epoch': 0.77}
+
+ 26%|██▌       | 360/1404 [20:36<59:02,  3.39s/it]
+ 26%|██▌       | 361/1404 [20:40<1:02:47,  3.61s/it]
+ 26%|██▌       | 362/1404 [20:44<1:03:22,  3.65s/it]
+ 26%|██▌       | 363/1404 [20:48<1:02:18,  3.59s/it]
+ 26%|██▌       | 364/1404 [20:51<1:01:05,  3.52s/it]
+ 26%|██▌       | 365/1404 [20:54<1:00:39,  3.50s/it]
+ 26%|██▌       | 366/1404 [20:58<59:41,  3.45s/it]  
+ 26%|██▌       | 367/1404 [21:01<58:39,  3.39s/it]
+ 26%|██▌       | 368/1404 [21:04<57:59,  3.36s/it]
+ 26%|██▋       | 369/1404 [21:08<59:40,  3.46s/it]
+ 26%|██▋       | 370/1404 [21:11<59:24,  3.45s/it]
+                                                  
+{'loss': 0.2074, 'grad_norm': 1.4765625, 'learning_rate': 1.763344551415946e-05, 'entropy': 0.21922977827489376, 'num_tokens': 15427435.0, 'mean_token_accuracy': 0.9417047411203384, 'epoch': 0.79}
+
+ 26%|██▋       | 370/1404 [21:11<59:24,  3.45s/it]
+ 26%|██▋       | 371/1404 [21:15<58:22,  3.39s/it]
+ 26%|██▋       | 372/1404 [21:18<58:50,  3.42s/it]
+ 27%|██▋       | 373/1404 [21:21<57:33,  3.35s/it]
+ 27%|██▋       | 374/1404 [21:25<57:22,  3.34s/it]
+ 27%|██▋       | 375/1404 [21:28<58:21,  3.40s/it]
+ 27%|██▋       | 376/1404 [21:32<59:04,  3.45s/it]
+ 27%|██▋       | 377/1404 [21:35<1:00:34,  3.54s/it]
+ 27%|██▋       | 378/1404 [21:39<59:07,  3.46s/it]  
+ 27%|██▋       | 379/1404 [21:42<58:38,  3.43s/it]
+ 27%|██▋       | 380/1404 [21:45<58:16,  3.41s/it]
+                                                  
+{'loss': 0.204, 'grad_norm': 1.3515625, 'learning_rate': 1.7479093497181714e-05, 'entropy': 0.21610701829195023, 'num_tokens': 15851479.0, 'mean_token_accuracy': 0.9427311882376671, 'epoch': 0.81}
+
+ 27%|██▋       | 380/1404 [21:45<58:16,  3.41s/it]
+ 27%|██▋       | 381/1404 [21:48<56:18,  3.30s/it]
+ 27%|██▋       | 382/1404 [21:52<56:25,  3.31s/it]
+ 27%|██▋       | 383/1404 [21:56<58:33,  3.44s/it]
+ 27%|██▋       | 384/1404 [21:59<1:01:06,  3.59s/it]
+ 27%|██▋       | 385/1404 [22:03<1:00:52,  3.58s/it]
+ 27%|██▋       | 386/1404 [22:06<59:49,  3.53s/it]  
+ 28%|██▊       | 387/1404 [22:10<59:14,  3.50s/it]
+ 28%|██▊       | 388/1404 [22:13<59:03,  3.49s/it]
+ 28%|██▊       | 389/1404 [22:17<58:03,  3.43s/it]
+ 28%|██▊       | 390/1404 [22:20<56:08,  3.32s/it]
+                                                  
+{'loss': 0.2024, 'grad_norm': 1.75, 'learning_rate': 1.7320587462847858e-05, 'entropy': 0.2128136970102787, 'num_tokens': 16267121.0, 'mean_token_accuracy': 0.9428054198622704, 'epoch': 0.83}
+
+ 28%|██▊       | 390/1404 [22:20<56:08,  3.32s/it]
+ 28%|██▊       | 391/1404 [22:23<56:29,  3.35s/it]
+ 28%|██▊       | 392/1404 [22:27<58:09,  3.45s/it]
+ 28%|██▊       | 393/1404 [22:31<1:00:08,  3.57s/it]
+ 28%|██▊       | 394/1404 [22:34<59:13,  3.52s/it]  
+ 28%|██▊       | 395/1404 [22:37<58:36,  3.49s/it]
+ 28%|██▊       | 396/1404 [22:41<57:35,  3.43s/it]
+ 28%|██▊       | 397/1404 [22:44<57:21,  3.42s/it]
+ 28%|██▊       | 398/1404 [22:48<57:30,  3.43s/it]
+ 28%|██▊       | 399/1404 [22:51<58:08,  3.47s/it]
+ 28%|██▊       | 400/1404 [22:55<1:01:19,  3.66s/it]
+                                                    
+{'loss': 0.2028, 'grad_norm': 1.3359375, 'learning_rate': 1.7158015448139645e-05, 'entropy': 0.2120282541960478, 'num_tokens': 16680657.0, 'mean_token_accuracy': 0.9426750183105469, 'epoch': 0.86}
+
+ 28%|██▊       | 400/1404 [22:55<1:01:19,  3.66s/it]
+ 29%|██▊       | 401/1404 [22:59<1:00:54,  3.64s/it]
+ 29%|██▊       | 402/1404 [23:02<59:40,  3.57s/it]  
+ 29%|██▊       | 403/1404 [23:06<57:54,  3.47s/it]
+ 29%|██▉       | 404/1404 [23:09<57:34,  3.45s/it]
+ 29%|██▉       | 405/1404 [23:12<57:18,  3.44s/it]
+ 29%|██▉       | 406/1404 [23:16<56:27,  3.39s/it]
+ 29%|██▉       | 407/1404 [23:19<57:10,  3.44s/it]
+ 29%|██▉       | 408/1404 [23:23<57:04,  3.44s/it]
+ 29%|██▉       | 409/1404 [23:26<56:51,  3.43s/it]
+ 29%|██▉       | 410/1404 [23:29<56:49,  3.43s/it]
+                                                  
+{'loss': 0.1961, 'grad_norm': 1.3671875, 'learning_rate': 1.6991467748354352e-05, 'entropy': 0.2069754607975483, 'num_tokens': 17076826.0, 'mean_token_accuracy': 0.9450925216078758, 'epoch': 0.88}
+
+ 29%|██▉       | 410/1404 [23:30<56:49,  3.43s/it]
+ 29%|██▉       | 411/1404 [23:33<56:44,  3.43s/it]
+ 29%|██▉       | 412/1404 [23:36<56:54,  3.44s/it]
+ 29%|██▉       | 413/1404 [23:40<56:07,  3.40s/it]
+ 29%|██▉       | 414/1404 [23:43<57:45,  3.50s/it]
+ 30%|██▉       | 415/1404 [23:46<54:43,  3.32s/it]
+ 30%|██▉       | 416/1404 [23:50<54:37,  3.32s/it]
+ 30%|██▉       | 417/1404 [23:53<55:34,  3.38s/it]
+ 30%|██▉       | 418/1404 [23:56<53:10,  3.24s/it]
+ 30%|██▉       | 419/1404 [24:00<54:43,  3.33s/it]
+ 30%|██▉       | 420/1404 [24:03<55:07,  3.36s/it]
+                                                  
+{'loss': 0.197, 'grad_norm': 1.28125, 'learning_rate': 1.6821036866953226e-05, 'entropy': 0.2112911030650139, 'num_tokens': 17479143.0, 'mean_token_accuracy': 0.9447996139526367, 'epoch': 0.9}
+
+ 30%|██▉       | 420/1404 [24:03<55:07,  3.36s/it]
+ 30%|██▉       | 421/1404 [24:06<54:52,  3.35s/it]
+ 30%|███       | 422/1404 [24:10<55:06,  3.37s/it]
+ 30%|███       | 423/1404 [24:14<58:02,  3.55s/it]
+ 30%|███       | 424/1404 [24:17<58:19,  3.57s/it]
+ 30%|███       | 425/1404 [24:21<58:16,  3.57s/it]
+ 30%|███       | 426/1404 [24:24<57:38,  3.54s/it]
+ 30%|███       | 427/1404 [24:28<57:19,  3.52s/it]
+ 30%|███       | 428/1404 [24:31<57:05,  3.51s/it]
+ 31%|███       | 429/1404 [24:35<56:28,  3.48s/it]
+ 31%|███       | 430/1404 [24:38<56:39,  3.49s/it]
+                                                  
+{'loss': 0.1967, 'grad_norm': 1.5, 'learning_rate': 1.6646817464183485e-05, 'entropy': 0.20949059389531613, 'num_tokens': 17919988.0, 'mean_token_accuracy': 0.9448363110423088, 'epoch': 0.92}
+
+ 31%|███       | 430/1404 [24:38<56:39,  3.49s/it]
+ 31%|███       | 431/1404 [24:41<54:40,  3.37s/it]
+ 31%|███       | 432/1404 [24:46<58:49,  3.63s/it]
+ 31%|███       | 433/1404 [24:49<58:02,  3.59s/it]
+ 31%|███       | 434/1404 [24:52<57:04,  3.53s/it]
+ 31%|███       | 435/1404 [24:56<55:50,  3.46s/it]
+ 31%|███       | 436/1404 [24:59<55:39,  3.45s/it]
+ 31%|███       | 437/1404 [25:02<53:55,  3.35s/it]
+ 31%|███       | 438/1404 [25:06<55:44,  3.46s/it]
+ 31%|███▏      | 439/1404 [25:10<59:03,  3.67s/it]
+ 31%|███▏      | 440/1404 [25:14<58:18,  3.63s/it]
+                                                  
+{'loss': 0.1933, 'grad_norm': 1.6015625, 'learning_rate': 1.6468906304502365e-05, 'entropy': 0.2057630315423012, 'num_tokens': 18343350.0, 'mean_token_accuracy': 0.9459871143102646, 'epoch': 0.94}
+
+ 31%|███▏      | 440/1404 [25:14<58:18,  3.63s/it]
+ 31%|███▏      | 441/1404 [25:17<57:10,  3.56s/it]
+ 31%|███▏      | 442/1404 [25:21<56:53,  3.55s/it]
+ 32%|███▏      | 443/1404 [25:24<56:08,  3.51s/it]
+ 32%|███▏      | 444/1404 [25:28<56:23,  3.52s/it]
+ 32%|███▏      | 445/1404 [25:31<56:03,  3.51s/it]
+ 32%|███▏      | 446/1404 [25:34<54:46,  3.43s/it]
+ 32%|███▏      | 447/1404 [25:38<55:49,  3.50s/it]
+ 32%|███▏      | 448/1404 [25:42<56:07,  3.52s/it]
+ 32%|███▏      | 449/1404 [25:45<55:19,  3.48s/it]
+ 32%|███▏      | 450/1404 [25:48<55:15,  3.48s/it]
+                                                  
+{'loss': 0.1931, 'grad_norm': 1.34375, 'learning_rate': 1.628740220283248e-05, 'entropy': 0.20565421357750893, 'num_tokens': 18774967.0, 'mean_token_accuracy': 0.9458880081772805, 'epoch': 0.96}
+
+ 32%|███▏      | 450/1404 [25:48<55:15,  3.48s/it]
+ 32%|███▏      | 451/1404 [25:51<52:57,  3.33s/it]
+ 32%|███▏      | 452/1404 [25:55<53:19,  3.36s/it]
+ 32%|███▏      | 453/1404 [25:58<53:37,  3.38s/it]
+ 32%|███▏      | 454/1404 [26:02<53:59,  3.41s/it]
+ 32%|███▏      | 455/1404 [26:06<58:43,  3.71s/it]
+ 32%|███▏      | 456/1404 [26:10<58:12,  3.68s/it]
+ 33%|███▎      | 457/1404 [26:13<54:52,  3.48s/it]
+ 33%|███▎      | 458/1404 [26:16<53:13,  3.38s/it]
+ 33%|███▎      | 459/1404 [26:19<53:56,  3.43s/it]
+ 33%|███▎      | 460/1404 [26:23<53:35,  3.41s/it]
+                                                  
+{'loss': 0.1881, 'grad_norm': 1.875, 'learning_rate': 1.6102405969678314e-05, 'entropy': 0.19996459782123566, 'num_tokens': 19178199.0, 'mean_token_accuracy': 0.9470368266105652, 'epoch': 0.98}
+
+ 33%|███▎      | 460/1404 [26:23<53:35,  3.41s/it]
+ 33%|███▎      | 461/1404 [26:26<53:50,  3.43s/it]
+ 33%|███▎      | 462/1404 [26:30<53:29,  3.41s/it]
+ 33%|███▎      | 463/1404 [26:34<57:13,  3.65s/it]
+ 33%|███▎      | 464/1404 [26:37<54:40,  3.49s/it]
+ 33%|███▎      | 465/1404 [26:40<53:36,  3.43s/it]
+ 33%|███▎      | 466/1404 [26:44<53:25,  3.42s/it]
+ 33%|███▎      | 467/1404 [26:47<52:56,  3.39s/it]
+ 33%|███▎      | 468/1404 [26:48<41:57,  2.69s/it]
+ 33%|███▎      | 469/1404 [26:52<46:57,  3.01s/it]
+ 33%|███▎      | 470/1404 [26:56<50:08,  3.22s/it]
+                                                  
+{'loss': 0.1831, 'grad_norm': 1.296875, 'learning_rate': 1.5914020355134333e-05, 'entropy': 0.19585226355372248, 'num_tokens': 19537224.0, 'mean_token_accuracy': 0.9489559853399122, 'epoch': 1.0}
+
+ 33%|███▎      | 470/1404 [26:56<50:08,  3.22s/it]
+ 34%|███▎      | 471/1404 [26:59<52:21,  3.37s/it]
+ 34%|███▎      | 472/1404 [27:03<52:40,  3.39s/it]
+ 34%|███▎      | 473/1404 [27:06<52:41,  3.40s/it]
+ 34%|███▍      | 474/1404 [27:09<52:38,  3.40s/it]
+ 34%|███▍      | 475/1404 [27:13<52:55,  3.42s/it]
+ 34%|███▍      | 476/1404 [27:16<53:11,  3.44s/it]
+ 34%|███▍      | 477/1404 [27:20<55:41,  3.60s/it]
+ 34%|███▍      | 478/1404 [27:24<54:26,  3.53s/it]
+ 34%|███▍      | 479/1404 [27:28<55:43,  3.62s/it]
+ 34%|███▍      | 480/1404 [27:31<54:52,  3.56s/it]
+                                                  
+{'loss': 0.1755, 'grad_norm': 1.3046875, 'learning_rate': 1.5722349991815802e-05, 'entropy': 0.19272066205739974, 'num_tokens': 19958921.0, 'mean_token_accuracy': 0.950786879658699, 'epoch': 1.03}
+
+ 34%|███▍      | 480/1404 [27:31<54:52,  3.56s/it]
+ 34%|███▍      | 481/1404 [27:34<53:55,  3.51s/it]
+ 34%|███▍      | 482/1404 [27:38<54:16,  3.53s/it]
+ 34%|███▍      | 483/1404 [27:41<53:34,  3.49s/it]
+ 34%|███▍      | 484/1404 [27:45<51:48,  3.38s/it]
+ 35%|███▍      | 485/1404 [27:48<53:44,  3.51s/it]
+ 35%|███▍      | 486/1404 [27:52<54:58,  3.59s/it]
+ 35%|███▍      | 487/1404 [27:55<53:12,  3.48s/it]
+ 35%|███▍      | 488/1404 [27:59<53:13,  3.49s/it]
+ 35%|███▍      | 489/1404 [28:02<52:40,  3.45s/it]
+ 35%|███▍      | 490/1404 [28:06<52:31,  3.45s/it]
+                                                  
+{'loss': 0.1768, 'grad_norm': 1.4140625, 'learning_rate': 1.5527501336744046e-05, 'entropy': 0.19040299020707607, 'num_tokens': 20368586.0, 'mean_token_accuracy': 0.9511288568377495, 'epoch': 1.05}
+
+ 35%|███▍      | 490/1404 [28:06<52:31,  3.45s/it]
+ 35%|███▍      | 491/1404 [28:09<52:45,  3.47s/it]
+ 35%|███▌      | 492/1404 [28:12<51:44,  3.40s/it]
+ 35%|███▌      | 493/1404 [28:16<51:37,  3.40s/it]
+ 35%|███▌      | 494/1404 [28:19<52:40,  3.47s/it]
+ 35%|███▌      | 495/1404 [28:23<54:50,  3.62s/it]
+ 35%|███▌      | 496/1404 [28:27<53:46,  3.55s/it]
+ 35%|███▌      | 497/1404 [28:30<53:33,  3.54s/it]
+ 35%|███▌      | 498/1404 [28:34<52:33,  3.48s/it]
+ 36%|███▌      | 499/1404 [28:37<52:57,  3.51s/it]
+ 36%|███▌      | 500/1404 [28:41<52:30,  3.49s/it]
+                                                  
+{'loss': 0.1734, 'grad_norm': 1.3671875, 'learning_rate': 1.5329582612218366e-05, 'entropy': 0.19158921465277673, 'num_tokens': 20781520.0, 'mean_token_accuracy': 0.9517018675804139, 'epoch': 1.07}
+
+ 36%|███▌      | 500/1404 [28:41<52:30,  3.49s/it]
+ 36%|███▌      | 501/1404 [28:58<1:56:31,  7.74s/it]
+ 36%|███▌      | 502/1404 [29:02<1:38:32,  6.55s/it]
+ 36%|███▌      | 503/1404 [29:06<1:25:39,  5.70s/it]
+ 36%|███▌      | 504/1404 [29:09<1:15:02,  5.00s/it]
+ 36%|███▌      | 505/1404 [29:12<1:06:55,  4.47s/it]
+ 36%|███▌      | 506/1404 [29:16<1:02:16,  4.16s/it]
+ 36%|███▌      | 507/1404 [29:19<58:49,  3.93s/it]  
+ 36%|███▌      | 508/1404 [29:23<56:39,  3.79s/it]
+ 36%|███▋      | 509/1404 [29:27<56:47,  3.81s/it]
+ 36%|███▋      | 510/1404 [29:30<56:05,  3.76s/it]
+                                                  
+{'loss': 0.1719, 'grad_norm': 1.3671875, 'learning_rate': 1.5128703745707527e-05, 'entropy': 0.18703486248850823, 'num_tokens': 21188174.0, 'mean_token_accuracy': 0.9521028980612755, 'epoch': 1.09}
+
+ 36%|███▋      | 510/1404 [29:30<56:05,  3.76s/it]
+ 36%|███▋      | 511/1404 [29:33<53:12,  3.57s/it]
+ 36%|███▋      | 512/1404 [29:37<52:24,  3.53s/it]
+ 37%|███▋      | 513/1404 [29:40<51:19,  3.46s/it]
+ 37%|███▋      | 514/1404 [29:44<51:46,  3.49s/it]
+ 37%|███▋      | 515/1404 [29:47<51:40,  3.49s/it]
+ 37%|███▋      | 516/1404 [29:50<50:58,  3.44s/it]
+ 37%|███▋      | 517/1404 [29:54<52:35,  3.56s/it]
+ 37%|███▋      | 518/1404 [29:58<53:39,  3.63s/it]
+ 37%|███▋      | 519/1404 [30:02<52:54,  3.59s/it]
+ 37%|███▋      | 520/1404 [30:05<51:17,  3.48s/it]
+                                                  
+{'loss': 0.172, 'grad_norm': 1.671875, 'learning_rate': 1.4924976308794134e-05, 'entropy': 0.1881852388381958, 'num_tokens': 21609973.0, 'mean_token_accuracy': 0.9521632775664329, 'epoch': 1.11}
+
+ 37%|███▋      | 520/1404 [30:05<51:17,  3.48s/it]
+ 37%|███▋      | 521/1404 [30:08<50:52,  3.46s/it]
+ 37%|███▋      | 522/1404 [30:12<50:55,  3.46s/it]
+ 37%|███▋      | 523/1404 [30:15<50:36,  3.45s/it]
+ 37%|███▋      | 524/1404 [30:18<50:15,  3.43s/it]
+ 37%|███▋      | 525/1404 [30:22<49:38,  3.39s/it]
+ 37%|███▋      | 526/1404 [30:26<51:37,  3.53s/it]
+ 38%|███▊      | 527/1404 [30:29<51:56,  3.55s/it]
+ 38%|███▊      | 528/1404 [30:33<51:07,  3.50s/it]
+ 38%|███▊      | 529/1404 [30:36<50:49,  3.48s/it]
+ 38%|███▊      | 530/1404 [30:39<50:20,  3.46s/it]
+                                                  
+{'loss': 0.1689, 'grad_norm': 1.4609375, 'learning_rate': 1.4718513455205867e-05, 'entropy': 0.1885015346109867, 'num_tokens': 22037842.0, 'mean_token_accuracy': 0.9527813553810119, 'epoch': 1.13}
+
+ 38%|███▊      | 530/1404 [30:40<50:20,  3.46s/it]
+ 38%|███▊      | 531/1404 [30:43<50:48,  3.49s/it]
+ 38%|███▊      | 532/1404 [30:46<50:21,  3.47s/it]
+ 38%|███▊      | 533/1404 [30:50<51:40,  3.56s/it]
+ 38%|███▊      | 534/1404 [30:55<55:32,  3.83s/it]
+ 38%|███▊      | 535/1404 [30:58<53:07,  3.67s/it]
+ 38%|███▊      | 536/1404 [31:02<52:40,  3.64s/it]
+ 38%|███▊      | 537/1404 [31:05<51:04,  3.53s/it]
+ 38%|███▊      | 538/1404 [31:08<49:49,  3.45s/it]
+ 38%|███▊      | 539/1404 [31:11<49:30,  3.43s/it]
+ 38%|███▊      | 540/1404 [31:15<50:39,  3.52s/it]
+                                                  
+{'loss': 0.1709, 'grad_norm': 1.2734375, 'learning_rate': 1.450942985796794e-05, 'entropy': 0.1859657846391201, 'num_tokens': 22492103.0, 'mean_token_accuracy': 0.9522583365440369, 'epoch': 1.15}
+
+ 38%|███▊      | 540/1404 [31:15<50:39,  3.52s/it]
+ 39%|███▊      | 541/1404 [31:19<52:56,  3.68s/it]
+ 39%|███▊      | 542/1404 [31:23<51:25,  3.58s/it]
+ 39%|███▊      | 543/1404 [31:26<50:31,  3.52s/it]
+ 39%|███▊      | 544/1404 [31:30<50:26,  3.52s/it]
+ 39%|███▉      | 545/1404 [31:33<49:34,  3.46s/it]
+ 39%|███▉      | 546/1404 [31:36<49:09,  3.44s/it]
+ 39%|███▉      | 547/1404 [31:40<48:56,  3.43s/it]
+ 39%|███▉      | 548/1404 [31:43<50:11,  3.52s/it]
+ 39%|███▉      | 549/1404 [31:47<51:13,  3.59s/it]
+ 39%|███▉      | 550/1404 [31:51<51:58,  3.65s/it]
+                                                  
+{'loss': 0.1705, 'grad_norm': 1.40625, 'learning_rate': 1.4297841645711738e-05, 'entropy': 0.18688944540917873, 'num_tokens': 22912487.0, 'mean_token_accuracy': 0.9529327616095543, 'epoch': 1.18}
+
+ 39%|███▉      | 550/1404 [31:51<51:58,  3.65s/it]
+ 39%|███▉      | 551/1404 [31:54<48:20,  3.40s/it]
+ 39%|███▉      | 552/1404 [31:57<48:30,  3.42s/it]
+ 39%|███▉      | 553/1404 [32:01<48:03,  3.39s/it]
+ 39%|███▉      | 554/1404 [32:04<47:43,  3.37s/it]
+ 40%|███▉      | 555/1404 [32:07<46:37,  3.30s/it]
+ 40%|███▉      | 556/1404 [32:10<47:26,  3.36s/it]
+ 40%|███▉      | 557/1404 [32:14<49:38,  3.52s/it]
+ 40%|███▉      | 558/1404 [32:18<49:14,  3.49s/it]
+ 40%|███▉      | 559/1404 [32:21<48:31,  3.45s/it]
+ 40%|███▉      | 560/1404 [32:25<48:35,  3.45s/it]
+                                                  
+{'loss': 0.1643, 'grad_norm': 1.3671875, 'learning_rate': 1.4083866338174964e-05, 'entropy': 0.18158644139766694, 'num_tokens': 23314574.0, 'mean_token_accuracy': 0.9543915122747422, 'epoch': 1.2}
+
+ 40%|███▉      | 560/1404 [32:25<48:35,  3.45s/it]
+ 40%|███▉      | 561/1404 [32:28<48:21,  3.44s/it]
+ 40%|████      | 562/1404 [32:31<47:33,  3.39s/it]
+ 40%|████      | 563/1404 [32:35<47:44,  3.41s/it]
+ 40%|████      | 564/1404 [32:38<45:49,  3.27s/it]
+ 40%|████      | 565/1404 [32:42<48:58,  3.50s/it]
+ 40%|████      | 566/1404 [32:45<48:11,  3.45s/it]
+ 40%|████      | 567/1404 [32:48<47:26,  3.40s/it]
+ 40%|████      | 568/1404 [32:52<47:37,  3.42s/it]
+ 41%|████      | 569/1404 [32:55<47:54,  3.44s/it]
+ 41%|████      | 570/1404 [32:59<47:28,  3.42s/it]
+                                                  
+{'loss': 0.1622, 'grad_norm': 1.46875, 'learning_rate': 1.386762278092916e-05, 'entropy': 0.1780468575656414, 'num_tokens': 23736290.0, 'mean_token_accuracy': 0.9554454147815704, 'epoch': 1.22}
+
+ 41%|████      | 570/1404 [32:59<47:28,  3.42s/it]
+ 41%|████      | 571/1404 [33:02<47:39,  3.43s/it]
+ 41%|████      | 572/1404 [33:06<49:52,  3.60s/it]
+ 41%|████      | 573/1404 [33:10<50:27,  3.64s/it]
+ 41%|████      | 574/1404 [33:13<47:24,  3.43s/it]
+ 41%|████      | 575/1404 [33:16<47:45,  3.46s/it]
+ 41%|████      | 576/1404 [33:20<47:42,  3.46s/it]
+ 41%|████      | 577/1404 [33:23<47:08,  3.42s/it]
+ 41%|████      | 578/1404 [33:26<46:36,  3.39s/it]
+ 41%|████      | 579/1404 [33:30<46:37,  3.39s/it]
+ 41%|████▏     | 580/1404 [33:34<48:35,  3.54s/it]
+                                                  
+{'loss': 0.1645, 'grad_norm': 1.46875, 'learning_rate': 1.3649231079370825e-05, 'entropy': 0.18107081912457942, 'num_tokens': 24140869.0, 'mean_token_accuracy': 0.9545478284358978, 'epoch': 1.24}
+
+ 41%|████▏     | 580/1404 [33:34<48:35,  3.54s/it]
+ 41%|████▏     | 581/1404 [33:37<48:55,  3.57s/it]
+ 41%|████▏     | 582/1404 [33:41<48:18,  3.53s/it]
+ 42%|████▏     | 583/1404 [33:44<47:50,  3.50s/it]
+ 42%|████▏     | 584/1404 [33:48<47:22,  3.47s/it]
+ 42%|████▏     | 585/1404 [33:51<47:12,  3.46s/it]
+ 42%|████▏     | 586/1404 [33:54<46:16,  3.39s/it]
+ 42%|████▏     | 587/1404 [33:58<46:42,  3.43s/it]
+ 42%|████▏     | 588/1404 [34:01<47:34,  3.50s/it]
+ 42%|████▏     | 589/1404 [34:05<46:14,  3.40s/it]
+ 42%|████▏     | 590/1404 [34:08<46:38,  3.44s/it]
+                                                  
+{'loss': 0.1635, 'grad_norm': 1.5, 'learning_rate': 1.3428812532012816e-05, 'entropy': 0.18125370442867278, 'num_tokens': 24570441.0, 'mean_token_accuracy': 0.955042339861393, 'epoch': 1.26}
+
+ 42%|████▏     | 590/1404 [34:08<46:38,  3.44s/it]
+ 42%|████▏     | 591/1404 [34:11<46:08,  3.41s/it]
+ 42%|████▏     | 592/1404 [34:14<44:30,  3.29s/it]
+ 42%|████▏     | 593/1404 [34:18<44:54,  3.32s/it]
+ 42%|████▏     | 594/1404 [34:21<45:33,  3.37s/it]
+ 42%|████▏     | 595/1404 [34:24<44:17,  3.29s/it]
+ 42%|████▏     | 596/1404 [34:27<42:50,  3.18s/it]
+ 43%|████▎     | 597/1404 [34:31<45:16,  3.37s/it]
+ 43%|████▎     | 598/1404 [34:35<46:09,  3.44s/it]
+ 43%|████▎     | 599/1404 [34:38<45:48,  3.41s/it]
+ 43%|████▎     | 600/1404 [34:41<45:29,  3.39s/it]
+                                                  
+{'loss': 0.161, 'grad_norm': 1.765625, 'learning_rate': 1.3206489563113054e-05, 'entropy': 0.180418599024415, 'num_tokens': 24991935.0, 'mean_token_accuracy': 0.955883914232254, 'epoch': 1.28}
+
+ 43%|████▎     | 600/1404 [34:42<45:29,  3.39s/it]
+ 43%|████▎     | 601/1404 [34:45<45:19,  3.39s/it]
+ 43%|████▎     | 602/1404 [34:48<45:22,  3.39s/it]
+ 43%|████▎     | 603/1404 [34:52<47:43,  3.57s/it]
+ 43%|████▎     | 604/1404 [34:56<48:24,  3.63s/it]
+ 43%|████▎     | 605/1404 [35:00<48:48,  3.67s/it]
+ 43%|████▎     | 606/1404 [35:03<47:45,  3.59s/it]
+ 43%|████▎     | 607/1404 [35:06<44:49,  3.37s/it]
+ 43%|████▎     | 608/1404 [35:10<45:08,  3.40s/it]
+ 43%|████▎     | 609/1404 [35:13<45:24,  3.43s/it]
+ 43%|████▎     | 610/1404 [35:16<45:25,  3.43s/it]
+                                                  
+{'loss': 0.1588, 'grad_norm': 1.7265625, 'learning_rate': 1.2982385654677989e-05, 'entropy': 0.17487620264291764, 'num_tokens': 25404180.0, 'mean_token_accuracy': 0.9562819689512253, 'epoch': 1.3}
+
+ 43%|████▎     | 610/1404 [35:17<45:25,  3.43s/it]
+ 44%|████▎     | 611/1404 [35:20<45:04,  3.41s/it]
+ 44%|████▎     | 612/1404 [35:24<47:11,  3.57s/it]
+ 44%|████▎     | 613/1404 [35:27<46:39,  3.54s/it]
+ 44%|████▎     | 614/1404 [35:31<46:48,  3.55s/it]
+ 44%|████▍     | 615/1404 [35:34<45:42,  3.48s/it]
+ 44%|████▍     | 616/1404 [35:38<45:30,  3.46s/it]
+ 44%|████▍     | 617/1404 [35:41<45:31,  3.47s/it]
+ 44%|████▍     | 618/1404 [35:45<45:29,  3.47s/it]
+ 44%|████▍     | 619/1404 [35:48<45:13,  3.46s/it]
+ 44%|████▍     | 620/1404 [35:51<45:30,  3.48s/it]
+                                                  
+{'loss': 0.1583, 'grad_norm': 1.5234375, 'learning_rate': 1.2756625277878571e-05, 'entropy': 0.17672029435634612, 'num_tokens': 25827706.0, 'mean_token_accuracy': 0.9562893003225327, 'epoch': 1.33}
+
+ 44%|████▍     | 620/1404 [35:52<45:30,  3.48s/it]
+ 44%|████▍     | 621/1404 [35:55<44:54,  3.44s/it]
+ 44%|████▍     | 622/1404 [35:58<43:58,  3.37s/it]
+ 44%|████▍     | 623/1404 [36:01<43:08,  3.31s/it]
+ 44%|████▍     | 624/1404 [36:05<43:30,  3.35s/it]
+ 45%|████▍     | 625/1404 [36:08<43:58,  3.39s/it]
+ 45%|████▍     | 626/1404 [36:11<43:42,  3.37s/it]
+ 45%|████▍     | 627/1404 [36:15<45:09,  3.49s/it]
+ 45%|████▍     | 628/1404 [36:19<45:39,  3.53s/it]
+ 45%|████▍     | 629/1404 [36:22<45:09,  3.50s/it]
+ 45%|████▍     | 630/1404 [36:26<44:30,  3.45s/it]
+                                                  
+{'loss': 0.1567, 'grad_norm': 1.546875, 'learning_rate': 1.2529333823916807e-05, 'entropy': 0.17682174928486347, 'num_tokens': 26239651.0, 'mean_token_accuracy': 0.9565541565418243, 'epoch': 1.35}
+
+ 45%|████▍     | 630/1404 [36:26<44:30,  3.45s/it]
+ 45%|████▍     | 631/1404 [36:29<42:33,  3.30s/it]
+ 45%|████▌     | 632/1404 [36:32<42:27,  3.30s/it]
+ 45%|████▌     | 633/1404 [36:35<42:48,  3.33s/it]
+ 45%|████▌     | 634/1404 [36:39<43:24,  3.38s/it]
+ 45%|████▌     | 635/1404 [36:42<42:37,  3.33s/it]
+ 45%|████▌     | 636/1404 [36:46<44:55,  3.51s/it]
+ 45%|████▌     | 637/1404 [36:49<45:06,  3.53s/it]
+ 45%|████▌     | 638/1404 [36:53<44:42,  3.50s/it]
+ 46%|████▌     | 639/1404 [36:56<44:01,  3.45s/it]
+ 46%|████▌     | 640/1404 [37:00<43:52,  3.45s/it]
+                                                  
+{'loss': 0.1545, 'grad_norm': 1.6328125, 'learning_rate': 1.2300637534381336e-05, 'entropy': 0.17444019317626952, 'num_tokens': 26652393.0, 'mean_token_accuracy': 0.9573904380202294, 'epoch': 1.37}
+
+ 46%|████▌     | 640/1404 [37:00<43:52,  3.45s/it]
+ 46%|████▌     | 641/1404 [37:03<43:03,  3.39s/it]
+ 46%|████▌     | 642/1404 [37:06<42:06,  3.32s/it]
+ 46%|████▌     | 643/1404 [37:10<44:00,  3.47s/it]
+ 46%|████▌     | 644/1404 [37:13<43:45,  3.45s/it]
+ 46%|████▌     | 645/1404 [37:17<42:52,  3.39s/it]
+ 46%|████▌     | 646/1404 [37:20<41:56,  3.32s/it]
+ 46%|████▌     | 647/1404 [37:23<41:43,  3.31s/it]
+ 46%|████▌     | 648/1404 [37:26<41:39,  3.31s/it]
+ 46%|████▌     | 649/1404 [37:30<41:21,  3.29s/it]
+ 46%|████▋     | 650/1404 [37:33<41:39,  3.31s/it]
+                                                  
+{'loss': 0.1544, 'grad_norm': 1.515625, 'learning_rate': 1.2070663431130666e-05, 'entropy': 0.17326070331037044, 'num_tokens': 27052844.0, 'mean_token_accuracy': 0.9576219707727432, 'epoch': 1.39}
+
+ 46%|████▋     | 650/1404 [37:33<41:39,  3.31s/it]
+ 46%|████▋     | 651/1404 [37:37<43:48,  3.49s/it]
+ 46%|████▋     | 652/1404 [37:40<43:37,  3.48s/it]
+ 47%|████▋     | 653/1404 [37:43<42:36,  3.40s/it]
+ 47%|████▋     | 654/1404 [37:47<43:38,  3.49s/it]
+ 47%|████▋     | 655/1404 [37:51<43:35,  3.49s/it]
+ 47%|████▋     | 656/1404 [37:54<43:10,  3.46s/it]
+ 47%|████▋     | 657/1404 [37:58<43:07,  3.46s/it]
+ 47%|████▋     | 658/1404 [38:01<42:27,  3.41s/it]
+ 47%|████▋     | 659/1404 [38:04<43:08,  3.47s/it]
+ 47%|████▋     | 660/1404 [38:08<42:53,  3.46s/it]
+                                                  
+{'loss': 0.152, 'grad_norm': 1.46875, 'learning_rate': 1.1839539245743066e-05, 'entropy': 0.17236062921583653, 'num_tokens': 27466862.0, 'mean_token_accuracy': 0.9583996221423149, 'epoch': 1.41}
+
+ 47%|████▋     | 660/1404 [38:08<42:53,  3.46s/it]
+ 47%|████▋     | 661/1404 [38:11<42:58,  3.47s/it]
+ 47%|████▋     | 662/1404 [38:15<41:59,  3.40s/it]
+ 47%|████▋     | 663/1404 [38:18<42:10,  3.42s/it]
+ 47%|████▋     | 664/1404 [38:21<41:42,  3.38s/it]
+ 47%|████▋     | 665/1404 [38:25<43:18,  3.52s/it]
+ 47%|████▋     | 666/1404 [38:29<44:05,  3.58s/it]
+ 48%|████▊     | 667/1404 [38:32<42:56,  3.50s/it]
+ 48%|████▊     | 668/1404 [38:36<42:56,  3.50s/it]
+ 48%|████▊     | 669/1404 [38:39<42:53,  3.50s/it]
+ 48%|████▊     | 670/1404 [38:43<42:39,  3.49s/it]
+                                                  
+{'loss': 0.1507, 'grad_norm': 1.4609375, 'learning_rate': 1.160739334857222e-05, 'entropy': 0.16964504234492778, 'num_tokens': 27878983.0, 'mean_token_accuracy': 0.958775494992733, 'epoch': 1.43}
+
+ 48%|████▊     | 670/1404 [38:43<42:39,  3.49s/it]
+ 48%|████▊     | 671/1404 [38:46<41:57,  3.43s/it]
+ 48%|████▊     | 672/1404 [38:49<41:44,  3.42s/it]
+ 48%|████▊     | 673/1404 [38:53<41:45,  3.43s/it]
+ 48%|████▊     | 674/1404 [38:57<43:28,  3.57s/it]
+ 48%|████▊     | 675/1404 [39:00<43:36,  3.59s/it]
+ 48%|████▊     | 676/1404 [39:04<43:21,  3.57s/it]
+ 48%|████▊     | 677/1404 [39:07<42:41,  3.52s/it]
+ 48%|████▊     | 678/1404 [39:11<42:05,  3.48s/it]
+ 48%|████▊     | 679/1404 [39:14<41:43,  3.45s/it]
+ 48%|████▊     | 680/1404 [39:18<41:49,  3.47s/it]
+                                                  
+{'loss': 0.1497, 'grad_norm': 1.3984375, 'learning_rate': 1.1374354677448145e-05, 'entropy': 0.16997216753661631, 'num_tokens': 28294098.0, 'mean_token_accuracy': 0.9590862974524498, 'epoch': 1.45}
+
+ 48%|████▊     | 680/1404 [39:18<41:49,  3.47s/it]
+ 49%|████▊     | 681/1404 [39:21<41:50,  3.47s/it]
+ 49%|████▊     | 682/1404 [39:25<41:53,  3.48s/it]
+ 49%|████▊     | 683/1404 [39:29<43:46,  3.64s/it]
+ 49%|████▊     | 684/1404 [39:32<42:42,  3.56s/it]
+ 49%|████▉     | 685/1404 [39:35<42:07,  3.51s/it]
+ 49%|████▉     | 686/1404 [39:39<42:18,  3.54s/it]
+ 49%|████▉     | 687/1404 [39:42<41:17,  3.46s/it]
+ 49%|████▉     | 688/1404 [39:46<41:03,  3.44s/it]
+ 49%|████▉     | 689/1404 [39:49<40:30,  3.40s/it]
+ 49%|████▉     | 690/1404 [39:53<41:15,  3.47s/it]
+                                                  
+{'loss': 0.149, 'grad_norm': 1.3671875, 'learning_rate': 1.1140552666062883e-05, 'entropy': 0.17089658230543137, 'num_tokens': 28719576.0, 'mean_token_accuracy': 0.9592411428689956, 'epoch': 1.48}
+
+ 49%|████▉     | 690/1404 [39:53<41:15,  3.47s/it]
+ 49%|████▉     | 691/1404 [39:56<42:01,  3.54s/it]
+ 49%|████▉     | 692/1404 [39:59<39:33,  3.33s/it]
+ 49%|████▉     | 693/1404 [40:03<40:46,  3.44s/it]
+ 49%|████▉     | 694/1404 [40:06<40:36,  3.43s/it]
+ 50%|████▉     | 695/1404 [40:10<40:21,  3.42s/it]
+ 50%|████▉     | 696/1404 [40:13<39:29,  3.35s/it]
+ 50%|████▉     | 697/1404 [40:16<40:31,  3.44s/it]
+ 50%|████▉     | 698/1404 [40:20<41:11,  3.50s/it]
+ 50%|████▉     | 699/1404 [40:24<40:58,  3.49s/it]
+ 50%|████▉     | 700/1404 [40:27<41:36,  3.55s/it]
+                                                  
+{'loss': 0.1492, 'grad_norm': 1.46875, 'learning_rate': 1.0906117172080812e-05, 'entropy': 0.17090923488140106, 'num_tokens': 29145570.0, 'mean_token_accuracy': 0.9594628676772118, 'epoch': 1.5}
+
+ 50%|████▉     | 700/1404 [40:27<41:36,  3.55s/it]
+ 50%|████▉     | 701/1404 [40:31<40:52,  3.49s/it]
+ 50%|█████     | 702/1404 [40:34<40:48,  3.49s/it]
+ 50%|█████     | 703/1404 [40:37<39:55,  3.42s/it]
+ 50%|█████     | 704/1404 [40:41<39:33,  3.39s/it]
+ 50%|█████     | 705/1404 [40:44<40:08,  3.45s/it]
+ 50%|█████     | 706/1404 [40:48<41:30,  3.57s/it]
+ 50%|█████     | 707/1404 [40:51<40:16,  3.47s/it]
+ 50%|█████     | 708/1404 [40:55<39:25,  3.40s/it]
+ 50%|█████     | 709/1404 [40:58<40:03,  3.46s/it]
+ 51%|█████     | 710/1404 [41:02<40:01,  3.46s/it]
+                                                  
+{'loss': 0.1468, 'grad_norm': 1.6796875, 'learning_rate': 1.0671178405013454e-05, 'entropy': 0.16889250092208385, 'num_tokens': 29550050.0, 'mean_token_accuracy': 0.9594772160053253, 'epoch': 1.52}
+
+ 51%|█████     | 710/1404 [41:02<40:01,  3.46s/it]
+ 51%|█████     | 711/1404 [41:05<40:18,  3.49s/it]
+ 51%|█████     | 712/1404 [41:09<40:00,  3.47s/it]
+ 51%|█████     | 713/1404 [41:12<40:13,  3.49s/it]
+ 51%|█████     | 714/1404 [41:16<40:40,  3.54s/it]
+ 51%|█████     | 715/1404 [41:19<39:43,  3.46s/it]
+ 51%|█████     | 716/1404 [41:22<39:28,  3.44s/it]
+ 51%|█████     | 717/1404 [41:26<39:24,  3.44s/it]
+ 51%|█████     | 718/1404 [41:29<39:23,  3.45s/it]
+ 51%|█████     | 719/1404 [41:33<38:37,  3.38s/it]
+ 51%|█████▏    | 720/1404 [41:36<38:51,  3.41s/it]
+                                                  
+{'loss': 0.1505, 'grad_norm': 1.3203125, 'learning_rate': 1.0435866853898869e-05, 'entropy': 0.17060910277068614, 'num_tokens': 29967332.0, 'mean_token_accuracy': 0.9588630557060241, 'epoch': 1.54}
+
+ 51%|█████▏    | 720/1404 [41:36<38:51,  3.41s/it]
+ 51%|█████▏    | 721/1404 [41:40<39:43,  3.49s/it]
+ 51%|█████▏    | 722/1404 [41:44<40:59,  3.61s/it]
+ 51%|█████▏    | 723/1404 [41:47<40:48,  3.60s/it]
+ 52%|█████▏    | 724/1404 [41:51<40:07,  3.54s/it]
+ 52%|█████▏    | 725/1404 [41:54<40:58,  3.62s/it]
+ 52%|█████▏    | 726/1404 [41:58<40:24,  3.58s/it]
+ 52%|█████▏    | 727/1404 [42:01<39:44,  3.52s/it]
+ 52%|█████▏    | 728/1404 [42:04<37:53,  3.36s/it]
+ 52%|█████▏    | 729/1404 [42:08<38:54,  3.46s/it]
+ 52%|█████▏    | 730/1404 [42:12<39:31,  3.52s/it]
+                                                  
+{'loss': 0.1464, 'grad_norm': 1.3828125, 'learning_rate': 1.0200313214825797e-05, 'entropy': 0.16887806542217731, 'num_tokens': 30420834.0, 'mean_token_accuracy': 0.9601036489009858, 'epoch': 1.56}
+
+ 52%|█████▏    | 730/1404 [42:12<39:31,  3.52s/it]
+ 52%|█████▏    | 731/1404 [42:15<39:10,  3.49s/it]
+ 52%|█████▏    | 732/1404 [42:19<39:48,  3.55s/it]
+ 52%|█████▏    | 733/1404 [42:22<38:04,  3.40s/it]
+ 52%|█████▏    | 734/1404 [42:25<38:18,  3.43s/it]
+ 52%|█████▏    | 735/1404 [42:29<38:34,  3.46s/it]
+ 52%|█████▏    | 736/1404 [42:33<39:58,  3.59s/it]
+ 52%|█████▏    | 737/1404 [42:36<40:09,  3.61s/it]
+ 53%|█████▎    | 738/1404 [42:40<40:16,  3.63s/it]
+ 53%|█████▎    | 739/1404 [42:43<39:12,  3.54s/it]
+ 53%|█████▎    | 740/1404 [42:47<38:54,  3.52s/it]
+                                                  
+{'loss': 0.1456, 'grad_norm': 1.6328125, 'learning_rate': 9.964648318342807e-06, 'entropy': 0.16523521319031714, 'num_tokens': 30873402.0, 'mean_token_accuracy': 0.9604591712355613, 'epoch': 1.58}
+
+ 53%|█████▎    | 740/1404 [42:47<38:54,  3.52s/it]
+ 53%|█████▎    | 741/1404 [42:50<37:58,  3.44s/it]
+ 53%|█████▎    | 742/1404 [42:53<35:51,  3.25s/it]
+ 53%|█████▎    | 743/1404 [42:56<34:55,  3.17s/it]
+ 53%|█████▎    | 744/1404 [42:59<36:01,  3.27s/it]
+ 53%|█████▎    | 745/1404 [43:03<36:09,  3.29s/it]
+ 53%|█████▎    | 746/1404 [43:06<37:37,  3.43s/it]
+ 53%|█████▎    | 747/1404 [43:10<37:16,  3.40s/it]
+ 53%|█████▎    | 748/1404 [43:13<37:37,  3.44s/it]
+ 53%|█████▎    | 749/1404 [43:17<38:40,  3.54s/it]
+ 53%|█████▎    | 750/1404 [43:21<38:21,  3.52s/it]
+                                                  
+{'loss': 0.1413, 'grad_norm': 1.7890625, 'learning_rate': 9.729003056792742e-06, 'entropy': 0.1626732274889946, 'num_tokens': 31261160.0, 'mean_token_accuracy': 0.961717963218689, 'epoch': 1.6}
+
+ 53%|█████▎    | 750/1404 [43:21<38:21,  3.52s/it]
+ 53%|█████▎    | 751/1404 [43:24<37:28,  3.44s/it]
+ 54%|█████▎    | 752/1404 [43:27<37:21,  3.44s/it]
+ 54%|█████▎    | 753/1404 [43:31<39:35,  3.65s/it]
+ 54%|█████▎    | 754/1404 [43:35<40:36,  3.75s/it]
+ 54%|█████▍    | 755/1404 [43:39<39:42,  3.67s/it]
+ 54%|█████▍    | 756/1404 [43:42<39:08,  3.62s/it]
+ 54%|█████▍    | 757/1404 [43:46<38:28,  3.57s/it]
+ 54%|█████▍    | 758/1404 [43:49<37:50,  3.52s/it]
+ 54%|█████▍    | 759/1404 [43:53<37:39,  3.50s/it]
+ 54%|█████▍    | 760/1404 [43:57<38:32,  3.59s/it]
+                                                  
+{'loss': 0.1437, 'grad_norm': 1.53125, 'learning_rate': 9.493508311612874e-06, 'entropy': 0.16605041064321996, 'num_tokens': 31695957.0, 'mean_token_accuracy': 0.960567519068718, 'epoch': 1.62}
+
+ 54%|█████▍    | 760/1404 [43:57<38:32,  3.59s/it]
+ 54%|█████▍    | 761/1404 [44:00<38:56,  3.63s/it]
+ 54%|█████▍    | 762/1404 [44:04<37:55,  3.54s/it]
+ 54%|█████▍    | 763/1404 [44:07<38:45,  3.63s/it]
+ 54%|█████▍    | 764/1404 [44:11<38:04,  3.57s/it]
+ 54%|█████▍    | 765/1404 [44:14<37:34,  3.53s/it]
+ 55%|█████▍    | 766/1404 [44:18<37:27,  3.52s/it]
+ 55%|█████▍    | 767/1404 [44:21<35:59,  3.39s/it]
+ 55%|█████▍    | 768/1404 [44:25<37:27,  3.53s/it]
+ 55%|█████▍    | 769/1404 [44:29<38:37,  3.65s/it]
+ 55%|█████▍    | 770/1404 [44:32<37:53,  3.59s/it]
+                                                  
+{'loss': 0.1439, 'grad_norm': 1.6953125, 'learning_rate': 9.258294880641078e-06, 'entropy': 0.16638884767889978, 'num_tokens': 32102506.0, 'mean_token_accuracy': 0.9601912677288056, 'epoch': 1.65}
+
+ 55%|█████▍    | 770/1404 [44:32<37:53,  3.59s/it]
+ 55%|█████▍    | 771/1404 [44:36<37:18,  3.54s/it]
+ 55%|█████▍    | 772/1404 [44:39<38:14,  3.63s/it]
+ 55%|█████▌    | 773/1404 [44:42<35:12,  3.35s/it]
+ 55%|█████▌    | 774/1404 [44:45<35:03,  3.34s/it]
+ 55%|█████▌    | 775/1404 [44:49<35:16,  3.36s/it]
+ 55%|█████▌    | 776/1404 [44:52<35:43,  3.41s/it]
+ 55%|█████▌    | 777/1404 [44:56<36:41,  3.51s/it]
+ 55%|█████▌    | 778/1404 [44:59<35:30,  3.40s/it]
+ 55%|█████▌    | 779/1404 [45:03<35:13,  3.38s/it]
+ 56%|█████▌    | 780/1404 [45:06<35:10,  3.38s/it]
+                                                  
+{'loss': 0.1385, 'grad_norm': 1.9609375, 'learning_rate': 9.023493405468487e-06, 'entropy': 0.16011262089014053, 'num_tokens': 32488487.0, 'mean_token_accuracy': 0.962880302965641, 'epoch': 1.67}
+
+ 56%|█████▌    | 780/1404 [45:06<35:10,  3.38s/it]
+ 56%|█████▌    | 781/1404 [45:09<35:27,  3.41s/it]
+ 56%|█████▌    | 782/1404 [45:13<35:29,  3.42s/it]
+ 56%|█████▌    | 783/1404 [45:16<35:24,  3.42s/it]
+ 56%|█████▌    | 784/1404 [45:20<36:03,  3.49s/it]
+ 56%|█████▌    | 785/1404 [45:24<37:56,  3.68s/it]
+ 56%|█████▌    | 786/1404 [45:27<36:34,  3.55s/it]
+ 56%|█████▌    | 787/1404 [45:31<35:42,  3.47s/it]
+ 56%|█████▌    | 788/1404 [45:34<34:20,  3.35s/it]
+ 56%|█████▌    | 789/1404 [45:37<34:41,  3.38s/it]
+ 56%|█████▋    | 790/1404 [45:41<35:04,  3.43s/it]
+                                                  
+{'loss': 0.1414, 'grad_norm': 1.4296875, 'learning_rate': 8.78923429887887e-06, 'entropy': 0.16406687386333943, 'num_tokens': 32924313.0, 'mean_token_accuracy': 0.9618461892008782, 'epoch': 1.69}
+
+ 56%|█████▋    | 790/1404 [45:41<35:04,  3.43s/it]
+ 56%|█████▋    | 791/1404 [45:44<35:09,  3.44s/it]
+ 56%|█████▋    | 792/1404 [45:48<35:00,  3.43s/it]
+ 56%|█████▋    | 793/1404 [45:51<35:18,  3.47s/it]
+ 57%|█████▋    | 794/1404 [45:55<35:31,  3.49s/it]
+ 57%|█████▋    | 795/1404 [45:59<37:09,  3.66s/it]
+ 57%|█████▋    | 796/1404 [46:02<36:26,  3.60s/it]
+ 57%|█████▋    | 797/1404 [46:06<36:21,  3.59s/it]
+ 57%|█████▋    | 798/1404 [46:09<35:46,  3.54s/it]
+ 57%|█████▋    | 799/1404 [46:13<36:26,  3.61s/it]
+ 57%|█████▋    | 800/1404 [46:17<37:14,  3.70s/it]
+                                                  
+{'loss': 0.1416, 'grad_norm': 1.3359375, 'learning_rate': 8.555647672415162e-06, 'entropy': 0.1634061736986041, 'num_tokens': 33354975.0, 'mean_token_accuracy': 0.9613689333200455, 'epoch': 1.71}
+
+ 57%|█████▋    | 800/1404 [46:17<37:14,  3.70s/it]
+ 57%|█████▋    | 801/1404 [46:20<36:15,  3.61s/it]
+ 57%|█████▋    | 802/1404 [46:23<33:53,  3.38s/it]
+ 57%|█████▋    | 803/1404 [46:26<33:25,  3.34s/it]
+ 57%|█████▋    | 804/1404 [46:30<35:10,  3.52s/it]
+ 57%|█████▋    | 805/1404 [46:34<34:55,  3.50s/it]
+ 57%|█████▋    | 806/1404 [46:37<32:59,  3.31s/it]
+ 57%|█████▋    | 807/1404 [46:40<33:25,  3.36s/it]
+ 58%|█████▊    | 808/1404 [46:44<34:50,  3.51s/it]
+ 58%|█████▊    | 809/1404 [46:47<34:27,  3.48s/it]
+ 58%|█████▊    | 810/1404 [46:51<34:06,  3.45s/it]
+                                                  
+{'loss': 0.1375, 'grad_norm': 1.4453125, 'learning_rate': 8.322863264113235e-06, 'entropy': 0.15897261463105677, 'num_tokens': 33758347.0, 'mean_token_accuracy': 0.962820878624916, 'epoch': 1.73}
+
+ 58%|█████▊    | 810/1404 [46:51<34:06,  3.45s/it]
+ 58%|█████▊    | 811/1404 [46:54<34:13,  3.46s/it]
+ 58%|█████▊    | 812/1404 [46:58<35:05,  3.56s/it]
+ 58%|█████▊    | 813/1404 [47:01<33:16,  3.38s/it]
+ 58%|█████▊    | 814/1404 [47:04<33:42,  3.43s/it]
+ 58%|█████▊    | 815/1404 [47:08<34:51,  3.55s/it]
+ 58%|█████▊    | 816/1404 [47:12<35:57,  3.67s/it]
+ 58%|█████▊    | 817/1404 [47:16<35:27,  3.62s/it]
+ 58%|█████▊    | 818/1404 [47:19<34:57,  3.58s/it]
+ 58%|█████▊    | 819/1404 [47:22<32:34,  3.34s/it]
+ 58%|█████▊    | 820/1404 [47:26<34:29,  3.54s/it]
+                                                  
+{'loss': 0.1404, 'grad_norm': 1.3046875, 'learning_rate': 8.091010366443189e-06, 'entropy': 0.16236928272992374, 'num_tokens': 34172468.0, 'mean_token_accuracy': 0.9623703420162201, 'epoch': 1.75}
+
+ 58%|█████▊    | 820/1404 [47:26<34:29,  3.54s/it]
+ 58%|█████▊    | 821/1404 [47:29<33:56,  3.49s/it]
+ 59%|█████▊    | 822/1404 [47:33<33:22,  3.44s/it]
+ 59%|█████▊    | 823/1404 [47:37<34:23,  3.55s/it]
+ 59%|█████▊    | 824/1404 [47:40<34:50,  3.60s/it]
+ 59%|█████▉    | 825/1404 [47:44<34:37,  3.59s/it]
+ 59%|█████▉    | 826/1404 [47:47<32:47,  3.40s/it]
+ 59%|█████▉    | 827/1404 [47:51<33:48,  3.52s/it]
+ 59%|█████▉    | 828/1404 [47:54<33:48,  3.52s/it]
+ 59%|█████▉    | 829/1404 [47:58<33:36,  3.51s/it]
+ 59%|█████▉    | 830/1404 [48:01<33:21,  3.49s/it]
+                                                  
+{'loss': 0.1422, 'grad_norm': 1.390625, 'learning_rate': 7.86021775449806e-06, 'entropy': 0.16462442204356192, 'num_tokens': 34592174.0, 'mean_token_accuracy': 0.960956871509552, 'epoch': 1.77}
+
+ 59%|█████▉    | 830/1404 [48:01<33:21,  3.49s/it]
+ 59%|█████▉    | 831/1404 [48:05<34:11,  3.58s/it]
+ 59%|█████▉    | 832/1404 [48:08<33:38,  3.53s/it]
+ 59%|█████▉    | 833/1404 [48:12<33:09,  3.48s/it]
+ 59%|█████▉    | 834/1404 [48:15<32:59,  3.47s/it]
+ 59%|█████▉    | 835/1404 [48:18<32:13,  3.40s/it]
+ 60%|█████▉    | 836/1404 [48:22<32:40,  3.45s/it]
+ 60%|█████▉    | 837/1404 [48:25<32:00,  3.39s/it]
+ 60%|█████▉    | 838/1404 [48:29<33:56,  3.60s/it]
+ 60%|█████▉    | 839/1404 [48:32<33:08,  3.52s/it]
+ 60%|█████▉    | 840/1404 [48:36<33:57,  3.61s/it]
+                                                  
+{'loss': 0.1365, 'grad_norm': 1.2578125, 'learning_rate': 7.630613614469948e-06, 'entropy': 0.16266395710408688, 'num_tokens': 35001660.0, 'mean_token_accuracy': 0.963075204193592, 'epoch': 1.8}
+
+ 60%|█████▉    | 840/1404 [48:36<33:57,  3.61s/it]
+ 60%|█████▉    | 841/1404 [48:40<33:41,  3.59s/it]
+ 60%|█████▉    | 842/1404 [48:43<32:55,  3.52s/it]
+ 60%|██████    | 843/1404 [48:47<32:15,  3.45s/it]
+ 60%|██████    | 844/1404 [48:50<32:18,  3.46s/it]
+ 60%|██████    | 845/1404 [48:53<31:46,  3.41s/it]
+ 60%|██████    | 846/1404 [48:57<32:37,  3.51s/it]
+ 60%|██████    | 847/1404 [49:01<33:11,  3.58s/it]
+ 60%|██████    | 848/1404 [49:05<33:48,  3.65s/it]
+ 60%|██████    | 849/1404 [49:08<33:04,  3.58s/it]
+ 61%|██████    | 850/1404 [49:11<32:18,  3.50s/it]
+                                                  
+{'loss': 0.138, 'grad_norm': 1.40625, 'learning_rate': 7.402325472453158e-06, 'entropy': 0.16156419962644578, 'num_tokens': 35435162.0, 'mean_token_accuracy': 0.9630140334367752, 'epoch': 1.82}
+
+ 61%|██████    | 850/1404 [49:11<32:18,  3.50s/it]
+ 61%|██████    | 851/1404 [49:15<32:09,  3.49s/it]
+ 61%|██████    | 852/1404 [49:19<32:50,  3.57s/it]
+ 61%|██████    | 853/1404 [49:22<31:53,  3.47s/it]
+ 61%|██████    | 854/1404 [49:26<32:52,  3.59s/it]
+ 61%|██████    | 855/1404 [49:29<33:36,  3.67s/it]
+ 61%|██████    | 856/1404 [49:33<32:37,  3.57s/it]
+ 61%|██████    | 857/1404 [49:36<32:12,  3.53s/it]
+ 61%|██████    | 858/1404 [49:39<30:59,  3.40s/it]
+ 61%|██████    | 859/1404 [49:43<32:06,  3.54s/it]
+ 61%|██████▏   | 860/1404 [49:47<32:43,  3.61s/it]
+                                                  
+{'loss': 0.1386, 'grad_norm': 1.265625, 'learning_rate': 7.175480123614048e-06, 'entropy': 0.16104926951229573, 'num_tokens': 35841222.0, 'mean_token_accuracy': 0.9623268291354179, 'epoch': 1.84}
+
+ 61%|██████▏   | 860/1404 [49:47<32:43,  3.61s/it]
+ 61%|██████▏   | 861/1404 [49:50<32:21,  3.58s/it]
+ 61%|██████▏   | 862/1404 [49:54<31:15,  3.46s/it]
+ 61%|██████▏   | 863/1404 [49:57<30:48,  3.42s/it]
+ 62%|██████▏   | 864/1404 [50:00<30:36,  3.40s/it]
+ 62%|██████▏   | 865/1404 [50:04<30:35,  3.41s/it]
+ 62%|██████▏   | 866/1404 [50:07<30:44,  3.43s/it]
+ 62%|██████▏   | 867/1404 [50:10<30:08,  3.37s/it]
+ 62%|██████▏   | 868/1404 [50:14<31:47,  3.56s/it]
+ 62%|██████▏   | 869/1404 [50:18<31:19,  3.51s/it]
+ 62%|██████▏   | 870/1404 [50:22<31:55,  3.59s/it]
+                                                  
+{'loss': 0.1377, 'grad_norm': 1.3359375, 'learning_rate': 6.95020356176678e-06, 'entropy': 0.15913184974342584, 'num_tokens': 36225866.0, 'mean_token_accuracy': 0.9629390016198158, 'epoch': 1.86}
+
+ 62%|██████▏   | 870/1404 [50:22<31:55,  3.59s/it]
+ 62%|██████▏   | 871/1404 [50:25<31:33,  3.55s/it]
+ 62%|██████▏   | 872/1404 [50:28<30:52,  3.48s/it]
+ 62%|██████▏   | 873/1404 [50:32<30:38,  3.46s/it]
+ 62%|██████▏   | 874/1404 [50:35<30:40,  3.47s/it]
+ 62%|██████▏   | 875/1404 [50:39<30:48,  3.49s/it]
+ 62%|██████▏   | 876/1404 [50:42<30:27,  3.46s/it]
+ 62%|██████▏   | 877/1404 [50:46<29:56,  3.41s/it]
+ 63%|██████▎   | 878/1404 [50:50<31:46,  3.62s/it]
+ 63%|██████▎   | 879/1404 [50:53<31:48,  3.64s/it]
+ 63%|██████▎   | 880/1404 [50:57<31:28,  3.60s/it]
+                                                  
+{'loss': 0.1389, 'grad_norm': 1.5234375, 'learning_rate': 6.7266209093942104e-06, 'entropy': 0.16391554959118365, 'num_tokens': 36664565.0, 'mean_token_accuracy': 0.9625502467155457, 'epoch': 1.88}
+
+ 63%|██████▎   | 880/1404 [50:57<31:28,  3.60s/it]
+ 63%|██████▎   | 881/1404 [51:00<30:18,  3.48s/it]
+ 63%|██████▎   | 882/1404 [51:03<28:30,  3.28s/it]
+ 63%|██████▎   | 883/1404 [51:07<29:54,  3.44s/it]
+ 63%|██████▎   | 884/1404 [51:10<29:46,  3.43s/it]
+ 63%|██████▎   | 885/1404 [51:14<30:53,  3.57s/it]
+ 63%|██████▎   | 886/1404 [51:17<29:12,  3.38s/it]
+ 63%|██████▎   | 887/1404 [51:21<29:58,  3.48s/it]
+ 63%|██████▎   | 888/1404 [51:24<29:46,  3.46s/it]
+ 63%|██████▎   | 889/1404 [51:27<29:09,  3.40s/it]
+ 63%|██████▎   | 890/1404 [51:31<29:42,  3.47s/it]
+                                                  
+{'loss': 0.1394, 'grad_norm': 1.4609375, 'learning_rate': 6.504856348152682e-06, 'entropy': 0.16065408959984778, 'num_tokens': 37065570.0, 'mean_token_accuracy': 0.96250179708004, 'epoch': 1.9}
+
+ 63%|██████▎   | 890/1404 [51:31<29:42,  3.47s/it]
+ 63%|██████▎   | 891/1404 [51:34<29:29,  3.45s/it]
+ 64%|██████▎   | 892/1404 [51:38<29:45,  3.49s/it]
+ 64%|██████▎   | 893/1404 [51:41<29:40,  3.48s/it]
+ 64%|██████▎   | 894/1404 [51:45<29:31,  3.47s/it]
+ 64%|██████▎   | 895/1404 [51:48<29:34,  3.49s/it]
+ 64%|██████▍   | 896/1404 [51:52<29:22,  3.47s/it]
+ 64%|██████▍   | 897/1404 [51:55<29:14,  3.46s/it]
+ 64%|██████▍   | 898/1404 [51:59<29:18,  3.48s/it]
+ 64%|██████▍   | 899/1404 [52:02<29:10,  3.47s/it]
+ 64%|██████▍   | 900/1404 [52:05<27:34,  3.28s/it]
+                                                  
+{'loss': 0.1359, 'grad_norm': 1.578125, 'learning_rate': 6.2850330498994235e-06, 'entropy': 0.15865150541067125, 'num_tokens': 37476715.0, 'mean_token_accuracy': 0.9633012682199478, 'epoch': 1.92}
+
+ 64%|██████▍   | 900/1404 [52:05<27:34,  3.28s/it]
+ 64%|██████▍   | 901/1404 [52:09<28:57,  3.45s/it]
+ 64%|██████▍   | 902/1404 [52:12<28:41,  3.43s/it]
+ 64%|██████▍   | 903/1404 [52:16<28:36,  3.43s/it]
+ 64%|██████▍   | 904/1404 [52:19<28:14,  3.39s/it]
+ 64%|██████▍   | 905/1404 [52:23<28:27,  3.42s/it]
+ 65%|██████▍   | 906/1404 [52:26<28:13,  3.40s/it]
+ 65%|██████▍   | 907/1404 [52:29<28:19,  3.42s/it]
+ 65%|██████▍   | 908/1404 [52:33<29:21,  3.55s/it]
+ 65%|██████▍   | 909/1404 [52:37<30:21,  3.68s/it]
+ 65%|██████▍   | 910/1404 [52:40<28:56,  3.51s/it]
+                                                  
+{'loss': 0.134, 'grad_norm': 1.3984375, 'learning_rate': 6.067273108280745e-06, 'entropy': 0.16008135341107846, 'num_tokens': 37884451.0, 'mean_token_accuracy': 0.9636892527341843, 'epoch': 1.95}
+
+ 65%|██████▍   | 910/1404 [52:40<28:56,  3.51s/it]
+ 65%|██████▍   | 911/1404 [52:44<28:09,  3.43s/it]
+ 65%|██████▍   | 912/1404 [52:47<27:28,  3.35s/it]
+ 65%|██████▌   | 913/1404 [52:50<27:43,  3.39s/it]
+ 65%|██████▌   | 914/1404 [52:54<27:51,  3.41s/it]
+ 65%|██████▌   | 915/1404 [52:57<27:29,  3.37s/it]
+ 65%|██████▌   | 916/1404 [53:01<28:12,  3.47s/it]
+ 65%|██████▌   | 917/1404 [53:04<28:30,  3.51s/it]
+ 65%|██████▌   | 918/1404 [53:08<27:53,  3.44s/it]
+ 65%|██████▌   | 919/1404 [53:11<27:52,  3.45s/it]
+ 66%|██████▌   | 920/1404 [53:14<27:45,  3.44s/it]
+                                                  
+{'loss': 0.1359, 'grad_norm': 1.34375, 'learning_rate': 5.851697470919151e-06, 'entropy': 0.15718039348721505, 'num_tokens': 38288874.0, 'mean_token_accuracy': 0.9632921576499939, 'epoch': 1.97}
+
+ 66%|██████▌   | 920/1404 [53:14<27:45,  3.44s/it]
+ 66%|██████▌   | 921/1404 [53:17<26:32,  3.30s/it]
+ 66%|██████▌   | 922/1404 [53:21<26:55,  3.35s/it]
+ 66%|██████▌   | 923/1404 [53:25<27:51,  3.48s/it]
+ 66%|██████▌   | 924/1404 [53:28<27:27,  3.43s/it]
+ 66%|██████▌   | 925/1404 [53:32<27:45,  3.48s/it]
+ 66%|██████▌   | 926/1404 [53:35<27:38,  3.47s/it]
+ 66%|██████▌   | 927/1404 [53:38<27:20,  3.44s/it]
+ 66%|██████▌   | 928/1404 [53:42<27:35,  3.48s/it]
+ 66%|██████▌   | 929/1404 [53:45<27:06,  3.42s/it]
+ 66%|██████▌   | 930/1404 [53:48<26:35,  3.37s/it]
+                                                  
+{'loss': 0.141, 'grad_norm': 1.59375, 'learning_rate': 5.638425872236937e-06, 'entropy': 0.16366195864975452, 'num_tokens': 38679656.0, 'mean_token_accuracy': 0.961883370578289, 'epoch': 1.99}
+
+ 66%|██████▌   | 930/1404 [53:48<26:35,  3.37s/it]
+ 66%|██████▋   | 931/1404 [53:52<27:31,  3.49s/it]
+ 66%|██████▋   | 932/1404 [53:56<27:11,  3.46s/it]
+ 66%|██████▋   | 933/1404 [53:59<27:44,  3.53s/it]
+ 67%|██████▋   | 934/1404 [54:02<26:47,  3.42s/it]
+ 67%|██████▋   | 935/1404 [54:06<26:46,  3.43s/it]
+ 67%|██████▋   | 936/1404 [54:07<21:11,  2.72s/it]
+ 67%|██████▋   | 937/1404 [54:11<23:37,  3.03s/it]
+ 67%|██████▋   | 938/1404 [54:14<24:45,  3.19s/it]
+ 67%|██████▋   | 939/1404 [54:18<24:55,  3.22s/it]
+ 67%|██████▋   | 940/1404 [54:21<25:40,  3.32s/it]
+                                                  
+{'loss': 0.1333, 'grad_norm': 1.2265625, 'learning_rate': 5.427576766953615e-06, 'entropy': 0.15619409124593478, 'num_tokens': 39070665.0, 'mean_token_accuracy': 0.9649124435476355, 'epoch': 2.01}
+
+ 67%|██████▋   | 940/1404 [54:21<25:40,  3.32s/it]
+ 67%|██████▋   | 941/1404 [54:24<25:44,  3.33s/it]
+ 67%|██████▋   | 942/1404 [54:29<27:22,  3.55s/it]
+ 67%|██████▋   | 943/1404 [54:32<26:18,  3.42s/it]
+ 67%|██████▋   | 944/1404 [54:35<26:03,  3.40s/it]
+ 67%|██████▋   | 945/1404 [54:38<25:45,  3.37s/it]
+ 67%|██████▋   | 946/1404 [54:42<25:59,  3.41s/it]
+ 67%|██████▋   | 947/1404 [54:45<26:04,  3.42s/it]
+ 68%|██████▊   | 948/1404 [54:49<25:38,  3.37s/it]
+ 68%|██████▊   | 949/1404 [54:52<26:37,  3.51s/it]
+ 68%|██████▊   | 950/1404 [54:56<27:01,  3.57s/it]
+                                                  
+{'loss': 0.1325, 'grad_norm': 1.265625, 'learning_rate': 5.219267264294159e-06, 'entropy': 0.15573709830641747, 'num_tokens': 39475333.0, 'mean_token_accuracy': 0.9645467430353165, 'epoch': 2.03}
+
+ 68%|██████▊   | 950/1404 [54:56<27:01,  3.57s/it]
+ 68%|██████▊   | 951/1404 [54:59<26:31,  3.51s/it]
+ 68%|██████▊   | 952/1404 [55:02<25:01,  3.32s/it]
+ 68%|██████▊   | 953/1404 [55:06<25:33,  3.40s/it]
+ 68%|██████▊   | 954/1404 [55:09<25:11,  3.36s/it]
+ 68%|██████▊   | 955/1404 [55:12<24:37,  3.29s/it]
+ 68%|██████▊   | 956/1404 [55:16<24:24,  3.27s/it]
+ 68%|██████▊   | 957/1404 [55:19<24:19,  3.27s/it]
+ 68%|██████▊   | 958/1404 [55:22<25:01,  3.37s/it]
+ 68%|██████▊   | 959/1404 [55:26<24:59,  3.37s/it]
+ 68%|██████▊   | 960/1404 [55:29<24:54,  3.37s/it]
+                                                  
+{'loss': 0.1309, 'grad_norm': 1.265625, 'learning_rate': 5.0136130629444755e-06, 'entropy': 0.15377995893359184, 'num_tokens': 39880301.0, 'mean_token_accuracy': 0.9652778074145317, 'epoch': 2.05}
+
+ 68%|██████▊   | 960/1404 [55:29<24:54,  3.37s/it]
+ 68%|██████▊   | 961/1404 [55:33<25:07,  3.40s/it]
+ 69%|██████▊   | 962/1404 [55:36<24:48,  3.37s/it]
+ 69%|██████▊   | 963/1404 [55:39<24:52,  3.38s/it]
+ 69%|██████▊   | 964/1404 [55:43<25:44,  3.51s/it]
+ 69%|██████▊   | 965/1404 [55:47<26:29,  3.62s/it]
+ 69%|██████▉   | 966/1404 [55:50<25:47,  3.53s/it]
+ 69%|██████▉   | 967/1404 [55:54<25:29,  3.50s/it]
+ 69%|██████▉   | 968/1404 [55:57<25:19,  3.48s/it]
+ 69%|██████▉   | 969/1404 [56:01<25:28,  3.51s/it]
+ 69%|██████▉   | 970/1404 [56:04<25:23,  3.51s/it]
+                                                  
+{'loss': 0.1314, 'grad_norm': 1.21875, 'learning_rate': 4.810728386790409e-06, 'entropy': 0.15625750571489333, 'num_tokens': 40305768.0, 'mean_token_accuracy': 0.964882618188858, 'epoch': 2.07}
+
+ 69%|██████▉   | 970/1404 [56:04<25:23,  3.51s/it]
+ 69%|██████▉   | 971/1404 [56:08<25:28,  3.53s/it]
+ 69%|██████▉   | 972/1404 [56:11<24:13,  3.37s/it]
+ 69%|██████▉   | 973/1404 [56:15<25:13,  3.51s/it]
+ 69%|██████▉   | 974/1404 [56:18<24:42,  3.45s/it]
+ 69%|██████▉   | 975/1404 [56:21<23:55,  3.35s/it]
+ 70%|██████▉   | 976/1404 [56:24<23:58,  3.36s/it]
+ 70%|██████▉   | 977/1404 [56:28<24:06,  3.39s/it]
+ 70%|██████▉   | 978/1404 [56:31<24:06,  3.40s/it]
+ 70%|██████▉   | 979/1404 [56:35<23:34,  3.33s/it]
+ 70%|██████▉   | 980/1404 [56:38<24:48,  3.51s/it]
+                                                  
+{'loss': 0.1305, 'grad_norm': 1.3828125, 'learning_rate': 4.610725921475786e-06, 'entropy': 0.15598013028502464, 'num_tokens': 40699466.0, 'mean_token_accuracy': 0.9646994829177856, 'epoch': 2.09}
+
+ 70%|██████▉   | 980/1404 [56:39<24:48,  3.51s/it]
+ 70%|██████▉   | 981/1404 [56:42<23:57,  3.40s/it]
+ 70%|██████▉   | 982/1404 [56:45<24:14,  3.45s/it]
+ 70%|███████   | 983/1404 [56:48<23:53,  3.40s/it]
+ 70%|███████   | 984/1404 [56:52<24:00,  3.43s/it]
+ 70%|███████   | 985/1404 [56:55<23:36,  3.38s/it]
+ 70%|███████   | 986/1404 [56:59<23:45,  3.41s/it]
+ 70%|███████   | 987/1404 [57:02<23:36,  3.40s/it]
+ 70%|███████   | 988/1404 [57:06<24:03,  3.47s/it]
+ 70%|███████   | 989/1404 [57:09<24:21,  3.52s/it]
+ 71%|███████   | 990/1404 [57:13<24:12,  3.51s/it]
+                                                  
+{'loss': 0.1285, 'grad_norm': 1.265625, 'learning_rate': 4.4137167518149025e-06, 'entropy': 0.1524582404643297, 'num_tokens': 41100170.0, 'mean_token_accuracy': 0.9658555090427399, 'epoch': 2.12}
+
+ 71%|███████   | 990/1404 [57:13<24:12,  3.51s/it]
+ 71%|███████   | 991/1404 [57:16<24:01,  3.49s/it]
+ 71%|███████   | 992/1404 [57:19<22:36,  3.29s/it]
+ 71%|███████   | 993/1404 [57:23<22:51,  3.34s/it]
+ 71%|███████   | 994/1404 [57:26<23:06,  3.38s/it]
+ 71%|███████   | 995/1404 [57:29<23:10,  3.40s/it]
+ 71%|███████   | 996/1404 [57:34<24:41,  3.63s/it]
+ 71%|███████   | 997/1404 [57:37<24:18,  3.58s/it]
+ 71%|███████   | 998/1404 [57:40<23:18,  3.44s/it]
+ 71%|███████   | 999/1404 [57:43<22:43,  3.37s/it]
+ 71%|███████   | 1000/1404 [57:47<22:56,  3.41s/it]
+                                                   
+{'loss': 0.1315, 'grad_norm': 1.203125, 'learning_rate': 4.2198103000940735e-06, 'entropy': 0.1558043982833624, 'num_tokens': 41501530.0, 'mean_token_accuracy': 0.964977602660656, 'epoch': 2.14}
+
+ 71%|███████   | 1000/1404 [57:47<22:56,  3.41s/it]
+ 71%|███████▏  | 1001/1404 [58:08<59:08,  8.81s/it]
+ 71%|███████▏  | 1002/1404 [58:12<48:28,  7.23s/it]
+ 71%|███████▏  | 1003/1404 [58:15<41:01,  6.14s/it]
+ 72%|███████▏  | 1004/1404 [58:19<36:07,  5.42s/it]
+ 72%|███████▏  | 1005/1404 [58:23<32:05,  4.82s/it]
+ 72%|███████▏  | 1006/1404 [58:26<29:00,  4.37s/it]
+ 72%|███████▏  | 1007/1404 [58:29<27:04,  4.09s/it]
+ 72%|███████▏  | 1008/1404 [58:33<25:46,  3.90s/it]
+ 72%|███████▏  | 1009/1404 [58:36<24:58,  3.79s/it]
+ 72%|███████▏  | 1010/1404 [58:40<23:58,  3.65s/it]
+                                                   
+{'loss': 0.1308, 'grad_norm': 1.3046875, 'learning_rate': 4.029114265296642e-06, 'entropy': 0.1557393603026867, 'num_tokens': 41924625.0, 'mean_token_accuracy': 0.9646377667784691, 'epoch': 2.16}
+
+ 72%|███████▏  | 1010/1404 [58:40<23:58,  3.65s/it]
+ 72%|███████▏  | 1011/1404 [58:43<23:52,  3.65s/it]
+ 72%|███████▏  | 1012/1404 [58:47<24:24,  3.74s/it]
+ 72%|███████▏  | 1013/1404 [58:51<23:28,  3.60s/it]
+ 72%|███████▏  | 1014/1404 [58:54<22:45,  3.50s/it]
+ 72%|███████▏  | 1015/1404 [58:57<21:56,  3.38s/it]
+ 72%|███████▏  | 1016/1404 [59:00<22:05,  3.42s/it]
+ 72%|███████▏  | 1017/1404 [59:04<22:06,  3.43s/it]
+ 73%|███████▎  | 1018/1404 [59:07<22:04,  3.43s/it]
+ 73%|███████▎  | 1019/1404 [59:11<21:53,  3.41s/it]
+ 73%|███████▎  | 1020/1404 [59:15<23:00,  3.60s/it]
+                                                   
+{'loss': 0.1296, 'grad_norm': 1.21875, 'learning_rate': 3.841734563285076e-06, 'entropy': 0.15541025288403035, 'num_tokens': 42323197.0, 'mean_token_accuracy': 0.9654269307851792, 'epoch': 2.18}
+
+ 73%|███████▎  | 1020/1404 [59:15<23:00,  3.60s/it]
+ 73%|███████▎  | 1021/1404 [59:18<22:35,  3.54s/it]
+ 73%|███████▎  | 1022/1404 [59:22<22:17,  3.50s/it]
+ 73%|███████▎  | 1023/1404 [59:24<20:59,  3.30s/it]
+ 73%|███████▎  | 1024/1404 [59:28<21:11,  3.35s/it]
+ 73%|███████▎  | 1025/1404 [59:31<21:25,  3.39s/it]
+ 73%|███████▎  | 1026/1404 [59:35<22:18,  3.54s/it]
+ 73%|███████▎  | 1027/1404 [59:39<21:51,  3.48s/it]
+ 73%|███████▎  | 1028/1404 [59:42<21:52,  3.49s/it]
+ 73%|███████▎  | 1029/1404 [59:46<21:44,  3.48s/it]
+ 73%|███████▎  | 1030/1404 [59:49<21:40,  3.48s/it]
+                                                   
+{'loss': 0.1278, 'grad_norm': 1.1640625, 'learning_rate': 3.6577752679735023e-06, 'entropy': 0.15505100190639495, 'num_tokens': 42743732.0, 'mean_token_accuracy': 0.965933695435524, 'epoch': 2.2}
+
+ 73%|███████▎  | 1030/1404 [59:49<21:40,  3.48s/it]
+ 73%|███████▎  | 1031/1404 [59:52<21:36,  3.47s/it]
+ 74%|███████▎  | 1032/1404 [59:55<20:34,  3.32s/it]
+ 74%|███████▎  | 1033/1404 [59:59<20:51,  3.37s/it]
+ 74%|███████▎  | 1034/1404 [1:00:02<20:58,  3.40s/it]
+ 74%|███████▎  | 1035/1404 [1:00:06<21:40,  3.52s/it]
+ 74%|███████▍  | 1036/1404 [1:00:10<22:11,  3.62s/it]
+ 74%|███████▍  | 1037/1404 [1:00:13<21:43,  3.55s/it]
+ 74%|███████▍  | 1038/1404 [1:00:17<21:31,  3.53s/it]
+ 74%|███████▍  | 1039/1404 [1:00:20<21:23,  3.52s/it]
+ 74%|███████▍  | 1040/1404 [1:00:24<21:15,  3.50s/it]
+                                                     
+{'loss': 0.1304, 'grad_norm': 1.1875, 'learning_rate': 3.4773385535232408e-06, 'entropy': 0.15499050114303828, 'num_tokens': 43172464.0, 'mean_token_accuracy': 0.9649657800793647, 'epoch': 2.22}
+
+ 74%|███████▍  | 1040/1404 [1:00:24<21:15,  3.50s/it]
+ 74%|███████▍  | 1041/1404 [1:00:27<21:07,  3.49s/it]
+ 74%|███████▍  | 1042/1404 [1:00:31<20:41,  3.43s/it]
+ 74%|███████▍  | 1043/1404 [1:00:34<21:12,  3.52s/it]
+ 74%|███████▍  | 1044/1404 [1:00:38<21:38,  3.61s/it]
+ 74%|███████▍  | 1045/1404 [1:00:42<21:17,  3.56s/it]
+ 75%|███████▍  | 1046/1404 [1:00:45<20:42,  3.47s/it]
+ 75%|███████▍  | 1047/1404 [1:00:48<20:43,  3.48s/it]
+ 75%|███████▍  | 1048/1404 [1:00:52<20:17,  3.42s/it]
+ 75%|███████▍  | 1049/1404 [1:00:55<19:21,  3.27s/it]
+ 75%|███████▍  | 1050/1404 [1:00:58<19:12,  3.26s/it]
+                                                     
+{'loss': 0.13, 'grad_norm': 1.3046875, 'learning_rate': 3.300524637593535e-06, 'entropy': 0.1536156924441457, 'num_tokens': 43574982.0, 'mean_token_accuracy': 0.9658286929130554, 'epoch': 2.24}
+
+ 75%|███████▍  | 1050/1404 [1:00:58<19:12,  3.26s/it]
+ 75%|███████▍  | 1051/1404 [1:01:02<20:31,  3.49s/it]
+ 75%|███████▍  | 1052/1404 [1:01:05<20:05,  3.42s/it]
+ 75%|███████▌  | 1053/1404 [1:01:09<20:11,  3.45s/it]
+ 75%|███████▌  | 1054/1404 [1:01:12<20:02,  3.44s/it]
+ 75%|███████▌  | 1055/1404 [1:01:16<20:15,  3.48s/it]
+ 75%|███████▌  | 1056/1404 [1:01:19<20:03,  3.46s/it]
+ 75%|███████▌  | 1057/1404 [1:01:22<19:57,  3.45s/it]
+ 75%|███████▌  | 1058/1404 [1:01:27<21:01,  3.65s/it]
+ 75%|███████▌  | 1059/1404 [1:01:30<21:15,  3.70s/it]
+ 75%|███████▌  | 1060/1404 [1:01:34<20:47,  3.63s/it]
+                                                     
+{'loss': 0.1322, 'grad_norm': 1.2109375, 'learning_rate': 3.1274317256789144e-06, 'entropy': 0.15679747834801674, 'num_tokens': 44015049.0, 'mean_token_accuracy': 0.9648854464292527, 'epoch': 2.27}
+
+ 75%|███████▌  | 1060/1404 [1:01:34<20:47,  3.63s/it]
+ 76%|███████▌  | 1061/1404 [1:01:37<20:29,  3.58s/it]
+ 76%|███████▌  | 1062/1404 [1:01:41<20:20,  3.57s/it]
+ 76%|███████▌  | 1063/1404 [1:01:44<19:58,  3.51s/it]
+ 76%|███████▌  | 1064/1404 [1:01:47<19:05,  3.37s/it]
+ 76%|███████▌  | 1065/1404 [1:01:50<18:44,  3.32s/it]
+ 76%|███████▌  | 1066/1404 [1:01:54<19:38,  3.49s/it]
+ 76%|███████▌  | 1067/1404 [1:01:58<19:51,  3.54s/it]
+ 76%|███████▌  | 1068/1404 [1:02:02<19:50,  3.54s/it]
+ 76%|███████▌  | 1069/1404 [1:02:05<19:40,  3.52s/it]
+ 76%|███████▌  | 1070/1404 [1:02:08<18:38,  3.35s/it]
+                                                     
+{'loss': 0.1313, 'grad_norm': 1.5078125, 'learning_rate': 2.9581559565641983e-06, 'entropy': 0.15512295700609685, 'num_tokens': 44447633.0, 'mean_token_accuracy': 0.9650249898433685, 'epoch': 2.29}
+
+ 76%|███████▌  | 1070/1404 [1:02:08<18:38,  3.35s/it]
+ 76%|███████▋  | 1071/1404 [1:02:11<18:22,  3.31s/it]
+ 76%|███████▋  | 1072/1404 [1:02:15<18:35,  3.36s/it]
+ 76%|███████▋  | 1073/1404 [1:02:18<18:46,  3.40s/it]
+ 76%|███████▋  | 1074/1404 [1:02:22<19:19,  3.51s/it]
+ 77%|███████▋  | 1075/1404 [1:02:27<21:23,  3.90s/it]
+ 77%|███████▋  | 1076/1404 [1:02:30<20:46,  3.80s/it]
+ 77%|███████▋  | 1077/1404 [1:02:34<19:56,  3.66s/it]
+ 77%|███████▋  | 1078/1404 [1:02:37<19:30,  3.59s/it]
+ 77%|███████▋  | 1079/1404 [1:02:41<19:15,  3.55s/it]
+ 77%|███████▋  | 1080/1404 [1:02:44<18:51,  3.49s/it]
+                                                     
+{'loss': 0.1322, 'grad_norm': 1.140625, 'learning_rate': 2.7927913489273284e-06, 'entropy': 0.15794619023799897, 'num_tokens': 44894266.0, 'mean_token_accuracy': 0.9646477043628693, 'epoch': 2.31}
+
+ 77%|███████▋  | 1080/1404 [1:02:44<18:51,  3.49s/it]
+ 77%|███████▋  | 1081/1404 [1:02:47<18:44,  3.48s/it]
+ 77%|███████▋  | 1082/1404 [1:02:51<19:12,  3.58s/it]
+ 77%|███████▋  | 1083/1404 [1:02:55<19:43,  3.69s/it]
+ 77%|███████▋  | 1084/1404 [1:02:59<19:19,  3.62s/it]
+ 77%|███████▋  | 1085/1404 [1:03:02<18:52,  3.55s/it]
+ 77%|███████▋  | 1086/1404 [1:03:06<18:51,  3.56s/it]
+ 77%|███████▋  | 1087/1404 [1:03:09<18:37,  3.52s/it]
+ 77%|███████▋  | 1088/1404 [1:03:12<18:24,  3.49s/it]
+ 78%|███████▊  | 1089/1404 [1:03:16<18:08,  3.46s/it]
+ 78%|███████▊  | 1090/1404 [1:03:20<18:42,  3.57s/it]
+                                                     
+{'loss': 0.135, 'grad_norm': 1.703125, 'learning_rate': 2.631429749119807e-06, 'entropy': 0.15802801065146924, 'num_tokens': 45358477.0, 'mean_token_accuracy': 0.9638634994626045, 'epoch': 2.33}
+
+ 78%|███████▊  | 1090/1404 [1:03:20<18:42,  3.57s/it]
+ 78%|███████▊  | 1091/1404 [1:03:23<18:24,  3.53s/it]
+ 78%|███████▊  | 1092/1404 [1:03:26<18:10,  3.50s/it]
+ 78%|███████▊  | 1093/1404 [1:03:30<18:06,  3.49s/it]
+ 78%|███████▊  | 1094/1404 [1:03:33<17:48,  3.45s/it]
+ 78%|███████▊  | 1095/1404 [1:03:37<17:55,  3.48s/it]
+ 78%|███████▊  | 1096/1404 [1:03:40<17:55,  3.49s/it]
+ 78%|███████▊  | 1097/1404 [1:03:44<18:17,  3.58s/it]
+ 78%|███████▊  | 1098/1404 [1:03:48<18:40,  3.66s/it]
+ 78%|███████▊  | 1099/1404 [1:03:52<18:56,  3.73s/it]
+ 78%|███████▊  | 1100/1404 [1:03:55<18:35,  3.67s/it]
+                                                     
+{'loss': 0.1289, 'grad_norm': 1.3046875, 'learning_rate': 2.474160780153624e-06, 'entropy': 0.15524947270751, 'num_tokens': 45793707.0, 'mean_token_accuracy': 0.9657340228557587, 'epoch': 2.35}
+
+ 78%|███████▊  | 1100/1404 [1:03:55<18:35,  3.67s/it]
+ 78%|███████▊  | 1101/1404 [1:03:59<18:00,  3.56s/it]
+ 78%|███████▊  | 1102/1404 [1:04:02<17:51,  3.55s/it]
+ 79%|███████▊  | 1103/1404 [1:04:06<17:39,  3.52s/it]
+ 79%|███████▊  | 1104/1404 [1:04:09<17:28,  3.50s/it]
+ 79%|███████▊  | 1105/1404 [1:04:13<17:26,  3.50s/it]
+ 79%|███████▉  | 1106/1404 [1:04:16<17:40,  3.56s/it]
+ 79%|███████▉  | 1107/1404 [1:04:20<18:16,  3.69s/it]
+ 79%|███████▉  | 1108/1404 [1:04:24<17:55,  3.63s/it]
+ 79%|███████▉  | 1109/1404 [1:04:27<17:44,  3.61s/it]
+ 79%|███████▉  | 1110/1404 [1:04:31<17:26,  3.56s/it]
+                                                     
+{'loss': 0.1298, 'grad_norm': 1.125, 'learning_rate': 2.3210717919231117e-06, 'entropy': 0.1560322243720293, 'num_tokens': 46225905.0, 'mean_token_accuracy': 0.9653522074222565, 'epoch': 2.37}
+
+ 79%|███████▉  | 1110/1404 [1:04:31<17:26,  3.56s/it]
+ 79%|███████▉  | 1111/1404 [1:04:34<17:09,  3.51s/it]
+ 79%|███████▉  | 1112/1404 [1:04:38<17:04,  3.51s/it]
+ 79%|███████▉  | 1113/1404 [1:04:41<16:48,  3.46s/it]
+ 79%|███████▉  | 1114/1404 [1:04:45<17:06,  3.54s/it]
+ 79%|███████▉  | 1115/1404 [1:04:48<17:03,  3.54s/it]
+ 79%|███████▉  | 1116/1404 [1:04:52<16:43,  3.48s/it]
+ 80%|███████▉  | 1117/1404 [1:04:55<16:22,  3.42s/it]
+ 80%|███████▉  | 1118/1404 [1:04:58<16:07,  3.38s/it]
+ 80%|███████▉  | 1119/1404 [1:05:02<16:19,  3.44s/it]
+ 80%|███████▉  | 1120/1404 [1:05:05<16:01,  3.38s/it]
+                                                     
+{'loss': 0.1309, 'grad_norm': 1.2734375, 'learning_rate': 2.1722478126893022e-06, 'entropy': 0.1552186418324709, 'num_tokens': 46659188.0, 'mean_token_accuracy': 0.9654116213321686, 'epoch': 2.39}
+
+ 80%|███████▉  | 1120/1404 [1:05:05<16:01,  3.38s/it]
+ 80%|███████▉  | 1121/1404 [1:05:09<16:29,  3.50s/it]
+ 80%|███████▉  | 1122/1404 [1:05:13<16:40,  3.55s/it]
+ 80%|███████▉  | 1123/1404 [1:05:16<16:07,  3.44s/it]
+ 80%|████████  | 1124/1404 [1:05:19<15:55,  3.41s/it]
+ 80%|████████  | 1125/1404 [1:05:22<15:16,  3.29s/it]
+ 80%|████████  | 1126/1404 [1:05:25<15:20,  3.31s/it]
+ 80%|████████  | 1127/1404 [1:05:29<15:35,  3.38s/it]
+ 80%|████████  | 1128/1404 [1:05:33<15:53,  3.45s/it]
+ 80%|████████  | 1129/1404 [1:05:36<16:00,  3.49s/it]
+ 80%|████████  | 1130/1404 [1:05:39<15:40,  3.43s/it]
+                                                     
+{'loss': 0.1284, 'grad_norm': 1.296875, 'learning_rate': 2.027771501853757e-06, 'entropy': 0.15320584531873466, 'num_tokens': 47037350.0, 'mean_token_accuracy': 0.9657025828957557, 'epoch': 2.42}
+
+ 80%|████████  | 1130/1404 [1:05:40<15:40,  3.43s/it]
+ 81%|████████  | 1131/1404 [1:05:43<15:59,  3.52s/it]
+ 81%|████████  | 1132/1404 [1:05:46<15:25,  3.40s/it]
+ 81%|████████  | 1133/1404 [1:05:50<15:34,  3.45s/it]
+ 81%|████████  | 1134/1404 [1:05:53<15:08,  3.37s/it]
+ 81%|████████  | 1135/1404 [1:05:57<15:19,  3.42s/it]
+ 81%|████████  | 1136/1404 [1:06:00<15:11,  3.40s/it]
+ 81%|████████  | 1137/1404 [1:06:04<15:41,  3.52s/it]
+ 81%|████████  | 1138/1404 [1:06:08<16:00,  3.61s/it]
+ 81%|████████  | 1139/1404 [1:06:11<15:30,  3.51s/it]
+ 81%|████████  | 1140/1404 [1:06:14<15:27,  3.51s/it]
+                                                     
+{'loss': 0.126, 'grad_norm': 1.2265625, 'learning_rate': 1.8877231040481302e-06, 'entropy': 0.15311659537255765, 'num_tokens': 47442878.0, 'mean_token_accuracy': 0.9662525355815887, 'epoch': 2.44}
+
+ 81%|████████  | 1140/1404 [1:06:14<15:27,  3.51s/it]
+ 81%|████████▏ | 1141/1404 [1:06:18<15:22,  3.51s/it]
+ 81%|████████▏ | 1142/1404 [1:06:21<15:07,  3.46s/it]
+ 81%|████████▏ | 1143/1404 [1:06:25<15:02,  3.46s/it]
+ 81%|████████▏ | 1144/1404 [1:06:28<15:06,  3.49s/it]
+ 82%|████████▏ | 1145/1404 [1:06:32<15:11,  3.52s/it]
+ 82%|████████▏ | 1146/1404 [1:06:36<15:34,  3.62s/it]
+ 82%|████████▏ | 1147/1404 [1:06:39<15:10,  3.54s/it]
+ 82%|████████▏ | 1148/1404 [1:06:43<15:03,  3.53s/it]
+ 82%|████████▏ | 1149/1404 [1:06:46<14:30,  3.41s/it]
+ 82%|████████▏ | 1150/1404 [1:06:49<14:30,  3.43s/it]
+                                                     
+{'loss': 0.1299, 'grad_norm': 1.296875, 'learning_rate': 1.7521804045649005e-06, 'entropy': 0.15554431825876236, 'num_tokens': 47873239.0, 'mean_token_accuracy': 0.9655300676822662, 'epoch': 2.46}
+
+ 82%|████████▏ | 1150/1404 [1:06:49<14:30,  3.43s/it]
+ 82%|████████▏ | 1151/1404 [1:06:53<14:26,  3.42s/it]
+ 82%|████████▏ | 1152/1404 [1:06:56<14:37,  3.48s/it]
+ 82%|████████▏ | 1153/1404 [1:07:00<15:05,  3.61s/it]
+ 82%|████████▏ | 1154/1404 [1:07:03<14:45,  3.54s/it]
+ 82%|████████▏ | 1155/1404 [1:07:07<14:26,  3.48s/it]
+ 82%|████████▏ | 1156/1404 [1:07:10<14:16,  3.46s/it]
+ 82%|████████▏ | 1157/1404 [1:07:13<13:49,  3.36s/it]
+ 82%|████████▏ | 1158/1404 [1:07:17<13:41,  3.34s/it]
+ 83%|████████▎ | 1159/1404 [1:07:20<13:30,  3.31s/it]
+ 83%|████████▎ | 1160/1404 [1:07:24<14:01,  3.45s/it]
+                                                     
+{'loss': 0.1286, 'grad_norm': 1.21875, 'learning_rate': 1.6212186861540946e-06, 'entropy': 0.15517145283520223, 'num_tokens': 48284710.0, 'mean_token_accuracy': 0.9652736321091652, 'epoch': 2.48}
+
+ 83%|████████▎ | 1160/1404 [1:07:24<14:01,  3.45s/it]
+ 83%|████████▎ | 1161/1404 [1:07:27<14:01,  3.46s/it]
+ 83%|████████▎ | 1162/1404 [1:07:31<14:04,  3.49s/it]
+ 83%|████████▎ | 1163/1404 [1:07:34<13:51,  3.45s/it]
+ 83%|████████▎ | 1164/1404 [1:07:37<13:46,  3.45s/it]
+ 83%|████████▎ | 1165/1404 [1:07:41<13:37,  3.42s/it]
+ 83%|████████▎ | 1166/1404 [1:07:44<13:05,  3.30s/it]
+ 83%|████████▎ | 1167/1404 [1:07:47<13:23,  3.39s/it]
+ 83%|████████▎ | 1168/1404 [1:07:51<13:14,  3.37s/it]
+ 83%|████████▎ | 1169/1404 [1:07:55<13:46,  3.52s/it]
+ 83%|████████▎ | 1170/1404 [1:07:58<13:41,  3.51s/it]
+                                                     
+{'loss': 0.1304, 'grad_norm': 1.1953125, 'learning_rate': 1.494910687209935e-06, 'entropy': 0.1540010530501604, 'num_tokens': 48705822.0, 'mean_token_accuracy': 0.9654973149299622, 'epoch': 2.5}
+
+ 83%|████████▎ | 1170/1404 [1:07:58<13:41,  3.51s/it]
+ 83%|████████▎ | 1171/1404 [1:08:02<13:50,  3.57s/it]
+ 83%|████████▎ | 1172/1404 [1:08:05<13:38,  3.53s/it]
+ 84%|████████▎ | 1173/1404 [1:08:08<12:49,  3.33s/it]
+ 84%|████████▎ | 1174/1404 [1:08:12<12:51,  3.35s/it]
+ 84%|████████▎ | 1175/1404 [1:08:15<12:56,  3.39s/it]
+ 84%|████████▍ | 1176/1404 [1:08:19<13:17,  3.50s/it]
+ 84%|████████▍ | 1177/1404 [1:08:22<13:28,  3.56s/it]
+ 84%|████████▍ | 1178/1404 [1:08:26<13:36,  3.61s/it]
+ 84%|████████▍ | 1179/1404 [1:08:30<13:18,  3.55s/it]
+ 84%|████████▍ | 1180/1404 [1:08:33<13:04,  3.50s/it]
+                                                     
+{'loss': 0.1291, 'grad_norm': 1.390625, 'learning_rate': 1.3733265613707037e-06, 'entropy': 0.15506299398839474, 'num_tokens': 49121922.0, 'mean_token_accuracy': 0.9655324652791023, 'epoch': 2.52}
+
+ 84%|████████▍ | 1180/1404 [1:08:33<13:04,  3.50s/it]
+ 84%|████████▍ | 1181/1404 [1:08:37<13:01,  3.50s/it]
+ 84%|████████▍ | 1182/1404 [1:08:40<12:46,  3.45s/it]
+ 84%|████████▍ | 1183/1404 [1:08:43<12:43,  3.46s/it]
+ 84%|████████▍ | 1184/1404 [1:08:47<12:53,  3.52s/it]
+ 84%|████████▍ | 1185/1404 [1:08:50<12:40,  3.47s/it]
+ 84%|████████▍ | 1186/1404 [1:08:54<12:45,  3.51s/it]
+ 85%|████████▍ | 1187/1404 [1:08:57<12:42,  3.51s/it]
+ 85%|████████▍ | 1188/1404 [1:09:01<12:39,  3.52s/it]
+ 85%|████████▍ | 1189/1404 [1:09:04<12:31,  3.49s/it]
+ 85%|████████▍ | 1190/1404 [1:09:08<12:23,  3.48s/it]
+                                                     
+{'loss': 0.1307, 'grad_norm': 1.2109375, 'learning_rate': 1.2565338385541792e-06, 'entropy': 0.15502672232687473, 'num_tokens': 49586281.0, 'mean_token_accuracy': 0.9650620639324188, 'epoch': 2.54}
+
+ 85%|████████▍ | 1190/1404 [1:09:08<12:23,  3.48s/it]
+ 85%|████████▍ | 1191/1404 [1:09:11<12:19,  3.47s/it]
+ 85%|████████▍ | 1192/1404 [1:09:15<12:12,  3.45s/it]
+ 85%|████████▍ | 1193/1404 [1:09:18<12:23,  3.53s/it]
+ 85%|████████▌ | 1194/1404 [1:09:22<12:38,  3.61s/it]
+ 85%|████████▌ | 1195/1404 [1:09:26<12:18,  3.53s/it]
+ 85%|████████▌ | 1196/1404 [1:09:29<12:06,  3.49s/it]
+ 85%|████████▌ | 1197/1404 [1:09:32<11:57,  3.47s/it]
+ 85%|████████▌ | 1198/1404 [1:09:36<11:51,  3.45s/it]
+ 85%|████████▌ | 1199/1404 [1:09:39<11:49,  3.46s/it]
+ 85%|████████▌ | 1200/1404 [1:09:43<11:59,  3.53s/it]
+                                                     
+{'loss': 0.1277, 'grad_norm': 1.328125, 'learning_rate': 1.144597387450378e-06, 'entropy': 0.15048868767917156, 'num_tokens': 49992343.0, 'mean_token_accuracy': 0.9662730231881141, 'epoch': 2.57}
+
+ 85%|████████▌ | 1200/1404 [1:09:43<11:59,  3.53s/it]
+ 86%|████████▌ | 1201/1404 [1:09:47<12:04,  3.57s/it]
+ 86%|████████▌ | 1202/1404 [1:09:50<11:34,  3.44s/it]
+ 86%|████████▌ | 1203/1404 [1:09:53<11:21,  3.39s/it]
+ 86%|████████▌ | 1204/1404 [1:09:56<11:06,  3.33s/it]
+ 86%|████████▌ | 1205/1404 [1:09:59<10:54,  3.29s/it]
+ 86%|████████▌ | 1206/1404 [1:10:03<10:54,  3.30s/it]
+ 86%|████████▌ | 1207/1404 [1:10:06<10:51,  3.31s/it]
+ 86%|████████▌ | 1208/1404 [1:10:10<11:21,  3.48s/it]
+ 86%|████████▌ | 1209/1404 [1:10:13<11:08,  3.43s/it]
+ 86%|████████▌ | 1210/1404 [1:10:17<11:35,  3.58s/it]
+                                                     
+{'loss': 0.1312, 'grad_norm': 1.546875, 'learning_rate': 1.0375793794923505e-06, 'entropy': 0.1547380093485117, 'num_tokens': 50378989.0, 'mean_token_accuracy': 0.9651034280657769, 'epoch': 2.59}
+
+ 86%|████████▌ | 1210/1404 [1:10:17<11:35,  3.58s/it]
+ 86%|████████▋ | 1211/1404 [1:10:21<11:32,  3.59s/it]
+ 86%|████████▋ | 1212/1404 [1:10:24<11:24,  3.56s/it]
+ 86%|████████▋ | 1213/1404 [1:10:28<11:14,  3.53s/it]
+ 86%|████████▋ | 1214/1404 [1:10:31<11:01,  3.48s/it]
+ 87%|████████▋ | 1215/1404 [1:10:35<11:08,  3.54s/it]
+ 87%|████████▋ | 1216/1404 [1:10:39<11:16,  3.60s/it]
+ 87%|████████▋ | 1217/1404 [1:10:41<10:32,  3.38s/it]
+ 87%|████████▋ | 1218/1404 [1:10:45<10:41,  3.45s/it]
+ 87%|████████▋ | 1219/1404 [1:10:48<10:33,  3.42s/it]
+ 87%|████████▋ | 1220/1404 [1:10:51<09:58,  3.25s/it]
+                                                     
+{'loss': 0.1288, 'grad_norm': 1.5078125, 'learning_rate': 9.355392543251119e-07, 'entropy': 0.1524150175973773, 'num_tokens': 50786454.0, 'mean_token_accuracy': 0.9658177897334099, 'epoch': 2.61}
+
+ 87%|████████▋ | 1220/1404 [1:10:51<09:58,  3.25s/it]
+ 87%|████████▋ | 1221/1404 [1:10:55<10:00,  3.28s/it]
+ 87%|████████▋ | 1222/1404 [1:10:59<10:31,  3.47s/it]
+ 87%|████████▋ | 1223/1404 [1:11:02<10:33,  3.50s/it]
+ 87%|████████▋ | 1224/1404 [1:11:06<10:32,  3.51s/it]
+ 87%|████████▋ | 1225/1404 [1:11:08<09:47,  3.28s/it]
+ 87%|████████▋ | 1226/1404 [1:11:12<10:19,  3.48s/it]
+ 87%|████████▋ | 1227/1404 [1:11:16<10:14,  3.47s/it]
+ 87%|████████▋ | 1228/1404 [1:11:19<09:54,  3.38s/it]
+ 88%|████████▊ | 1229/1404 [1:11:22<09:55,  3.40s/it]
+ 88%|████████▊ | 1230/1404 [1:11:26<09:56,  3.43s/it]
+                                                     
+{'loss': 0.1292, 'grad_norm': 1.2578125, 'learning_rate': 8.385336867918226e-07, 'entropy': 0.154438366740942, 'num_tokens': 51202086.0, 'mean_token_accuracy': 0.9658403068780899, 'epoch': 2.63}
+
+ 88%|████████▊ | 1230/1404 [1:11:26<09:56,  3.43s/it]
+ 88%|████████▊ | 1231/1404 [1:11:29<09:58,  3.46s/it]
+ 88%|████████▊ | 1232/1404 [1:11:33<10:14,  3.57s/it]
+ 88%|████████▊ | 1233/1404 [1:11:37<09:55,  3.48s/it]
+ 88%|████████▊ | 1234/1404 [1:11:40<09:31,  3.36s/it]
+ 88%|████████▊ | 1235/1404 [1:11:43<09:22,  3.33s/it]
+ 88%|████████▊ | 1236/1404 [1:11:46<09:27,  3.38s/it]
+ 88%|████████▊ | 1237/1404 [1:11:50<09:30,  3.41s/it]
+ 88%|████████▊ | 1238/1404 [1:11:53<09:26,  3.41s/it]
+ 88%|████████▊ | 1239/1404 [1:11:56<09:10,  3.34s/it]
+ 88%|████████▊ | 1240/1404 [1:12:00<09:31,  3.49s/it]
+                                                     
+{'loss': 0.1322, 'grad_norm': 1.2421875, 'learning_rate': 7.466165554556193e-07, 'entropy': 0.1568707026541233, 'num_tokens': 51605943.0, 'mean_token_accuracy': 0.9646613821387291, 'epoch': 2.65}
+
+ 88%|████████▊ | 1240/1404 [1:12:00<09:31,  3.49s/it]
+ 88%|████████▊ | 1241/1404 [1:12:04<09:26,  3.47s/it]
+ 88%|████████▊ | 1242/1404 [1:12:07<09:28,  3.51s/it]
+ 89%|████████▊ | 1243/1404 [1:12:11<09:20,  3.48s/it]
+ 89%|████████▊ | 1244/1404 [1:12:14<09:13,  3.46s/it]
+ 89%|████████▊ | 1245/1404 [1:12:18<09:10,  3.46s/it]
+ 89%|████████▊ | 1246/1404 [1:12:21<09:10,  3.48s/it]
+ 89%|████████▉ | 1247/1404 [1:12:25<09:13,  3.52s/it]
+ 89%|████████▉ | 1248/1404 [1:12:28<09:05,  3.49s/it]
+ 89%|████████▉ | 1249/1404 [1:12:32<09:13,  3.57s/it]
+ 89%|████████▉ | 1250/1404 [1:12:35<08:53,  3.46s/it]
+                                                     
+{'loss': 0.1292, 'grad_norm': 1.4765625, 'learning_rate': 6.598389126745209e-07, 'entropy': 0.15392714627087117, 'num_tokens': 52011811.0, 'mean_token_accuracy': 0.9653821349143982, 'epoch': 2.67}
+
+ 89%|████████▉ | 1250/1404 [1:12:35<08:53,  3.46s/it]
+ 89%|████████▉ | 1251/1404 [1:12:38<08:40,  3.40s/it]
+ 89%|████████▉ | 1252/1404 [1:12:42<08:39,  3.42s/it]
+ 89%|████████▉ | 1253/1404 [1:12:46<08:51,  3.52s/it]
+ 89%|████████▉ | 1254/1404 [1:12:49<08:56,  3.58s/it]
+ 89%|████████▉ | 1255/1404 [1:12:53<08:58,  3.61s/it]
+ 89%|████████▉ | 1256/1404 [1:12:56<08:43,  3.54s/it]
+ 90%|████████▉ | 1257/1404 [1:13:00<08:27,  3.45s/it]
+ 90%|████████▉ | 1258/1404 [1:13:03<08:36,  3.53s/it]
+ 90%|████████▉ | 1259/1404 [1:13:07<08:19,  3.44s/it]
+ 90%|████████▉ | 1260/1404 [1:13:10<08:15,  3.44s/it]
+                                                     
+{'loss': 0.1306, 'grad_norm': 1.1953125, 'learning_rate': 5.782489562460791e-07, 'entropy': 0.1547961201518774, 'num_tokens': 52422990.0, 'mean_token_accuracy': 0.964862085878849, 'epoch': 2.69}
+
+ 90%|████████▉ | 1260/1404 [1:13:10<08:15,  3.44s/it]
+ 90%|████████▉ | 1261/1404 [1:13:13<08:02,  3.37s/it]
+ 90%|████████▉ | 1262/1404 [1:13:17<08:07,  3.43s/it]
+ 90%|████████▉ | 1263/1404 [1:13:21<08:35,  3.66s/it]
+ 90%|█████████ | 1264/1404 [1:13:24<07:50,  3.36s/it]
+ 90%|█████████ | 1265/1404 [1:13:27<07:43,  3.33s/it]
+ 90%|█████████ | 1266/1404 [1:13:31<08:02,  3.50s/it]
+ 90%|█████████ | 1267/1404 [1:13:34<07:50,  3.43s/it]
+ 90%|█████████ | 1268/1404 [1:13:38<07:46,  3.43s/it]
+ 90%|█████████ | 1269/1404 [1:13:41<07:38,  3.40s/it]
+ 90%|█████████ | 1270/1404 [1:13:44<07:30,  3.36s/it]
+                                                     
+{'loss': 0.1276, 'grad_norm': 1.4140625, 'learning_rate': 5.018920026374841e-07, 'entropy': 0.1516122952103615, 'num_tokens': 52804304.0, 'mean_token_accuracy': 0.9663827031850815, 'epoch': 2.71}
+
+ 90%|█████████ | 1270/1404 [1:13:44<07:30,  3.36s/it]
+ 91%|█████████ | 1271/1404 [1:13:48<07:45,  3.50s/it]
+ 91%|█████████ | 1272/1404 [1:13:51<07:33,  3.44s/it]
+ 91%|█████████ | 1273/1404 [1:13:55<07:38,  3.50s/it]
+ 91%|█████████ | 1274/1404 [1:13:58<07:34,  3.50s/it]
+ 91%|█████████ | 1275/1404 [1:14:01<07:12,  3.35s/it]
+ 91%|█████████ | 1276/1404 [1:14:05<07:06,  3.34s/it]
+ 91%|█████████ | 1277/1404 [1:14:08<07:08,  3.37s/it]
+ 91%|█████████ | 1278/1404 [1:14:12<07:28,  3.56s/it]
+ 91%|█████████ | 1279/1404 [1:14:15<07:02,  3.38s/it]
+ 91%|█████████ | 1280/1404 [1:14:19<07:07,  3.44s/it]
+                                                     
+{'loss': 0.1288, 'grad_norm': 1.265625, 'learning_rate': 4.3081046181602583e-07, 'entropy': 0.15394473783671855, 'num_tokens': 53201051.0, 'mean_token_accuracy': 0.9655551835894585, 'epoch': 2.74}
+
+ 91%|█████████ | 1280/1404 [1:14:19<07:07,  3.44s/it]
+ 91%|█████████ | 1281/1404 [1:14:22<06:55,  3.38s/it]
+ 91%|█████████▏| 1282/1404 [1:14:25<06:51,  3.37s/it]
+ 91%|█████████▏| 1283/1404 [1:14:29<06:52,  3.41s/it]
+ 91%|█████████▏| 1284/1404 [1:14:32<06:30,  3.25s/it]
+ 92%|█████████▏| 1285/1404 [1:14:35<06:47,  3.42s/it]
+ 92%|█████████▏| 1286/1404 [1:14:39<06:43,  3.42s/it]
+ 92%|█████████▏| 1287/1404 [1:14:43<06:52,  3.52s/it]
+ 92%|█████████▏| 1288/1404 [1:14:46<06:39,  3.45s/it]
+ 92%|█████████▏| 1289/1404 [1:14:50<06:45,  3.53s/it]
+ 92%|█████████▏| 1290/1404 [1:14:53<06:41,  3.53s/it]
+                                                     
+{'loss': 0.1302, 'grad_norm': 1.34375, 'learning_rate': 3.65043813693855e-07, 'entropy': 0.15581307522952556, 'num_tokens': 53625725.0, 'mean_token_accuracy': 0.965433931350708, 'epoch': 2.76}
+
+ 92%|█████████▏| 1290/1404 [1:14:53<06:41,  3.53s/it]
+ 92%|█████████▏| 1291/1404 [1:14:57<06:36,  3.51s/it]
+ 92%|█████████▏| 1292/1404 [1:15:00<06:31,  3.50s/it]
+ 92%|█████████▏| 1293/1404 [1:15:03<06:18,  3.41s/it]
+ 92%|█████████▏| 1294/1404 [1:15:07<06:23,  3.49s/it]
+ 92%|█████████▏| 1295/1404 [1:15:10<06:20,  3.49s/it]
+ 92%|█████████▏| 1296/1404 [1:15:14<06:15,  3.47s/it]
+ 92%|█████████▏| 1297/1404 [1:15:17<06:01,  3.38s/it]
+ 92%|█████████▏| 1298/1404 [1:15:21<06:02,  3.42s/it]
+ 93%|█████████▎| 1299/1404 [1:15:24<05:49,  3.32s/it]
+ 93%|█████████▎| 1300/1404 [1:15:27<05:46,  3.34s/it]
+                                                     
+{'loss': 0.1313, 'grad_norm': 1.2109375, 'learning_rate': 3.0462858620017633e-07, 'entropy': 0.15695922672748566, 'num_tokens': 54058428.0, 'mean_token_accuracy': 0.9650809183716774, 'epoch': 2.78}
+
+ 93%|█████████▎| 1300/1404 [1:15:27<05:46,  3.34s/it]
+ 93%|█████████▎| 1301/1404 [1:15:31<05:49,  3.40s/it]
+ 93%|█████████▎| 1302/1404 [1:15:34<05:59,  3.53s/it]
+ 93%|█████████▎| 1303/1404 [1:15:38<05:55,  3.52s/it]
+ 93%|█████████▎| 1304/1404 [1:15:41<05:46,  3.47s/it]
+ 93%|█████████▎| 1305/1404 [1:15:45<05:43,  3.47s/it]
+ 93%|█████████▎| 1306/1404 [1:15:48<05:35,  3.42s/it]
+ 93%|█████████▎| 1307/1404 [1:15:51<05:30,  3.40s/it]
+ 93%|█████████▎| 1308/1404 [1:15:55<05:24,  3.38s/it]
+ 93%|█████████▎| 1309/1404 [1:15:58<05:28,  3.46s/it]
+ 93%|█████████▎| 1310/1404 [1:16:02<05:27,  3.48s/it]
+                                                     
+{'loss': 0.1327, 'grad_norm': 1.2578125, 'learning_rate': 2.4959833499299314e-07, 'entropy': 0.1566608551889658, 'num_tokens': 54474012.0, 'mean_token_accuracy': 0.964613389968872, 'epoch': 2.8}
+
+ 93%|█████████▎| 1310/1404 [1:16:02<05:27,  3.48s/it]
+ 93%|█████████▎| 1311/1404 [1:16:05<05:22,  3.47s/it]
+ 93%|█████████▎| 1312/1404 [1:16:09<05:16,  3.44s/it]
+ 94%|█████████▎| 1313/1404 [1:16:12<05:09,  3.41s/it]
+ 94%|█████████▎| 1314/1404 [1:16:15<05:06,  3.41s/it]
+ 94%|█████████▎| 1315/1404 [1:16:19<05:02,  3.40s/it]
+ 94%|█████████▎| 1316/1404 [1:16:22<05:00,  3.41s/it]
+ 94%|█████████▍| 1317/1404 [1:16:26<04:51,  3.35s/it]
+ 94%|█████████▍| 1318/1404 [1:16:28<04:37,  3.23s/it]
+ 94%|█████████▍| 1319/1404 [1:16:32<04:39,  3.29s/it]
+ 94%|█████████▍| 1320/1404 [1:16:35<04:40,  3.34s/it]
+                                                     
+{'loss': 0.132, 'grad_norm': 1.1953125, 'learning_rate': 1.9998362482172462e-07, 'entropy': 0.1557843193411827, 'num_tokens': 54877404.0, 'mean_token_accuracy': 0.9649198845028877, 'epoch': 2.82}
+
+ 94%|█████████▍| 1320/1404 [1:16:35<04:40,  3.34s/it]
+ 94%|█████████▍| 1321/1404 [1:16:39<04:37,  3.35s/it]
+ 94%|█████████▍| 1322/1404 [1:16:42<04:37,  3.38s/it]
+ 94%|█████████▍| 1323/1404 [1:16:46<04:35,  3.40s/it]
+ 94%|█████████▍| 1324/1404 [1:16:49<04:20,  3.26s/it]
+ 94%|█████████▍| 1325/1404 [1:16:52<04:23,  3.34s/it]
+ 94%|█████████▍| 1326/1404 [1:16:56<04:29,  3.45s/it]
+ 95%|█████████▍| 1327/1404 [1:16:59<04:22,  3.41s/it]
+ 95%|█████████▍| 1328/1404 [1:17:03<04:20,  3.43s/it]
+ 95%|█████████▍| 1329/1404 [1:17:06<04:10,  3.34s/it]
+ 95%|█████████▍| 1330/1404 [1:17:08<03:53,  3.16s/it]
+                                                     
+{'loss': 0.1282, 'grad_norm': 1.5234375, 'learning_rate': 1.5581201255101874e-07, 'entropy': 0.1532172705978155, 'num_tokens': 55277882.0, 'mean_token_accuracy': 0.9659610196948052, 'epoch': 2.84}
+
+ 95%|█████████▍| 1330/1404 [1:17:08<03:53,  3.16s/it]
+ 95%|█████████▍| 1331/1404 [1:17:12<03:57,  3.26s/it]
+ 95%|█████████▍| 1332/1404 [1:17:15<04:01,  3.35s/it]
+ 95%|█████████▍| 1333/1404 [1:17:19<03:54,  3.30s/it]
+ 95%|█████████▌| 1334/1404 [1:17:22<03:59,  3.42s/it]
+ 95%|█████████▌| 1335/1404 [1:17:26<03:55,  3.41s/it]
+ 95%|█████████▌| 1336/1404 [1:17:29<03:51,  3.40s/it]
+ 95%|█████████▌| 1337/1404 [1:17:32<03:43,  3.34s/it]
+ 95%|█████████▌| 1338/1404 [1:17:36<03:42,  3.37s/it]
+ 95%|█████████▌| 1339/1404 [1:17:39<03:41,  3.41s/it]
+ 95%|█████████▌| 1340/1404 [1:17:43<03:40,  3.45s/it]
+                                                     
+{'loss': 0.1349, 'grad_norm': 1.328125, 'learning_rate': 1.1710803185518537e-07, 'entropy': 0.16022949144244195, 'num_tokens': 55712810.0, 'mean_token_accuracy': 0.9637763276696205, 'epoch': 2.86}
+
+ 95%|█████████▌| 1340/1404 [1:17:43<03:40,  3.45s/it]
+ 96%|█████████▌| 1341/1404 [1:17:46<03:36,  3.43s/it]
+ 96%|█████████▌| 1342/1404 [1:17:49<03:25,  3.32s/it]
+ 96%|█████████▌| 1343/1404 [1:17:53<03:24,  3.35s/it]
+ 96%|█████████▌| 1344/1404 [1:17:56<03:24,  3.40s/it]
+ 96%|█████████▌| 1345/1404 [1:18:00<03:19,  3.38s/it]
+ 96%|█████████▌| 1346/1404 [1:18:03<03:16,  3.38s/it]
+ 96%|█████████▌| 1347/1404 [1:18:06<03:11,  3.36s/it]
+ 96%|█████████▌| 1348/1404 [1:18:10<03:13,  3.46s/it]
+ 96%|█████████▌| 1349/1404 [1:18:14<03:14,  3.53s/it]
+ 96%|█████████▌| 1350/1404 [1:18:17<03:05,  3.43s/it]
+                                                     
+{'loss': 0.1279, 'grad_norm': 1.296875, 'learning_rate': 8.3893179591783e-08, 'entropy': 0.1521322075277567, 'num_tokens': 56105830.0, 'mean_token_accuracy': 0.9657902583479882, 'epoch': 2.89}
+
+ 96%|█████████▌| 1350/1404 [1:18:17<03:05,  3.43s/it]
+ 96%|█████████▌| 1351/1404 [1:18:20<03:03,  3.46s/it]
+ 96%|█████████▋| 1352/1404 [1:18:24<03:00,  3.46s/it]
+ 96%|█████████▋| 1353/1404 [1:18:27<03:00,  3.53s/it]
+ 96%|█████████▋| 1354/1404 [1:18:31<02:55,  3.51s/it]
+ 97%|█████████▋| 1355/1404 [1:18:34<02:50,  3.48s/it]
+ 97%|█████████▋| 1356/1404 [1:18:38<02:47,  3.49s/it]
+ 97%|█████████▋| 1357/1404 [1:18:42<02:52,  3.66s/it]
+ 97%|█████████▋| 1358/1404 [1:18:46<02:50,  3.72s/it]
+ 97%|█████████▋| 1359/1404 [1:18:49<02:42,  3.62s/it]
+ 97%|█████████▋| 1360/1404 [1:18:53<02:37,  3.58s/it]
+                                                     
+{'loss': 0.134, 'grad_norm': 1.1875, 'learning_rate': 5.618590386188616e-08, 'entropy': 0.15974246859550476, 'num_tokens': 56559994.0, 'mean_token_accuracy': 0.9640483245253563, 'epoch': 2.91}
+
+ 97%|█████████▋| 1360/1404 [1:18:53<02:37,  3.58s/it]
+ 97%|█████████▋| 1361/1404 [1:18:56<02:35,  3.63s/it]
+ 97%|█████████▋| 1362/1404 [1:19:00<02:29,  3.57s/it]
+ 97%|█████████▋| 1363/1404 [1:19:03<02:24,  3.54s/it]
+ 97%|█████████▋| 1364/1404 [1:19:07<02:20,  3.51s/it]
+ 97%|█████████▋| 1365/1404 [1:19:10<02:16,  3.50s/it]
+ 97%|█████████▋| 1366/1404 [1:19:13<02:10,  3.43s/it]
+ 97%|█████████▋| 1367/1404 [1:19:17<02:07,  3.43s/it]
+ 97%|█████████▋| 1368/1404 [1:19:20<02:01,  3.38s/it]
+ 98%|█████████▊| 1369/1404 [1:19:24<02:01,  3.47s/it]
+ 98%|█████████▊| 1370/1404 [1:19:27<01:58,  3.47s/it]
+                                                     
+{'loss': 0.1276, 'grad_norm': 1.3046875, 'learning_rate': 3.400159376369394e-08, 'entropy': 0.15297772958874703, 'num_tokens': 56965657.0, 'mean_token_accuracy': 0.9655930951237679, 'epoch': 2.93}
+
+ 98%|█████████▊| 1370/1404 [1:19:27<01:58,  3.47s/it]
+ 98%|█████████▊| 1371/1404 [1:19:31<01:52,  3.40s/it]
+ 98%|█████████▊| 1372/1404 [1:19:34<01:52,  3.52s/it]
+ 98%|█████████▊| 1373/1404 [1:19:38<01:50,  3.58s/it]
+ 98%|█████████▊| 1374/1404 [1:19:42<01:46,  3.55s/it]
+ 98%|█████████▊| 1375/1404 [1:19:45<01:42,  3.52s/it]
+ 98%|█████████▊| 1376/1404 [1:19:49<01:40,  3.60s/it]
+ 98%|█████████▊| 1377/1404 [1:19:52<01:36,  3.57s/it]
+ 98%|█████████▊| 1378/1404 [1:19:56<01:31,  3.52s/it]
+ 98%|█████████▊| 1379/1404 [1:19:59<01:27,  3.50s/it]
+ 98%|█████████▊| 1380/1404 [1:20:03<01:25,  3.57s/it]
+                                                     
+{'loss': 0.1285, 'grad_norm': 1.1484375, 'learning_rate': 1.735257084516051e-08, 'entropy': 0.154943860322237, 'num_tokens': 57381927.0, 'mean_token_accuracy': 0.9653488874435425, 'epoch': 2.95}
+
+ 98%|█████████▊| 1380/1404 [1:20:03<01:25,  3.57s/it]
+ 98%|█████████▊| 1381/1404 [1:20:06<01:21,  3.55s/it]
+ 98%|█████████▊| 1382/1404 [1:20:10<01:16,  3.49s/it]
+ 99%|█████████▊| 1383/1404 [1:20:13<01:13,  3.49s/it]
+ 99%|█████████▊| 1384/1404 [1:20:16<01:06,  3.33s/it]
+ 99%|█████████▊| 1385/1404 [1:20:20<01:06,  3.49s/it]
+ 99%|█████████▊| 1386/1404 [1:20:23<01:02,  3.46s/it]
+ 99%|█████████▉| 1387/1404 [1:20:27<00:57,  3.41s/it]
+ 99%|█████████▉| 1388/1404 [1:20:31<00:57,  3.57s/it]
+ 99%|█████████▉| 1389/1404 [1:20:34<00:52,  3.50s/it]
+ 99%|█████████▉| 1390/1404 [1:20:38<00:49,  3.51s/it]
+                                                     
+{'loss': 0.1317, 'grad_norm': 1.2578125, 'learning_rate': 6.2480822603960825e-09, 'entropy': 0.15674763396382332, 'num_tokens': 57806912.0, 'mean_token_accuracy': 0.9644747167825699, 'epoch': 2.97}
+
+ 99%|█████████▉| 1390/1404 [1:20:38<00:49,  3.51s/it]
+ 99%|█████████▉| 1391/1404 [1:20:41<00:45,  3.47s/it]
+ 99%|█████████▉| 1392/1404 [1:20:44<00:40,  3.41s/it]
+ 99%|█████████▉| 1393/1404 [1:20:48<00:38,  3.50s/it]
+ 99%|█████████▉| 1394/1404 [1:20:51<00:34,  3.47s/it]
+ 99%|█████████▉| 1395/1404 [1:20:55<00:31,  3.47s/it]
+ 99%|█████████▉| 1396/1404 [1:20:58<00:27,  3.46s/it]
+100%|█████████▉| 1397/1404 [1:21:02<00:23,  3.43s/it]
+100%|█████████▉| 1398/1404 [1:21:05<00:20,  3.46s/it]
+100%|█████████▉| 1399/1404 [1:21:08<00:17,  3.42s/it]
+100%|█████████▉| 1400/1404 [1:21:12<00:13,  3.43s/it]
+                                                     
+{'loss': 0.1329, 'grad_norm': 1.1484375, 'learning_rate': 6.942956336353224e-10, 'entropy': 0.15778457708656787, 'num_tokens': 58221529.0, 'mean_token_accuracy': 0.964215625822544, 'epoch': 2.99}
+
+100%|█████████▉| 1400/1404 [1:21:12<00:13,  3.43s/it]
+100%|█████████▉| 1401/1404 [1:21:15<00:10,  3.44s/it]
+100%|█████████▉| 1402/1404 [1:21:19<00:06,  3.47s/it]
+100%|█████████▉| 1403/1404 [1:21:23<00:03,  3.58s/it]
+100%|██████████| 1404/1404 [1:21:24<00:00,  2.94s/it]
+                                                     
+{'train_runtime': 4901.6967, 'train_samples_per_second': 18.295, 'train_steps_per_second': 0.286, 'train_loss': 0.194398450206148, 'entropy': 0.15516093717171595, 'num_tokens': 58363046.0, 'mean_token_accuracy': 0.9646676045197707, 'epoch': 3.0}
+
+100%|██████████| 1404/1404 [1:21:41<00:00,  2.94s/it]
+100%|██████████| 1404/1404 [1:21:41<00:00,  3.49s/it]
+INFO:__main__:Saving model...
+INFO:__main__:Saving model...
+INFO:__main__:Saving model...
+INFO:__main__:Saving model...
+INFO:__main__:Training complete. Model saved to artifacts/steps/step_001_sft_gsm8k_full/output
+INFO:__main__:Metrics: {'train_runtime': 4884.7231, 'train_samples_per_second': 18.358, 'train_steps_per_second': 0.287, 'total_flos': 1.0372315681264763e+18, 'train_loss': 0.19449261514379768}
+INFO:__main__:Training complete. Model saved to artifacts/steps/step_001_sft_gsm8k_full/output
+INFO:__main__:Metrics: {'train_runtime': 4884.716, 'train_samples_per_second': 18.358, 'train_steps_per_second': 0.287, 'total_flos': 1.0372315681264763e+18, 'train_loss': 0.19456516677497798}
+INFO:__main__:Training complete. Model saved to artifacts/steps/step_001_sft_gsm8k_full/output
+INFO:__main__:Metrics: {'train_runtime': 4884.7175, 'train_samples_per_second': 18.358, 'train_steps_per_second': 0.287, 'total_flos': 1.0372315681264763e+18, 'train_loss': 0.19443668556688856}
+***** train metrics *****
+  total_flos               = 965997174GF
+  train_loss               =      0.1944
+  train_runtime            =  1:21:41.69
+  train_samples_per_second =      18.295
+  train_steps_per_second   =       0.286
+INFO:__main__:Training complete. Model saved to artifacts/steps/step_001_sft_gsm8k_full/output
+INFO:__main__:Metrics: {'train_runtime': 4901.6967, 'train_samples_per_second': 18.295, 'train_steps_per_second': 0.286, 'total_flos': 1.0372315681264763e+18, 'train_loss': 0.194398450206148}
+[rank0]:[W901 18:38:19.349321585 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
