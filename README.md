@@ -2,12 +2,11 @@
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/📄-Paper-blue)](https://arxiv.org/abs/2608.19072)
 [![License](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
 
 </div>
 
-Code and data for **[What is Missing from AI Post-Training AI: An Empirical Analysis](https://arxiv.org/abs/2608.19072)**.
+Code and data for **What is Missing from AI Post-Training AI: An Empirical Analysis**.
 
 ## Overview
 
@@ -105,7 +104,7 @@ main agent is free to ignore, and at the strategy level does.
 ## Installation
 
 ```bash
-git clone --recurse-submodules https://github.com/JoylimJY/AI-PostTraining-AI.git
+git clone --recurse-submodules <repository-url>
 cd AI-PostTraining-AI
 pip install -r requirements.txt
 ```
@@ -173,17 +172,7 @@ never imputed. Every label carries a reference back to the exact line of the sou
 
 ## Citation
 
-```bibtex
-@misc{lim2026missingaiposttrainingai,
-      title={What is Missing from AI Post-Training AI: An Empirical Analysis},
-      author={Joy Jia Yin Lim and Xin Huang and Hao Peng and Yaxi Lu and Xin Cong and Zhong Zhang and Maosong Sun and Yankai Lin},
-      year={2026},
-      eprint={2608.19072},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2608.19072},
-}
-```
+Citation details are withheld for anonymous review.
 
 ## License
 
