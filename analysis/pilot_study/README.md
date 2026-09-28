@@ -25,9 +25,9 @@ commands are excluded.
 Objective evidence is read from the executed training script whenever possible.
 The labels are `supervised_likelihood`, `reward_optimization`,
 `preference_optimization`, `on_policy_distillation`, and
-`objective_unknown`. Later strategy statistics compare only adjacent training
-experiments for which both objective forms are known; unknown experiments are
-excluded and never bridged. A proposed or unexecuted change is not counted.
+`objective_unknown`. Later strategy statistics count a change only where both
+objective forms are known; `objective_unknown` is never imputed to a class. A
+proposed or unexecuted change is not counted.
 
 The output files that define the current annotation are:
 

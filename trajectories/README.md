@@ -1,8 +1,8 @@
 # Archived Trajectories
 
-Ten runs of our own controlled experiments — the ones the paper's qualitative
-claims point at. Each directory is the agent's working directory as it stood
-when the run ended, minus the artifacts that cannot be redistributed.
+Thirteen runs of our own controlled experiments — the ones the paper's
+qualitative claims point at. Each directory is the agent's working directory as
+it stood when the run ended, minus the artifacts that cannot be redistributed.
 
 Directories are named `{setting}_{benchmark}_{id}`. The setting is the condition
 the agent ran under — `experience` (the experience-driven framework: experiment
@@ -25,31 +25,50 @@ be recomputed from a checkout.
 | [`autonomous_aime2025_c7c4a0c4/`](autonomous_aime2025_c7c4a0c4/) | autonomous | Codex | AIME 2025 | 7h 24m | — | — | 0.000 |
 | [`autonomous_gsm8k_5dcf0c73/`](autonomous_gsm8k_5dcf0c73/) | autonomous | Codex | GSM8K | 3h 02m | — | — | 0.537 |
 | [`autonomous_humaneval_832f94ce/`](autonomous_humaneval_832f94ce/) | autonomous | Codex | HumanEval | 5h 33m | — | — | 0.134 |
+| [`autonomous_gsm8k_886c6165/`](autonomous_gsm8k_886c6165/) | autonomous | Claude Code | GSM8K | 9h 56m | — | — | 0.478 |
+| [`autonomous_humaneval_7d7f21b3/`](autonomous_humaneval_7d7f21b3/) | autonomous | Claude Code | HumanEval | 7h 48m | — | — | 0.585 † |
+| [`autonomous_aime2025_99ac2f89/`](autonomous_aime2025_99ac2f89/) | autonomous | Claude Code | AIME 2025 | 9h 45m | — | — | 0.000 |
 
-All ten runs post-train Qwen3-1.7B-Base on 4 GPUs under a 10-hour budget.
+† Data contamination; excluded from the paper's comparison — see below.
+
+All thirteen runs post-train Qwen3-1.7B-Base on 4 GPUs under a 10-hour budget.
 `run_metadata.json` in each directory records the exact start/end times and
 configuration. Several runs ended before their budget; where they did, the
 reason is in the stream's closing records.
 
 **The score column is not a controlled comparison.** It has three different
 meanings. The four framework and human runs report the in-run metric produced by
-our own evaluator agent, one sample per problem. The three Codex runs report the
-benchmark harness's final evaluation of the model the agent submitted. The three
-Claude Code autonomous runs have no official score: the harness's final
-evaluation never started for that batch, so nothing was recorded. What those
-three do have is the agent's own evaluations — 7, 5 and 9 of them, condensed
-into `evals/eval_log_summary.json`, run on subsets the agent chose for itself
+our own evaluator agent, one sample per problem. The three Codex runs and the
+last three Claude Code rows report the benchmark harness's final evaluation of
+the model the agent submitted (`metrics.json`). The first three Claude Code
+autonomous runs have no official score: the harness's final evaluation never
+started for that batch, so nothing was recorded. What those three do have is the
+agent's own evaluations — 7, 5 and 9 of them, condensed into
+`evals/eval_log_summary.json`, run on subsets the agent chose for itself
 (20 to 150 problems) and ending at 0.000 on AIME 2025, 0.647 on GSM8K and 0.050
 on HumanEval. Those are the agent's own view of its progress, not benchmark
 results; the HumanEval agent's best subset score along the way was 0.35, and it
 finished below it.
 
+The three scored Claude Code autonomous runs are the **recorded continuations**
+behind the mid-run fork comparison: they are the trajectories that were forked,
+and their own later halves are what the guided branch is measured against. The
+GSM8K row's 0.4776 is exactly the 47.76% continuation figure the paper reports,
+and the AIME row's 0.000 is its 0.00%.
+
+HumanEval is the exception: the paper scores that continuation at **52.00%**.
+The 0.585 checkpoint recorded here showed data contamination and is excluded;
+`metrics.json` is left as the harness wrote it rather than retroactively
+corrected.
+
 If you want the autonomous condition held to the same scaffold as the framework
-runs, use the three Claude Code rows: the Codex runs differ from everything else
+runs, use the six Claude Code rows: the Codex runs differ from everything else
 here in scaffold as well as in setting. The paper's quantitative claims rest on
 the annotated corpus in [`../analysis/annotations/`](../analysis/annotations/),
-not on these ten runs. The post-hoc pass@8 numbers for the AIME comparison are in
-[`../experiments/human_guidance/pass8_results.json`](../experiments/human_guidance/pass8_results.json).
+not on these thirteen runs. The post-hoc pass@8 numbers for the AIME comparison
+are in
+[`../experiments/human_guidance/pass8_results.json`](../experiments/human_guidance/pass8_results.json);
+the best checkpoint there reaches 3/30 (10.0%).
 
 ## What each directory contains
 
@@ -76,7 +95,7 @@ verdicts and stated reasons). The human reviewer rejected iteration 1 for
 over-weighting SFT and accepted iteration 2; the 10-hour budget starts only
 after acceptance, and the 793 s of human wait time is excluded from it.
 
-The six autonomous runs came out of the benchmark harness instead, so their
+The nine autonomous runs came out of the benchmark harness instead, so their
 layout is different and deliberately sparser — none of the framework's machinery
 is present, which is the point of the condition:
 
@@ -85,13 +104,18 @@ is present, which is the point of the condition:
 | `trajectory.jsonl` | the agent's stream as the harness recorded it |
 | `program.md` | the prompt this run was given |
 | `run_metadata.json` | elapsed, start/end, base model, budget, how the run ended, and final metrics where any exist |
-| `metrics.json` | the harness's final evaluation of the submitted model — Codex runs only |
+| `metrics.json` | the harness's final evaluation of the submitted model — present wherever it ran |
 | `scripts/` | **agent-authored** data preparation, training and evaluation scripts |
 | `logs/` | the training and evaluation logs the agent produced |
 | `evals/` | the agent's own evaluation results, and `eval_log_summary.json` condensing its full evaluation logs |
-| `*.md` | the agent's own notes, where it wrote any |
+| `*.md` | the agent's own notes, where it wrote any — including the `summary.md` step-by-step log the three forked runs kept |
 | `contamination_judgement.txt`, `disallowed_model_judgement.txt` | the harness's compliance verdicts on the run |
 | `timer.sh` | the budget watchdog the agent could call |
+
+The three forked runs came out of PostTrainBench rather than the reference
+harness, which records exit codes instead of those two verdict files; their
+`run_metadata.json` carries a `harness_validation` block in their place. Those
+files are absent rather than invented.
 
 There is no journal, no skill library, no evaluator agent, and no queue — an
 autonomous agent has only its own context. `autonomous_aime2025_c7c4a0c4/` kept
@@ -129,15 +153,15 @@ files themselves, so the archives stay internally consistent:
 | `verl-parquet-schema` | `data-parquet-schema` |
 | `grpo-lora-verl` | `grpo-lora-config` |
 
-Only the identifier changed; skill contents are untouched. The third skill was
-authored in an earlier AIME run and does not appear in these archives, and the
-autonomous runs carry no skills at all.
+Only the identifier changed; skill contents are untouched. `grpo-lora-config`
+entered the library during an earlier AIME run and does not appear in these
+archives, and the autonomous runs carry no skills at all.
 
 **2. Redactions.** Three kinds, all mechanical:
 
 *Credentials.* Each Codex run's stream opens with the harness echoing the agent
 provider and its API key. That one token per file is replaced with
-`sk-[REDACTED]`. The other seven runs contain none.
+`sk-[REDACTED]`. The other ten runs contain none.
 
 *Account balances.* Our API provider returns `403` quota errors whose message
 text quotes the account balance. In
@@ -155,12 +179,14 @@ throughout.
 
 *Host paths.* `experience_aime2025_c247e78e/trajectory.jsonl` contains a
 directory listing of a shared model store in which three symlink targets carry
-our cluster account name; those are rewritten to `/home/user`. The autonomous
-runs reference the base model by its absolute path on the same store, rewritten
-the same way — 36, 24 and 79 occurrences in the Codex runs, 35, 55 and 66 in the
-Claude Code ones. Container-internal paths (`/workspace/AI4AI/...`,
-`/home/ben/task/...`) are left alone — the evaluator log filenames encode them,
-so rewriting them would desynchronize the archive from itself.
+our cluster account name; those are rewritten to `/home/user`. The first six
+autonomous runs reference the base model by its absolute path on the same
+store, rewritten the same way — 36, 24 and 79 occurrences in the Codex runs,
+35, 55 and 66 in the Claude Code ones. The three forked runs ran in a container
+whose home is already `/home/user` and needed no rewrite. Container-internal
+paths (`/workspace/AI4AI/...`, `/home/ben/task/...`, `/home/test/...`) are left
+alone throughout — the evaluator log filenames encode them, so rewriting them
+would desynchronize the archive from itself.
 
 ## Reading a trajectory
 
@@ -181,12 +207,20 @@ records, stats = parse_claude_records(
 )
 ```
 
-The three Claude Code autonomous runs carry the same records, but as the
-benchmark harness wrote them: every JSON line is prefixed with a wall-clock
-stamp, `[2026-06-09T06:26:38Z] {...}`, and the container's startup banner
-occupies the first 15 lines. `parse_claude_records` reads them as they are — it
-scans past any prefix to the first `{` and skips lines that hold no JSON object,
-reporting them in `stats["warnings"]`.
+The six Claude Code autonomous runs carry the same records, but as their
+harness wrote them, and the two batches differ slightly. In the first three,
+every JSON line is prefixed with a wall-clock stamp,
+`[2026-06-09T06:26:38Z] {...}`, and the container's startup banner occupies the
+first 15 lines. The three forked runs carry no stamps — PostTrainBench does not
+write them, which is why their `run_metadata.json` reconstructs start and end
+from `timer.sh` and the last write to `logs/solve_out.txt` — their banner runs
+to 40 lines, and they interleave incremental `stream_event` records with the
+completed message records.
+
+`parse_claude_records` reads all six as they are: it scans past any prefix to
+the first `{`, skips lines that hold no JSON object, and reports them in
+`stats["warnings"]`. On the three forked runs it returns 3,115 / 5,861 / 7,906
+records with zero malformed JSON lines.
 
 The Codex runs keep that harness's own event format instead, stamped the same
 way, with `thread.started`, `turn.*` and `item.*` events in place of Claude's
@@ -202,7 +236,7 @@ records, stats = parse_codex_records(
 
 These are the same formats, and the same parsers, that the pipeline uses for the
 wider corpus — `config.json` lists `solve_out.txt` and `trace.txt` as the two
-stream sources, and the six autonomous files are the former, renamed.
+stream sources, and the nine autonomous files are the former, renamed.
 
 One archive does not end on a clean JSON line. When our watchdog reaches the
 wall-clock budget it kills the agent process, and the shell's `Killed` notice is
@@ -218,15 +252,19 @@ have no equivalent; that absence is the finding.
 
 ## Scope
 
-These ten runs are the controlled arm of the study. The broader corpus the
-statistics in the paper are computed over — 1,338 trajectories across 5 agent
-harnesses, 7 benchmarks and 4 base models — is not redistributed here; its
-annotations are in [`../analysis/annotations/`](../analysis/annotations/). The
-autonomous runs were recorded by the same benchmark harness that produced that
-corpus, which is why the pipeline's parsers read them unchanged, but they are
-separate local runs and are not among the 1,338.
+These thirteen runs are the controlled arm of the study. The broader corpus the
+statistics in the paper are computed over — 1,338 trajectories across 20
+agent-model configurations spanning 3 agent frameworks, 7 benchmarks and 4 base
+models — is not redistributed here; its annotations are in
+[`../analysis/annotations/`](../analysis/annotations/). The autonomous runs were
+recorded by the same benchmark harness that produced that corpus, which is why
+the pipeline's parsers read them unchanged, but they are separate local runs and
+are not among the 1,338.
 
 The AIME campaign ran nine times under the framework. The ninth, with all three
-components in place, is the one archived here; the additional ten skills in
-[`../framework/skills/skills/`](../framework/skills/skills/) were written by the
-agent during runs 3, 4, 6 and 7, which are not included.
+components in place, is the one archived here. The additional ten skills in
+[`../framework/skills/skills/`](../framework/skills/skills/) — beyond the five
+seeds — are knowledge the agent **consulted** during runs 3, 4, 6 and 7, which
+are not included. **No skill was written by an agent in any run**, here or in
+the campaign; see
+[`../framework/skills/README.md`](../framework/skills/README.md).

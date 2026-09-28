@@ -1,0 +1,17 @@
+trajectory_id,agent_framework,benchmark,base_model,n_experiments,n_algorithm_changes,begins_with_sft,oscillates,algorithm_sequence,in_table_6
+274adc6398a15336353b,Claude Code,AIME 2025,Qwen3-1.7B-Base,8,3,False,True,GRPO SFT SFT SFT SFT GRPO GRPO SFT,False
+3b0a14de5d35bb44abf3,Codex CLI,AIME 2025,Qwen3-4B-Base,16,3,True,True,SFT SFT SFT GRPO GRPO GRPO SFT SFT SFT SFT SFT SFT SFT SFT SFT GRPO,False
+3fd3ea0ba59a8679ee77,Codex CLI,ArenaHardWriting,SmolLM3-3B-Base,7,4,True,True,SFT SFT DPO SFT DPO SFT SFT,True
+50c64287b6a3efb8d308,Codex CLI,ArenaHardWriting,Qwen3-4B-Base,6,1,True,False,SFT SFT SFT SFT DPO DPO,True
+57c8086b6941e80337db,Claude Code,AIME 2025,Qwen3-1.7B-Base,6,1,True,False,SFT SFT SFT SFT GRPO GRPO,False
+59151c09e7e27c475dc4,Claude Code,GSM8K,Qwen3-4B-Base,6,2,True,True,SFT SFT GRPO GRPO GRPO SFT,False
+7549345e0817452e7997,OpenCode,GSM8K,Gemma-3-4B-PT,10,2,True,True,SFT SFT SFT SFT GRPO GRPO GRPO SFT SFT SFT,False
+8226f786f9bad5f57535,Codex CLI,ArenaHardWriting,SmolLM3-3B-Base,5,3,True,True,SFT DPO DPO SFT DPO,True
+860ceacdf1c5761bc063,Claude Code,AIME 2025,Qwen3-1.7B-Base,11,4,True,True,SFT SFT SFT GRPO GRPO GRPO GRPO GRPO SFT GRPO SFT,True
+99c2dd6640d271b1db63,Codex CLI,ArenaHardWriting,Qwen3-1.7B-Base,7,2,True,True,SFT SFT DPO SFT SFT SFT SFT,False
+a01a372145f5f2e5a3a7,Claude Code,AIME 2025,Qwen3-1.7B-Base,6,2,True,True,SFT SFT SFT GRPO GRPO SFT,False
+a5b13e066b53dd539892,OpenCode,AIME 2025,SmolLM3-3B-Base,7,1,True,False,SFT SFT SFT SFT SFT SFT GRPO,False
+b152fc3b295f1b8e39f4,Claude Code,AIME 2025,Qwen3-1.7B-Base,7,2,True,True,SFT SFT SFT SFT GRPO SFT SFT,False
+c7f18274d5eae161a339,OpenCode,ArenaHardWriting,Gemma-3-4B-PT,28,1,True,False,SFT SFT SFT SFT SFT SFT SFT SFT SFT SFT SFT SFT SFT DPO DPO DPO DPO DPO DPO DPO DPO DPO DPO DPO DPO DPO DPO DPO,False
+c92715d6498b09655b26,Claude Code,ArenaHardWriting,Gemma-3-4B-PT,11,3,True,True,SFT SFT SFT SFT DPO DPO SFT DPO DPO DPO DPO,True
+df40a6660663efb2bec7,Claude Code,GSM8K,Qwen3-4B-Base,4,1,False,False,GRPO SFT SFT SFT,False

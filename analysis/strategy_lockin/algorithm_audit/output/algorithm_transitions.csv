@@ -1,0 +1,36 @@
+trajectory_id,agent_framework,benchmark,base_model,from_experiment,to_experiment,from_algorithm,to_algorithm,returns_to_sft,is_first_switch,normalized_progress
+274adc6398a15336353b,Claude Code,AIME 2025,Qwen3-1.7B-Base,0,1,GRPO,SFT,True,True,0.1429
+274adc6398a15336353b,Claude Code,AIME 2025,Qwen3-1.7B-Base,4,5,SFT,GRPO,False,False,0.7143
+274adc6398a15336353b,Claude Code,AIME 2025,Qwen3-1.7B-Base,6,7,GRPO,SFT,True,False,1.0
+3b0a14de5d35bb44abf3,Codex CLI,AIME 2025,Qwen3-4B-Base,2,3,SFT,GRPO,False,True,0.2
+3b0a14de5d35bb44abf3,Codex CLI,AIME 2025,Qwen3-4B-Base,5,6,GRPO,SFT,True,False,0.4
+3b0a14de5d35bb44abf3,Codex CLI,AIME 2025,Qwen3-4B-Base,14,15,SFT,GRPO,False,False,1.0
+3fd3ea0ba59a8679ee77,Codex CLI,ArenaHardWriting,SmolLM3-3B-Base,1,2,SFT,DPO,False,True,0.3333
+3fd3ea0ba59a8679ee77,Codex CLI,ArenaHardWriting,SmolLM3-3B-Base,2,3,DPO,SFT,True,False,0.5
+3fd3ea0ba59a8679ee77,Codex CLI,ArenaHardWriting,SmolLM3-3B-Base,3,4,SFT,DPO,False,False,0.6667
+3fd3ea0ba59a8679ee77,Codex CLI,ArenaHardWriting,SmolLM3-3B-Base,4,5,DPO,SFT,True,False,0.8333
+50c64287b6a3efb8d308,Codex CLI,ArenaHardWriting,Qwen3-4B-Base,3,4,SFT,DPO,False,True,0.8
+57c8086b6941e80337db,Claude Code,AIME 2025,Qwen3-1.7B-Base,3,4,SFT,GRPO,False,True,0.8
+59151c09e7e27c475dc4,Claude Code,GSM8K,Qwen3-4B-Base,1,2,SFT,GRPO,False,True,0.4
+59151c09e7e27c475dc4,Claude Code,GSM8K,Qwen3-4B-Base,4,5,GRPO,SFT,True,False,1.0
+7549345e0817452e7997,OpenCode,GSM8K,Gemma-3-4B-PT,3,4,SFT,GRPO,False,True,0.4444
+7549345e0817452e7997,OpenCode,GSM8K,Gemma-3-4B-PT,6,7,GRPO,SFT,True,False,0.7778
+8226f786f9bad5f57535,Codex CLI,ArenaHardWriting,SmolLM3-3B-Base,0,1,SFT,DPO,False,True,0.25
+8226f786f9bad5f57535,Codex CLI,ArenaHardWriting,SmolLM3-3B-Base,2,3,DPO,SFT,True,False,0.75
+8226f786f9bad5f57535,Codex CLI,ArenaHardWriting,SmolLM3-3B-Base,3,4,SFT,DPO,False,False,1.0
+860ceacdf1c5761bc063,Claude Code,AIME 2025,Qwen3-1.7B-Base,2,3,SFT,GRPO,False,True,0.3
+860ceacdf1c5761bc063,Claude Code,AIME 2025,Qwen3-1.7B-Base,7,8,GRPO,SFT,True,False,0.8
+860ceacdf1c5761bc063,Claude Code,AIME 2025,Qwen3-1.7B-Base,8,9,SFT,GRPO,False,False,0.9
+860ceacdf1c5761bc063,Claude Code,AIME 2025,Qwen3-1.7B-Base,9,10,GRPO,SFT,True,False,1.0
+99c2dd6640d271b1db63,Codex CLI,ArenaHardWriting,Qwen3-1.7B-Base,1,2,SFT,DPO,False,True,0.3333
+99c2dd6640d271b1db63,Codex CLI,ArenaHardWriting,Qwen3-1.7B-Base,2,3,DPO,SFT,True,False,0.5
+a01a372145f5f2e5a3a7,Claude Code,AIME 2025,Qwen3-1.7B-Base,2,3,SFT,GRPO,False,True,0.6
+a01a372145f5f2e5a3a7,Claude Code,AIME 2025,Qwen3-1.7B-Base,4,5,GRPO,SFT,True,False,1.0
+a5b13e066b53dd539892,OpenCode,AIME 2025,SmolLM3-3B-Base,5,6,SFT,GRPO,False,True,1.0
+b152fc3b295f1b8e39f4,Claude Code,AIME 2025,Qwen3-1.7B-Base,3,4,SFT,GRPO,False,True,0.6667
+b152fc3b295f1b8e39f4,Claude Code,AIME 2025,Qwen3-1.7B-Base,4,5,GRPO,SFT,True,False,0.8333
+c7f18274d5eae161a339,OpenCode,ArenaHardWriting,Gemma-3-4B-PT,12,13,SFT,DPO,False,True,0.4815
+c92715d6498b09655b26,Claude Code,ArenaHardWriting,Gemma-3-4B-PT,3,4,SFT,DPO,False,True,0.4
+c92715d6498b09655b26,Claude Code,ArenaHardWriting,Gemma-3-4B-PT,5,6,DPO,SFT,True,False,0.6
+c92715d6498b09655b26,Claude Code,ArenaHardWriting,Gemma-3-4B-PT,6,7,SFT,DPO,False,False,0.7
+df40a6660663efb2bec7,Claude Code,GSM8K,Qwen3-4B-Base,0,1,GRPO,SFT,True,True,0.3333

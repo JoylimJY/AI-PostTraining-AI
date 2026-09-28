@@ -2,21 +2,10 @@
 
 ## Core finding
 
-Across all seven shared benchmarks, all four shared base models, and the same
-10-hour single-H100 budget, the two scaffolds do not converge on the same
-supervised fine-tuning implementation.
-
-Among Claude's identifiable initial methods, Full SFT accounts for 163/202
-(80.7%); among Codex's identifiable initial methods, LoRA/PEFT accounts for
-268/299 (89.6%).
-
-The direction is consistent: in 28/28 matched cells Claude leans towards Full
-SFT, and in 28/28 cells Codex leans towards PEFT; the mean gaps are 71.7 and
-72.9 percentage points respectively.
-
-In the Qwen3-1.7B-Base slice, the one closest to our controlled baseline,
-Claude's Full SFT commands are 123/148 (83.1%), and Codex's PEFT commands are
-300/349 (86.0%).
+Across all seven shared benchmarks, all four shared base models, and the same 10-hour single-H100 budget, the two scaffolds do not converge on the same supervised fine-tuning implementation.
+Among Claude's identifiable initial methods, Full SFT accounts for 163/202 (80.7%); among Codex's identifiable initial methods, LoRA/PEFT accounts for 268/299 (89.6%).
+The direction is consistent: in 28/28 matched cells Claude leans towards Full SFT, and in 28/28 cells Codex leans towards PEFT; the mean gaps are 71.7 and 72.9 percentage points respectively.
+In the Qwen3-1.7B-Base slice, the one closest to our controlled baseline, Claude's Full SFT commands are 123/148 (83.1%), and Codex's PEFT commands are 300/349 (86.0%).
 
 ## Cross-scaffold comparison
 
@@ -37,37 +26,17 @@ Claude's Full SFT commands are 123/148 (83.1%), and Codex's PEFT commands are
 | Codex | HealthBench | 0.231 (42) | LoRA/PEFT (85.7%) | 97.7% | 164/193 (85.0%) | LoRA/PEFT (94.5%) | 0/106 (0.0%) |
 | Codex | HumanEval | 0.332 (47) | LoRA/PEFT (95.7%) | 95.9% | 314/334 (94.0%) | LoRA/PEFT (96.5%) | 0/141 (0.0%) |
 
-Final accuracy is the mean over trajectories that trained and produced a valid
-final accuracy. It is interpretable only within a benchmark: it is not
-aggregated across benchmarks and is not a causal estimate of the scaffold's
-effect. The denominator of the dominant-method share is the set of identifiable
-methods, so the table also reports method-labelled commands / verified training
-commands coverage.
+Final accuracy is the mean over trajectories that trained and produced a valid final accuracy. It is interpretable only within a benchmark: it is not aggregated across benchmarks and is not a causal estimate of the scaffold's effect. The denominator of the dominant-method share is the set of identifiable methods, so the table also reports method-labelled commands / verified training commands coverage.
 
 ## Interpretation
 
-The result separates two layers. At the objective layer both scaffolds
-concentrate heavily on supervised likelihood; at the update-mechanism layer they
-concentrate on Full SFT and LoRA/PEFT respectively. If task demand alone
-determined the reasonable strategy, matched task cells should push both
-scaffolds towards the same implementation mechanism. The stable opposing
-preferences we observe are therefore not consistent with that simple account,
-and are better predicted by scaffold-specific priors or default tooling habits.
+The result separates two layers. At the objective layer both scaffolds concentrate heavily on supervised likelihood; at the update-mechanism layer they concentrate on Full SFT and LoRA/PEFT respectively. If task demand alone determined the reasonable strategy, matched task cells should push both scaffolds towards the same implementation mechanism. The stable opposing preferences we observe are therefore not consistent with that simple account, and are better predicted by scaffold-specific priors or default tooling habits.
 
-This evidence remains observational rather than causally identified: agent
-model, interface, prompt and scaffold are not independently randomised, and the
-method labels do not cover every training command. The conclusion should be
-stated as `inconsistent with a task-demand-only account` or `suggestive of
-scaffold-specific priors`, not as `proves scaffold causality`.
+This evidence remains observational rather than causally identified: agent model, interface, prompt and scaffold are not independently randomised, and the method labels do not cover every training command. The conclusion should be stated as `inconsistent with a task-demand-only account` or `suggestive of scaffold-specific priors`, not as `proves scaffold causality`.
 
 ## Measurement layers
 
-- `Dominant initial method`: the first identifiable method-family label in each
-  trajectory that trained.
-- `Dominant command method`: training episodes that contain a training action
-  and whose method family is identifiable.
-- `Objective switches`: switches between adjacent identified experiments at the
-  canonical objective layer. Full SFT and PEFT are both supervised likelihood,
-  so swapping one for the other is not an objective switch.
-- `Final accuracy`: the mean over trajectories that trained and produced a valid
-  final accuracy, reported per benchmark.
+- `Dominant initial method`: the first identifiable method-family label in each trajectory that trained.
+- `Dominant command method`: training episodes that contain a training action and whose method family is identifiable.
+- `Objective switches`: switches between adjacent identified experiments at the canonical objective layer. Full SFT and PEFT are both supervised likelihood, so swapping one for the other is not an objective switch.
+- `Final accuracy`: the mean over trajectories that trained and produced a valid final accuracy, reported per benchmark.

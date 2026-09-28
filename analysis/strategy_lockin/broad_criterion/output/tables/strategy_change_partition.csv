@@ -1,0 +1,5 @@
+changed_dimension,pairs,rate,basis
+Training algorithm,35,0.0098,"mechanical, from the objective form on both sides"
+Data source,38,0.0107,"mechanical, over the 1,401 pairs labelled on both sides"
+Training stages,1,0.0003,"author-adjudicated: c8fd5fbb5f110a978afb accepted, de3168aa0c59fecdd925 rejected as a restart"
+Overall,74,0.0208,disjoint union; no pair changes more than one dimension

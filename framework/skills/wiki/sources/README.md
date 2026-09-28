@@ -27,7 +27,8 @@ git submodule update --init --recursive framework/skills/wiki/sources/upstream
 
 The submodules are optional: nothing in this repository imports from them. They
 are here so that the provenance of every wiki claim can be checked against the
-exact upstream state the agent read.
+exact upstream state that was ingested.
 
 The `Raw location:` field at the top of each summary page refers to the
-original ingestion layout and is kept as written by the agent.
+original ingestion layout and is kept verbatim, pointing into the 908-document
+raw corpus that is not redistributed.

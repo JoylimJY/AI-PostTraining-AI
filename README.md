@@ -14,67 +14,160 @@ We give coding agents a base language model, a benchmark, one GPU, and ten hours
 post-train the model. Repeating this 1,338 times, we find that agents are strong *executors* and
 weak *strategists*.
 
-The paper separates two capabilities that discussions of AI-for-AI tend to conflate:
+The paper separates two capabilities that discussions of recursive self-improvement (RSI) tend to
+conflate. Every training experiment decomposes into a **strategy** `s = (p, d, g)` — training
+algorithm, data source, stage structure — and an **execution configuration** `x`:
 
-- **Execution level** — iterating inside a selected strategy: constructing data, tuning
-  hyperparameters, shaping rewards, selecting checkpoints, debugging the implementation.
-- **Strategy level** — revising the high-level judgment itself: switching the training paradigm,
-  adding or removing a stage, redirecting the remaining budget.
+- **Execution-level capability** — moving within `x` while holding `s` fixed: formatting data,
+  tuning hyperparameters, shaping rewards, selecting checkpoints, debugging the implementation.
+- **Strategy-level capability** — moving within `s`: switching the training algorithm, changing
+  the data source, adding or removing a training stage, as experimental evidence accumulates.
 
-Agents configure trainers, fit models onto a single card, and recover from crashes reliably. But
-the strategy they commit to — training paradigm, data source, stage structure — is fixed in the
-planning phase, before any code is written or any experiment is run, and is almost never revised
-afterwards, even when the agent's own recorded evidence says it should be. We call this **strategy
-lock-in**.
+The two levels partition the headroom of a run. For a trajectory locked into its initial strategy
+`s₁`, with `V(s, x)` the benchmark score, `V⋆(s) = maxₓ V(s, x)` and `V⋆ = maxₛ V⋆(s)`:
+
+```
+V⋆ − V(τ)   =   V⋆ − V⋆(s₁)   +   V⋆(s₁) − V(τ)
+ total gap      strategy-level gap    execution-level gap
+```
+
+Agents configure trainers, fit models onto a single card, and recover from crashes reliably, so
+the **execution-level gap shrinks steadily**. But the strategy they commit to is fixed before any
+experimental evidence arrives, and is almost never revised afterwards — even when the agent's own
+recorded evidence says it should be. The **strategy-level gap is therefore frozen at `t = 1`**. We
+call this **strategy lock-in**.
 
 The analyzed trajectories are publicly released PostTrainBench runs, spanning seven benchmarks,
-four base models, and five agent scaffolds; the controlled experiments are our own. This
-repository contains the harness that ran them, the annotations behind the paper's numbers, and ten
-archived agent runs covering all three conditions.
+four base models, and three agent frameworks (Claude Code, Codex CLI, OpenCode) across 20
+agent-model configurations; the controlled experiments are our own. This repository contains the
+harness that ran them, the annotations behind the paper's numbers, and thirteen archived agent runs
+covering all three conditions.
+
+What the agent turns out to lack is neither the ability to carry out a different strategy nor a
+resource, but **the decision to reopen a committed strategy and try another one**.
 
 ## Findings
 
-**Agents are competent executors.** A trajectory averages 3.8 training runs and 13.8 evaluations.
-Nearly every agent completes the pipeline from data preparation through training, evaluation, and
-checkpoint submission, and every benchmark shows an average gain over the base model. The repairs
-are technically meaningful — realigning generation templates, concentrating a data mixture on the
-target format, fixing EOS handling — so execution is not the binding constraint.
+**Finding 1 — agents are reliable executors.** A trajectory averages 3.82 training runs and 13.80
+evaluations. Nearly every agent completes the pipeline from data preparation through training,
+evaluation, and checkpoint submission, and every benchmark shows an average gain over the base
+model. The repairs are technically meaningful — realigning generation templates, concentrating a
+data mixture on the target format, fixing EOS handling — so execution is not the binding
+constraint.
 
-**The strategy tracks the agent, not the task.** 80.7% of Claude Code trajectories anchor on
-full-parameter SFT; 89.6% of Codex CLI trajectories anchor on parameter-efficient fine-tuning —
-on the same tasks, under the same budget. Once training starts, the budget is spent inside that
-choice: 2.1% of adjacent training pairs ever probe an alternative, and the rest are denser local
-search over learning rates, data mixtures, and chat templates.
+**Finding 2 — agents lock into a default strategy, and the default follows the agent, not the
+task.** Each agent commits to a default before any experimental evidence arrives, and different
+agents commit to different defaults on the same tasks under the same budget. Writing `κ_a` for the
+mass an agent's initial-strategy distribution places on its modal strategy, and `ρ_a` for its
+pooled switch rate over adjacent training pairs:
 
-**Neither experience, guidance, nor reasoning compute reopens the choice.**
-
-| Intervention | Effect on execution | Effect on strategy |
+| Agent (#Traj.) | Default strategy (`κ_a`) | Switch rate (`ρ_a`) |
 | --- | --- | --- |
-| Experience-driven framework | +12.6 on GSM8K, +40.8 on HumanEval | unchanged — the agent adopts every execution-level suggestion the evaluator makes, and none of the strategy-level ones |
-| Human review of the plan before training | starting strategy is redirected, and the agent extends it on its own initiative | the run falls back into local adjustment once training begins |
-| Several times the inference tokens | large gains on the easier benchmarks | no gain on the hardest one |
+| Claude Code (575) | Full SFT — 166/231 = **71.9%** | 54/1,203 = 4.5% |
+| Codex CLI (369) | PEFT — 274/306 = **89.5%** | 15/943 = 1.6% |
+| OpenCode (394) | Full SFT — 184/277 = **66.4%** | 5/1,411 = 0.4% |
+| Overall (1,338) | 624/814 = **76.7%** | 74/3,557 = **2.1%** |
 
-The strategy is plastic only within a short window before the first training run. Once that window
-closes, the same channels stop working. What is missing is not a resource but a mechanism for
-spontaneously reopening a committed choice during execution.
+The divergence is systematic: in every one of the 28 benchmark × base-model combinations, Claude
+Code shows a higher full-SFT share and Codex CLI a higher PEFT share. Once training starts, the
+budget is spent inside that choice — only 74 of 3,557 adjacent training pairs ever probe an
+alternative, and the rest are denser local search over learning rates, data mixtures, and chat
+templates. The rate stays low even where the default nearly fails: on AIME 2025 final scores
+remain near zero, yet the highest per-agent switch rate is 10.6%.
+
+**What unlocks the strategy level?** Revising a committed strategy needs the *experience* to
+recognize it is failing, the *reasoning* to weigh an alternative, and the *decision* to act. We
+test each in turn.
+
+| Probe | Effect on execution | Effect on strategy |
+| --- | --- | --- |
+| Experience — journal, skill library, evaluator agent | closes **75.1%** of the base-to-instruct gap vs. 48.6% for the same agent autonomously (+12.6 GSM8K, +30.8 HumanEval) | unchanged — the agent adopts **22/22** execution-level suggestions from the evaluator and **0/21** strategy-level ones |
+| Reasoning compute — 1.8–9.2× the agent tokens | front-loaded gains on the easier benchmarks (3.7M tokens per point on GSM8K, 0.9M on HumanEval) | none on the hardest — on AIME 2025 roughly 14M extra tokens buy one extra problem, within evaluation variance |
+| Decision — human review *before* training | the starting strategy is redirected, and the agent implements and even extends it on its own initiative | changes *which* strategy the agent locks into, not *whether* it locks in |
+| Decision — a single instruction to switch *mid-run* | — | **reopens the committed strategy**: forked from the same checkpoint under the same remaining budget, the guided branch wins on all three benchmarks, by up to **17.44 points** |
+
+Two controls matter for reading that last row. Human review at the initial decision does not keep
+the agent from locking in: the AIME 2025 runs peak early (best 3/30 pass@8) and then tune
+hyperparameters back and forth inside the *new* strategy without recovering the peak. And when a
+fork is given an instruction to *reconsider* its strategy without naming an alternative, the agent
+reaffirms its current strategy in every case and proceeds much as its recorded continuation did.
+
+So what is missing is not the ability to carry out a different strategy, and not a resource:
+experience and reasoning compute both improve execution without moving the strategy. It is **the
+decision to reopen a committed strategy and try another one**. Human guidance works precisely
+because it makes that decision on the agent's behalf; nothing we supplied leads the agent to make
+it on its own.
+
+### What this implies for RSI
+
+RSI assumes a loop that closes globally — propose a strategy, run experiments, interpret results,
+revise the strategy, repeat. What we observe closes only at the execution level:
+
+```
+assumed: globally closed            observed: locally iterative, globally linear
+
+  Strategy → Execute → Evaluate       Strategy → Execute → Evaluate
+      ↑__________________|                          ↑________|
+          revise strategy                          repair & retry
+                                              (revision not taken)
+```
+
+Two consequences. Scaling execution-level autonomy deepens the loop that already closes and leaves
+the open one untouched — the quality of the *initial* strategy, not the iteration count or the
+compute, sets a run's upper bound. And measuring RSI progress needs strategy-level metrics
+alongside the final score: two agents with the same score may differ in exactly the capability RSI
+depends on. See [`docs/metrics.md`](docs/metrics.md) for the three we propose.
 
 ## Controlled Experiments
 
 Qwen3-1.7B-Base on three benchmarks of increasing difficulty, ten hours per run on four A800 GPUs,
 three independent runs per configuration, with the system prompt, base model, hardware, and
 evaluation protocol held fixed within each comparison. Scores are pass@1, except AIME 2025, which
-has only 30 problems and is scored pass@8.
+has only 30 problems and is scored pass@8. All interventions build on Claude Code with Opus 4.6,
+which preliminary runs found more reliable on this setting than Opus 4.8, Opus 5 and Fable 5 —
+the newer models either vary widely across runs or contaminate training data (train-on-test).
 
-| Setting | GSM8K | HumanEval | AIME 2025 |
+Mean ± one standard deviation over three runs. `Gap Closed` is
+`(Avg − Avg_base) / (Avg_instruct − Avg_base)`: the fraction of the distance from the base model to
+the official instruct model that the run recovers.
+
+| Setting | GSM8K | HumanEval | AIME 2025 | Avg. | Gap Closed |
+| --- | --- | --- | --- | --- | --- |
+| Base model | 10.84 | 5.48 | 0.00 | 5.44 | 0.0% |
+| Official instruct model | 88.70 | 66.46 | 33.33 | 62.83 | 100.0% |
+| Autonomous — Opus 4.6 (Claude Code) | 64.70 ±9.6 | 32.00 ±10.4 | 3.33 ±0.0 | 33.34 | 48.6% |
+| Autonomous — GLM-5.2 (Claude Code) | 49.51 ±7.2 | 44.51 ±9.8 | 3.33 ±0.0 | 32.45 | 47.1% |
+| Autonomous — GPT-5.2 (Codex CLI) | 43.44 ±4.1 | 13.41 ±8.7 | 0.00 ±0.0 | 18.95 | 23.5% |
+| **Experience-driven (Opus 4.6)** | **77.30 ±3.8** | **62.80 ±6.1** | **5.56 ±1.6** | **48.55** | **75.1%** |
+| — w/o experiment journal | 74.50 ±4.5 | 50.20 ±7.4 | 4.44 ±1.6 | 43.05 | 65.5% |
+| — w/o skill library | 73.10 ±5.2 | 54.50 ±6.8 | 3.33 ±0.0 | 43.64 | 66.6% |
+| — w/o evaluator agent | 68.20 ±6.0 | 42.60 ±8.2 | 3.33 ±0.0 | 38.04 | 56.8% |
+
+All three components contribute; the evaluator agent matters most (−18.3 points of gap closed when
+removed). Note that every ablation still closes more of the gap than any autonomous baseline, and
+none of them lifts AIME 2025 past a single problem.
+
+Human guidance is evaluated separately, at two decision points. A **human review before training**
+runs on AIME 2025: the reviewer redirects the initial strategy from SFT to RL, the agent implements
+and even extends the new strategy — and then locks into it, reaching its best score of 3/30 (10.0%
+pass@8) early and iterating on hyperparameters for the rest of the budget. A **single mid-run
+instruction to switch strategy**, issued at a forked checkpoint of a completed autonomous run and
+compared against that run's own recorded continuation under the same remaining budget, beats the
+continuation on all three benchmarks:
+
+| Benchmark | Agent's own continuation | Guided branch | Δ |
 | --- | --- | --- | --- |
-| Base model | 10.84% | 5.48% | 0.00% |
-| Autonomous — Claude Code (Opus 4.6) | 64.70% | 22.00% | 3.33% |
-| Autonomous — Codex CLI (GPT-5.2) | 43.44% | 13.41% | 0.00% |
-| Experience-driven framework | **77.30%** | **62.80%** | **5.56%** |
+| GSM8K (pass@1) | 47.76% | 65.20% | **+17.44** |
+| HumanEval (pass@1) | 52.00% * | 62.80% | +10.80 |
+| AIME 2025 (pass@8) | 0.00% | 6.67% | +6.67 |
 
-Mean over three runs. Human guidance is evaluated on AIME 2025 only, where its best run reaches
-13.33% pass@8; since a one-problem difference on AIME lies within evaluation variance, that column
-is read qualitatively, alongside the trajectories.
+Forking each of those checkpoints with an instruction that asks the agent to *reconsider* its
+strategy without naming an alternative produces no switch: in every such fork the agent reaffirms
+what it is already doing.
+
+The three recorded continuations are archived as `autonomous_{gsm8k,humaneval,aime2025}_*` in
+[`trajectories/`](trajectories/). (* The HumanEval continuation reached 58.54% at its highest, but
+that checkpoint showed data contamination and is excluded.)
 
 ## Repository Structure
 
@@ -82,11 +175,11 @@ is read qualitatively, alongside the trajectories.
 ├── framework/       the experience-driven scaffold
 │   ├── journal/       experiment journal: plan / lesson / reflection schemas
 │   ├── evaluator/     evaluator agent: predict → evaluate → analyze
-│   └── skills/        agent-authored skills, and the reference wiki they draw on
+│   └── skills/        the skill library the agent consults, and the wiki it is distilled from
 ├── experiments/     agent prompts, configs, and launchers, per benchmark
 ├── evaluation/      AIME 2025 / GSM8K / HumanEval scoring harnesses
 ├── analysis/        trajectory parsing pipeline, lock-in analyses, and the annotations
-├── trajectories/    ten agent runs: framework, baseline, and human-guided
+├── trajectories/    thirteen agent runs: framework, baseline, and human-guided
 └── docs/            framework design, annotation protocol, metric definitions
 ```
 
@@ -96,7 +189,8 @@ The scaffold's three components map onto the first three subdirectories. The **e
 persists plans, results, observations, and lessons across iterations, so evidence from an early
 experiment survives into a later decision. The **skill library** distills recipes, configurations,
 and known failure modes from widely used training frameworks into references the agent consults
-while building and debugging its pipeline. The **evaluator agent** runs whenever the main agent
+while building and debugging its pipeline; it is compiled before the campaign, not written during
+it. The **evaluator agent** runs whenever the main agent
 requests an evaluation: it forms an expectation, invokes the original scoring script, inspects both
 the scores and the model outputs, and returns a diagnosis with concrete suggestions — which the
 main agent is free to ignore, and at the strategy level does.
@@ -145,21 +239,25 @@ agent's own account of what it planned, what it expected, and what it concluded.
 
 Re-running the full extraction (`python -m analysis.pipeline.run_pipeline --config
 analysis/pipeline/config.json`) requires the raw logs, which are terabyte-scale and not released.
-The ten included runs are complete enough to exercise every parser on real input; they cover
+The thirteen included runs are complete enough to exercise every parser on real input; they cover
 both stream formats the pipeline handles.
 
 ## Data
 
 `analysis/annotations/` holds two independent annotation passes over the same trajectories:
 `objective_level/` labels the training objective of each experiment, and `strategy_level/` labels
-the full strategy state — training strategy, data source, and stage structure.
+the full strategy state `s = (p, d, g)` — training algorithm, data source, and stage structure.
 
 A *training experiment* is counted only when an executed command launches a parameter update;
 writing training scripts, constructing data, installing packages, running evaluations, and saving
 checkpoints do not count as independent experiments. A transition between adjacent experiments is
-a *strategy change* only when it alters the training paradigm, the data-source type, or the stage
-structure; everything else — learning rates, data reformatting, reward shaping within a paradigm,
-checkpoint selection, bug fixes — is an execution change.
+a *strategy change* only when it alters the training algorithm `p`, the data-source type `d`, or
+the stage structure `g`; everything else — learning rates, data reformatting, reward shaping within
+an algorithm, checkpoint selection, bug fixes — is an execution change.
+
+Of the 5,111 verified experiments the training algorithm is recognized for 4,378; the other 733
+are left unlabelled and never imputed. Switch rates are computed over the 3,557 recognized
+adjacent training pairs.
 
 Labels are assigned from executed evidence only, never from stated intent, and missing labels are
 never imputed. Every label carries a reference back to the exact line of the source trajectory.
