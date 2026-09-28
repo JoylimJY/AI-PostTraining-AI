@@ -1,0 +1,70 @@
+{
+  "setting": "fork",
+  "setting_note": "A continuation of an archived autonomous run: the workspace was restored to the state it was in at a chosen node of that run's trajectory (scripts, summary.md, evaluation outputs, training logs and a transcript of the session up to that point; no weights, training data or inspect-ai dumps), the agent was given a fresh time budget and a one-line hint, and then ran autonomously. See the fork block below and fork_source.md.",
+  "benchmark": "AIME 2025",
+  "scaffold": "claude-code",
+  "agent_model": "claude-opus-4-6",
+  "agent_config": {
+    "effort": "low",
+    "max_output_tokens": 4096
+  },
+  "base_model": "Qwen3-1.7B-Base",
+  "num_gpus": 4,
+  "time_budget_hours": 5,
+  "elapsed": "04:46:58",
+  "elapsed_seconds": 17218,
+  "start": "2026-09-24T08:01:32Z",
+  "end": "2026-09-24T12:48:30Z",
+  "termination": "agent stopped on its own (exit 0, stop_reason end_turn) with about 13 minutes left on the budget",
+  "final_metrics": {
+    "accuracy": 0.03333333333333333,
+    "stderr": 0.033333333333333326
+  },
+  "final_metrics_note": "The harness's automatic final evaluation did not run to completion (final_eval_exit_code 1: it could not start a vLLM server on final_model while the GPUs were shared with another user's processes). The same evaluation was re-run manually on the submitted final_model and scored 1/30; that is the score recorded here and in metrics.json. It matches the agent's own last evaluations of the same weights (evals/step_012_eval_ctx_metrics.json, evals/step_013_eval_metrics.json).",
+  "source_run_id": "claude_opus46_aime2025_qwen3_1_7b_20260903_190537_fork_step6_20260924_160129",
+  "fork": {
+    "source_run_id": "claude_opus46_aime2025_qwen3_1_7b_20260903_190537",
+    "source_archive": "trajectories_opus46/autonomous_aime2025_99ac2f89",
+    "source_archive_id": "99ac2f89",
+    "source_run_final_metrics": {
+      "accuracy": 0.0,
+      "stderr": 0.0
+    },
+    "fork_node": "Step 6 (step_006_sft_v5_cont: continuation SFT from Step 5 on the v5 synthetic data) and its full 30-problem evaluation (about 4h48m into the source run)",
+    "cut_after_line": 5434,
+    "fork_state_ends_at_line": 5439,
+    "forked_at": "2026-09-24T08:01:32Z",
+    "hint": "Please evaluate whether the current strategy needs adjustment.",
+    "restored_step_dirs": [
+      "step_001_sft_math",
+      "step_002_sft_v2",
+      "step_003_sft_v3",
+      "step_004_sft_v4",
+      "step_005_sft_eos",
+      "step_006_sft_v5_cont"
+    ],
+    "restored_files": [
+      "artifacts/eval_logs/baseline_limit5.json",
+      "gen_data.py",
+      "gen_data_v2.py",
+      "gen_data_v3.py",
+      "gen_data_v4.py",
+      "gen_data_v5.py",
+      "summary.md",
+      "train_sft.py",
+      "train_sft_v2.py",
+      "train_sft_v3.py"
+    ],
+    "not_restored": "model weights, generated training data, inspect-ai logs",
+    "fork_state_note": "fork_source/trajectory_until_fork.jsonl is the prefix of the source archive's trajectory.jsonl that defines the fork state (lines 1..fork_state_ends_at_line); fork_provenance/transcript_until_fork.md is the human-readable rendering of it that was placed in the agent's workspace. Neither is part of trajectory.jsonl, which holds only the continuation."
+  },
+  "note": "Reconstructed from the PostTrainBench run record: start from timer.sh CREATION_DATE (the moment the fresh budget began), end from the last write to logs/solve_out.txt, elapsed as their difference. The stream holds 1 agent session start(s) under a single session_id (the harness resumed the same session); this harness does not stamp wall-clock times into the stream.",
+  "harness_validation": {
+    "agent_exit_code": 0,
+    "final_eval_exit_code": 1,
+    "final_model_validation_exit_code": 0,
+    "summary_validation_exit_code": 1
+  },
+  "harness_validation_note": "PostTrainBench records these exit codes instead of the contamination_judgement.txt / disallowed_model_judgement.txt verdicts the reference harness writes; those two files are absent here rather than invented.",
+  "agent_sessions": 1
+}

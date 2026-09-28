@@ -1,0 +1,35 @@
+{
+  "setting": "autonomous",
+  "benchmark": "HumanEval",
+  "scaffold": "claude-code",
+  "agent_model": "claude-opus-4-6",
+  "base_model": "Qwen3-1.7B-Base",
+  "num_gpus": 4,
+  "time_budget_hours": 10,
+  "elapsed": "07:47:47",
+  "elapsed_seconds": 28067,
+  "start": "2026-09-02T03:41:22Z",
+  "end": "2026-09-02T11:29:09Z",
+  "termination": "agent process terminated (exit 141) with time left on the budget; the agent's last productive invocation ended about 7h08m in with a 'Prompt is too long' API error, and the harness's resume loop then re-invoked it 61 more times over the next 40 minutes, each attempt failing immediately with an HTTP 403 rate-limit error before any tool call",
+  "final_metrics": {
+    "accuracy": 0.5853658536585366,
+    "stderr": 0.03858801357403453
+  },
+  "source_run_id": "claude_opus46_humaneval_qwen3_1_7b_20260902_114122",
+  "note": "Reconstructed from the PostTrainBench run record: start from timer.sh CREATION_DATE, end from the last write to logs/solve_out.txt, elapsed as their difference. The stream is one session_id re-invoked by the harness whenever the agent returned with budget left; trajectory.jsonl keeps the 20 invocations in which the agent worked (each ended with an output-token-cap or prompt-too-long API error) and omits the 61 that failed immediately with HTTP 403. This harness does not stamp wall-clock times into the stream.",
+  "harness_validation": {
+    "agent_exit_code": 141,
+    "final_eval_exit_code": 0,
+    "final_model_validation_exit_code": 0,
+    "summary_validation_exit_code": 1
+  },
+  "harness_validation_note": "PostTrainBench records these exit codes instead of the contamination_judgement.txt / disallowed_model_judgement.txt verdicts the reference harness writes; those two files are absent here rather than invented.",
+  "agent_sessions": 20,
+  "stream_trimmed": {
+    "removed_invocations": 61,
+    "removed_lines": "5658-6024 of the original solve_out.txt",
+    "removed_content": "61 consecutive one-turn invocations, each a system/init record, a 'Failed to authenticate. API Error: 403 Rate limit exceeded' result and the harness's resume notice; no assistant content and no tool calls",
+    "kept_lines": "1-5657, byte-for-byte",
+    "reason": "the removed part is a harness retry loop against a rate-limited API, not agent activity; the fork run fork_humaneval_af9d89f6 was taken at line 4687, inside the kept part"
+  }
+}

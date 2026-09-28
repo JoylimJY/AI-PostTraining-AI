@@ -1,0 +1,134 @@
+[
+  {
+    "task": "inspect_evals/humaneval",
+    "model": "vllm/artifacts/steps/step_009_train/output/final",
+    "model_args": {
+      "gpu_memory_utilization": 0.85,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "solver": null,
+      "instruction_prompt": "\nRead the following function signature and docstring, and fully implement\nthe function described. Your response should only contain the code for\nthis function.\n\n",
+      "scorer": null,
+      "sandbox": "local"
+    },
+    "dataset": {
+      "name": "openai/openai_humaneval",
+      "samples": 164
+    },
+    "total_samples": 164,
+    "completed_samples": 164,
+    "scores": [
+      {
+        "name": "verify",
+        "scored_samples": 164,
+        "metrics": {
+          "accuracy": 0.34146341463414637,
+          "stderr": 0.03714225274895275
+        }
+      }
+    ],
+    "started_at": "2026-09-24T03:58:44+00:00",
+    "completed_at": "2026-09-24T03:59:14+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/humaneval",
+    "model": "vllm/artifacts/steps/step_009_train/output/final",
+    "model_args": {
+      "gpu_memory_utilization": 0.85,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "solver": null,
+      "instruction_prompt": "\nRead the following function signature and docstring, and fully implement\nthe function described. Your response should only contain the code for\nthis function.\n\n",
+      "scorer": null,
+      "sandbox": "local"
+    },
+    "dataset": {
+      "name": "openai/openai_humaneval",
+      "samples": 164
+    },
+    "total_samples": 164,
+    "completed_samples": 164,
+    "scores": [
+      {
+        "name": "verify",
+        "scored_samples": 164,
+        "metrics": {
+          "accuracy": 0.31097560975609756,
+          "stderr": 0.036256565294446125
+        }
+      }
+    ],
+    "started_at": "2026-09-24T04:09:47+00:00",
+    "completed_at": "2026-09-24T04:10:10+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/humaneval",
+    "model": "vllm/artifacts/steps/step_011_train/output/final",
+    "model_args": {
+      "gpu_memory_utilization": 0.85,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "solver": null,
+      "instruction_prompt": "\nRead the following function signature and docstring, and fully implement\nthe function described. Your response should only contain the code for\nthis function.\n\n",
+      "scorer": null,
+      "sandbox": "local"
+    },
+    "dataset": {
+      "name": "openai/openai_humaneval",
+      "samples": 164
+    },
+    "total_samples": 164,
+    "completed_samples": 164,
+    "scores": [
+      {
+        "name": "verify",
+        "scored_samples": 164,
+        "metrics": {
+          "accuracy": 0.3170731707317073,
+          "stderr": 0.03644794381282875
+        }
+      }
+    ],
+    "started_at": "2026-09-24T06:19:45+00:00",
+    "completed_at": "2026-09-24T06:20:50+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/humaneval",
+    "model": "vllm/artifacts/steps/step_012_train/output/final",
+    "model_args": {
+      "gpu_memory_utilization": 0.3,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "solver": null,
+      "instruction_prompt": "\nRead the following function signature and docstring, and fully implement\nthe function described. Your response should only contain the code for\nthis function.\n\n",
+      "scorer": null,
+      "sandbox": "local"
+    },
+    "dataset": {
+      "name": "openai/openai_humaneval",
+      "samples": 164
+    },
+    "total_samples": 150,
+    "completed_samples": 150,
+    "scores": [
+      {
+        "name": "verify",
+        "scored_samples": 150,
+        "metrics": {
+          "accuracy": 0.26666666666666666,
+          "stderr": 0.03622779862191886
+        }
+      }
+    ],
+    "started_at": "2026-09-24T07:17:06+00:00",
+    "completed_at": "2026-09-24T07:19:56+00:00",
+    "status": "success"
+  }
+]

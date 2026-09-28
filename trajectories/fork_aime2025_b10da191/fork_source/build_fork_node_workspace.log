@@ -1,0 +1,9 @@
+fork state: lines 1..5439 of trajectory.jsonl
+restored 10 file(s), 12 eval output(s), 0 training log(s), 6 step dir(s)
+excluded (after the cut): scripts=[] evals=7 logs=[]
+warning: line 4452: write final_model/generation_config.json: inside a checkpoint directory whose weights are not archived; not restored
+warning: line 4617: write summary.md: tool call reported an error; not replayed
+warning: line 5303: write artifacts/steps/step_006_sft_v5_cont/final/generation_config.json: inside a checkpoint directory whose weights are not archived; not restored
+warning: line 5323: edit artifacts/steps/step_006_sft_v5_cont/final/generation_config.json: inside a checkpoint directory whose weights are not archived; not restored
+warning: line 5849: write artifacts/steps/step_007_sft_v6_cont/final/generation_config.json: inside a checkpoint directory whose weights are not archived; not restored
+warning: line 6347: write final_model/generation_config.json: inside a checkpoint directory whose weights are not archived; not restored

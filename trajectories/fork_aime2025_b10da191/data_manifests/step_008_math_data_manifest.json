@@ -1,0 +1,12 @@
+{
+  "total": 23067,
+  "sources": {
+    "openr1_math_220k": 11000,
+    "numina_cot": 8000,
+    "metamathqa": 4000,
+    "orca_math": 67
+  },
+  "prompt_template": "Solve the following math problem step by step.\nThe last line of your response should be of the form \"ANSWER: $ANSWER\" (without quotes) where $ANSWER is the answer to the problem.\n\n{prompt}\n\nRemember to put your answer on its own line at the end in the form \"ANSWER: $ANSWER\" (without quotes) where $ANSWER is the answer to the problem, and you do not need to use a \\boxed command.",
+  "max_assist_chars": 6000,
+  "max_user_chars": 2000
+}

@@ -1,0 +1,178 @@
+{
+  "archive": "/home/user/ptb/opus46/trajectories_opus46/autonomous_aime2025_99ac2f89",
+  "source_run_id": "claude_opus46_aime2025_qwen3_1_7b_20260903_190537",
+  "cut_after_line": 5434,
+  "fork_state_ends_at_line": 5439,
+  "generated_at": "2026-09-24T08:01:31+00:00",
+  "path_rewrites": [
+    {
+      "from": "/home/user/new/PostTrainBench/.runtime/results/claude_opus46_aime2025_qwen3_1_7b_20260903_190537/workspace",
+      "to": "/home/user/ptb/.runtime/results/claude_opus46_aime2025_qwen3_1_7b_20260903_190537_fork_step6_20260924_160129/workspace"
+    },
+    {
+      "from": "/home/user/new/PostTrainBench/.runtime/results/claude_opus46_aime2025_qwen3_1_7b_20260903_190537",
+      "to": "/home/user/ptb/.runtime/results/claude_opus46_aime2025_qwen3_1_7b_20260903_190537_fork_step6_20260924_160129"
+    },
+    {
+      "from": "/home/user/models/Qwen3-1.7B-Base",
+      "to": "/home/user/models/Qwen3-1.7B-Base"
+    },
+    {
+      "from": "/home/user",
+      "to": "/home/user"
+    }
+  ],
+  "restored_files": [
+    {
+      "path": "artifacts/eval_logs/baseline_limit5.json",
+      "source": "replay",
+      "last_recorded_write_line": 2231
+    },
+    {
+      "path": "gen_data.py",
+      "source": "archive",
+      "last_recorded_write_line": 2842
+    },
+    {
+      "path": "gen_data_v2.py",
+      "source": "archive",
+      "last_recorded_write_line": 3701
+    },
+    {
+      "path": "gen_data_v3.py",
+      "source": "archive",
+      "last_recorded_write_line": 3925
+    },
+    {
+      "path": "gen_data_v4.py",
+      "source": "archive",
+      "last_recorded_write_line": 4112
+    },
+    {
+      "path": "gen_data_v5.py",
+      "source": "archive",
+      "last_recorded_write_line": 4857
+    },
+    {
+      "path": "summary.md",
+      "source": "replay",
+      "last_recorded_write_line": 4715
+    },
+    {
+      "path": "train_sft.py",
+      "source": "archive",
+      "last_recorded_write_line": 2896
+    },
+    {
+      "path": "train_sft_v2.py",
+      "source": "archive",
+      "last_recorded_write_line": 3041
+    },
+    {
+      "path": "train_sft_v3.py",
+      "source": "archive",
+      "last_recorded_write_line": 5161
+    }
+  ],
+  "restored_step_dirs": [
+    "step_001_sft_math",
+    "step_002_sft_v2",
+    "step_003_sft_v3",
+    "step_004_sft_v4",
+    "step_005_sft_eos",
+    "step_006_sft_v5_cont"
+  ],
+  "restored_eval_outputs": [
+    {
+      "path": "artifacts/eval_logs/baseline_limit5.json",
+      "archived_as": "baseline_limit5.json",
+      "command_line": 312
+    },
+    {
+      "path": "artifacts/eval_logs/step001_limit5.json",
+      "archived_as": "step001_limit5.json",
+      "command_line": 2959
+    },
+    {
+      "path": "artifacts/eval_logs/step002_limit10.json",
+      "archived_as": "step002_limit10.json",
+      "command_line": 3773
+    },
+    {
+      "path": "artifacts/eval_logs/step003_limit10.json",
+      "archived_as": "step003_limit10.json",
+      "command_line": 4002
+    },
+    {
+      "path": "artifacts/eval_logs/step004_limit10.json",
+      "archived_as": "step004_limit10.json",
+      "command_line": 4165
+    },
+    {
+      "path": "artifacts/eval_logs/step005_limit10.json",
+      "archived_as": "step005_limit10.json",
+      "command_line": 4395
+    },
+    {
+      "path": "artifacts/eval_logs/step005b_limit10.json",
+      "archived_as": "step005b_limit10.json",
+      "command_line": 4468
+    },
+    {
+      "path": "artifacts/eval_logs/step005_full.json",
+      "archived_as": "step005_full.json",
+      "command_line": 4524
+    },
+    {
+      "path": "artifacts/eval_logs/step003_eos_limit10.json",
+      "archived_as": "step003_eos_limit10.json",
+      "command_line": 4766
+    },
+    {
+      "path": "artifacts/eval_logs/step003_eos_limit10.json",
+      "archived_as": "step003_eos_limit10.json",
+      "command_line": 4779
+    },
+    {
+      "path": "artifacts/eval_logs/step006_limit10.json",
+      "archived_as": "step006_limit10.json",
+      "command_line": 5343
+    },
+    {
+      "path": "artifacts/eval_logs/step006_full.json",
+      "archived_as": "step006_full.json",
+      "command_line": 5414
+    }
+  ],
+  "restored_train_logs": [],
+  "checkpoint_labels_before_cut": [
+    {
+      "line": 4729,
+      "label": "005-sft-eos-with-format-fix"
+    }
+  ],
+  "excluded_archive_scripts": [],
+  "excluded_archive_evals": [
+    "eval_log_summary.json",
+    "final_model.json",
+    "step006_ep1.json",
+    "step007_full.json",
+    "step008_full.json",
+    "step009_full.json",
+    "step010_full.json"
+  ],
+  "excluded_archive_logs": [],
+  "not_restorable": [
+    "model weights (artifacts/steps/*/{output,final,checkpoint-*}, final_model/)",
+    "generated training data files",
+    "inspect-ai logs/ dumps"
+  ],
+  "warnings": [
+    "line 4452: write final_model/generation_config.json: inside a checkpoint directory whose weights are not archived; not restored",
+    "line 4617: write summary.md: tool call reported an error; not replayed",
+    "line 5303: write artifacts/steps/step_006_sft_v5_cont/final/generation_config.json: inside a checkpoint directory whose weights are not archived; not restored",
+    "line 5323: edit artifacts/steps/step_006_sft_v5_cont/final/generation_config.json: inside a checkpoint directory whose weights are not archived; not restored",
+    "line 5849: write artifacts/steps/step_007_sft_v6_cont/final/generation_config.json: inside a checkpoint directory whose weights are not archived; not restored",
+    "line 6347: write final_model/generation_config.json: inside a checkpoint directory whose weights are not archived; not restored"
+  ]
+}

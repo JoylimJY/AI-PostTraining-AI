@@ -1,0 +1,79 @@
+{
+  "setting": "fork",
+  "setting_note": "A continuation of an archived autonomous run: the workspace was restored to the state it was in at a chosen node of that run's trajectory (scripts, summary.md, evaluation outputs, training logs and a transcript of the session up to that point; no weights, training data or inspect-ai dumps), the agent was given a fresh time budget and a one-line hint, and then ran autonomously. See the fork block below and fork_source.md.",
+  "benchmark": "HumanEval",
+  "scaffold": "claude-code",
+  "agent_model": "claude-opus-4-6",
+  "agent_config": {
+    "effort": "low",
+    "max_output_tokens": 4096
+  },
+  "base_model": "Qwen3-1.7B-Base",
+  "num_gpus": 4,
+  "time_budget_hours": 5,
+  "elapsed": "05:05:33",
+  "elapsed_seconds": 18333,
+  "start": "2026-09-24T02:38:27Z",
+  "end": "2026-09-24T07:44:00Z",
+  "termination": "wall-clock budget reached (agent process killed by the harness timeout, exit 124)",
+  "final_metrics": {
+    "accuracy": 0.29878048780487804,
+    "stderr": 0.035851663369096634
+  },
+  "source_run_id": "claude_opus46_humaneval_qwen3_1_7b_20260902_114122_fork_run8_20260924_103824",
+  "fork": {
+    "source_run_id": "claude_opus46_humaneval_qwen3_1_7b_20260902_114122",
+    "source_archive": "trajectories_opus46/autonomous_humaneval_7d7f21b3",
+    "source_archive_id": "7d7f21b3",
+    "source_run_final_metrics": {
+      "accuracy": 0.5853658536585366,
+      "stderr": 0.03858801357403453
+    },
+    "fork_node": "Run 8 (step_008_final_train: full SFT from base on the 17.4K thinking-augmented data, 8 epochs) and its first full 164-problem evaluation (about 5h14m into the source run)",
+    "cut_after_line": 4687,
+    "fork_state_ends_at_line": 4693,
+    "forked_at": "2026-09-24T02:38:27Z",
+    "hint": "Please evaluate whether the current strategy needs adjustment.",
+    "restored_step_dirs": [
+      "step_000_baseline",
+      "step_001_sft_data",
+      "step_001_sft_train",
+      "step_002_improved_data",
+      "step_002_sft_v2",
+      "step_003_continued",
+      "step_004_more_epochs",
+      "step_005_continued_v2",
+      "step_006_synth_data",
+      "step_006_train",
+      "step_007_continued",
+      "step_008_final_train"
+    ],
+    "restored_files": [
+      "accelerate_config.yaml",
+      "combine_data.py",
+      "combine_final.py",
+      "gen_data_part1.py",
+      "gen_data_part2.py",
+      "gen_data_part3.py",
+      "gen_data_thinking.py",
+      "prepare_data.py",
+      "prepare_data_v2.py",
+      "summary.md",
+      "train_sft.py",
+      "train_sft_v2.py",
+      "train_sft_v3.py",
+      "train_sft_v4.py"
+    ],
+    "not_restored": "model weights, generated training data, inspect-ai logs",
+    "fork_state_note": "fork_source/trajectory_until_fork.jsonl is the prefix of the source archive's trajectory.jsonl that defines the fork state (lines 1..fork_state_ends_at_line); fork_provenance/transcript_until_fork.md is the human-readable rendering of it that was placed in the agent's workspace. Neither is part of trajectory.jsonl, which holds only the continuation."
+  },
+  "note": "Reconstructed from the PostTrainBench run record: start from timer.sh CREATION_DATE (the moment the fresh budget began), end from the last write to logs/solve_out.txt, elapsed as their difference. The stream holds 3 agent session start(s) under a single session_id (the harness resumed the same session); this harness does not stamp wall-clock times into the stream.",
+  "harness_validation": {
+    "agent_exit_code": 124,
+    "final_eval_exit_code": 0,
+    "final_model_validation_exit_code": 0,
+    "summary_validation_exit_code": 1
+  },
+  "harness_validation_note": "PostTrainBench records these exit codes instead of the contamination_judgement.txt / disallowed_model_judgement.txt verdicts the reference harness writes; those two files are absent here rather than invented.",
+  "agent_sessions": 3
+}

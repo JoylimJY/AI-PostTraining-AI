@@ -1,0 +1,28 @@
+{
+  "setting": "autonomous",
+  "benchmark": "GSM8K",
+  "scaffold": "claude-code",
+  "agent_model": "claude-opus-4-6",
+  "base_model": "Qwen3-1.7B-Base",
+  "num_gpus": 4,
+  "time_budget_hours": 10,
+  "elapsed": "09:56:24",
+  "elapsed_seconds": 35784,
+  "start": "2026-09-01T16:50:51Z",
+  "end": "2026-09-02T02:47:15Z",
+  "termination": "wall-clock budget reached",
+  "final_metrics": {
+    "accuracy": 0.47763457164518575,
+    "stderr": 0.01375869948591185
+  },
+  "source_run_id": "claude_opus46_gsm8k_qwen3_1_7b_20260902_005050",
+  "note": "Reconstructed from the PostTrainBench run record: start from timer.sh CREATION_DATE, end from the last write to logs/solve_out.txt, elapsed as their difference. The stream is 1 agent session(s); this harness does not stamp wall-clock times into the stream.",
+  "harness_validation": {
+    "agent_exit_code": 0,
+    "final_eval_exit_code": 0,
+    "final_model_validation_exit_code": 0,
+    "summary_validation_exit_code": 1
+  },
+  "harness_validation_note": "PostTrainBench records these exit codes instead of the contamination_judgement.txt / disallowed_model_judgement.txt verdicts the reference harness writes; those two files are absent here rather than invented.",
+  "agent_sessions": 1
+}

@@ -1,0 +1,923 @@
+Unexpected exception loading entrypoints from 'inspect_evals._registry': [Errno 2] No such file or directory: '/usr/local/lib/python3.10/dist-packages/inspect_evals/coconot/data/refusal_evaluation_rubric.json'
+[09/24/26 12:37:59] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+---------------------------------------------------------                       
+aime2025 (30 samples): vllm/artifacts/steps/step_013_hard_train/output/merged   
+timeout: 18000000, attempt_timeout: 18000000, max_connections: 4, max_tokens:   
+14000, log_realtime: False, score_display: False, dataset: math-ai/aime25       
+---------------------------------------------------------                       
+                                                                                
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:38:06] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:   1/30   3% | Samples:   1/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:38:07] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:38:43] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:   3/30  10% | Samples:   3/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:38:45] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:38:49] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:   5/30  16% | Samples:   5/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:38:53] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:38:55] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:   7/30  23% | Samples:   7/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:38:57] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:38:58] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:06] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:   9/30  30% | Samples:   9/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:08] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:12] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  12/30  40% | Samples:  12/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:14] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:17] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:26] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  15/30  50% | Samples:  15/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:33] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  16/30  53% | Samples:  16/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:37] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:38] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  18/30  60% | Samples:  18/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:46] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  19/30  63% | Samples:  19/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:51] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  20/30  66% | Samples:  20/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:39:53] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:40:01] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  22/30  73% | Samples:  22/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:40:43] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  23/30  76% | Samples:  23/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:41:10] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  24/30  80% | Samples:  24/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:41:17] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  25/30  83% | Samples:  25/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:41:27] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  26/30  86% | Samples:  26/ 30 | vllm:  3/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+[09/24/26 12:41:49] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  27/30  90% | Samples:  27/ 30 | vllm:  3/ 4 | HTTP retries: 0
+[09/24/26 12:43:58] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  28/30  93% | Samples:  28/ 30 | vllm:  2/ 4 | HTTP retries: 0
+[09/24/26 12:44:25] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  29/30  96% | Samples:  29/ 30 | vllm:  1/ 4 | HTTP retries: 0
+[09/24/26 12:44:33] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps:  30/30 100% | Samples:  30/ 30 | vllm:  0/ 4 | HTTP retries: 0
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+
+---------------------------------------------------------                       
+aime2025 (30 samples): vllm/artifacts/steps/step_013_hard_train/output/merged   
+timeout: 18000000, attempt_timeout: 18000000, max_connections: 4, max_tokens:   
+14000, log_realtime: False, score_display: False, dataset: math-ai/aime25       
+                                                                                
+total time:                                0:06:34                              
+vllm/artifacts/steps/step_013_hard_train…  111,231 tokens [I: 8,302, O: 102,929]
+aime_scorer                                                                     
+accuracy     0.033                                                              
+stderr       0.033                                                              
+Log: logs/2026-09-24T12-37-59+00-00_aime2025_8ogxyVeubQSEuEBipAVDxF.json        
+---------------------------------------------------------                       
+                                                                                
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  

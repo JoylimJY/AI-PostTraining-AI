@@ -1,0 +1,134 @@
+{
+  "archive": "/home/user/ptb/opus46/trajectories_opus46/autonomous_gsm8k_886c6165",
+  "source_run_id": "claude_opus46_gsm8k_qwen3_1_7b_20260902_005050",
+  "cut_after_line": 1234,
+  "fork_state_ends_at_line": 1238,
+  "generated_at": "2026-09-24T16:59:48+00:00",
+  "path_rewrites": [
+    {
+      "from": "/home/user/new/PostTrainBench/.runtime/results/claude_opus46_gsm8k_qwen3_1_7b_20260902_005050/workspace",
+      "to": "/home/user/ptb/.runtime/results/claude_opus46_gsm8k_qwen3_1_7b_20260902_005050_fork_run2_20260925_005947/workspace"
+    },
+    {
+      "from": "/home/user/new/PostTrainBench/.runtime/results/claude_opus46_gsm8k_qwen3_1_7b_20260902_005050",
+      "to": "/home/user/ptb/.runtime/results/claude_opus46_gsm8k_qwen3_1_7b_20260902_005050_fork_run2_20260925_005947"
+    },
+    {
+      "from": "/home/user/models/Qwen3-1.7B-Base",
+      "to": "/home/user/models/Qwen3-1.7B-Base"
+    },
+    {
+      "from": "/home/user",
+      "to": "/home/user"
+    }
+  ],
+  "restored_files": [
+    {
+      "path": "ds_config_z2.json",
+      "source": "replay",
+      "last_recorded_write_line": 716
+    },
+    {
+      "path": "prepare_data.py",
+      "source": "archive",
+      "last_recorded_write_line": 530
+    },
+    {
+      "path": "prepare_data_v2.py",
+      "source": "archive",
+      "last_recorded_write_line": 655
+    },
+    {
+      "path": "prepare_data_v3.py",
+      "source": "archive",
+      "last_recorded_write_line": 1024
+    },
+    {
+      "path": "summary.md",
+      "source": "replay",
+      "last_recorded_write_line": 1223
+    },
+    {
+      "path": "train_sft.py",
+      "source": "archive",
+      "last_recorded_write_line": 815
+    },
+    {
+      "path": "train_sft_v2.py",
+      "source": "archive",
+      "last_recorded_write_line": 1065
+    }
+  ],
+  "restored_step_dirs": [
+    "step_001_sft_gsm8k_full",
+    "step_002_sft_rawtext"
+  ],
+  "restored_eval_outputs": [
+    {
+      "path": "artifacts/baseline_eval.json",
+      "archived_as": "baseline_eval.json",
+      "command_line": 240
+    },
+    {
+      "path": "artifacts/steps/step_001_sft_gsm8k_full/eval_50.json",
+      "archived_as": "step_001_sft_gsm8k_full_eval_50.json",
+      "command_line": 875
+    },
+    {
+      "path": "artifacts/steps/step_002_sft_rawtext/eval_50.json",
+      "archived_as": "step_002_sft_rawtext_eval_50.json",
+      "command_line": 1147
+    }
+  ],
+  "restored_train_logs": [
+    {
+      "path": "artifacts/steps/step_001_sft_gsm8k_full/train.log",
+      "archived_as": "step_001_sft_gsm8k_full.log"
+    },
+    {
+      "path": "artifacts/steps/step_002_sft_rawtext/train.log",
+      "archived_as": "step_002_sft_rawtext.log"
+    }
+  ],
+  "checkpoint_labels_before_cut": [
+    {
+      "line": 1098,
+      "label": "1-sft-v1-failed"
+    },
+    {
+      "line": 1234,
+      "label": "2-sft-rawtext-42pct"
+    }
+  ],
+  "excluded_archive_scripts": [
+    "prepare_data_v4.py"
+  ],
+  "excluded_archive_evals": [
+    "eval_log_summary.json",
+    "final_eval_50.json",
+    "step_002_sft_rawtext_eval_150_ckpt500.json",
+    "step_002_sft_rawtext_eval_150_final.json",
+    "step_002_sft_rawtext_eval_50_ckpt500.json",
+    "step_003_sft_v4_lr1e5_5ep_eval_50_ckpt1000.json",
+    "step_003_sft_v4_lr1e5_5ep_eval_50_ckpt1500.json",
+    "step_003_sft_v4_lr1e5_5ep_eval_50_ckpt500.json",
+    "step_004_sft_v3_1ep_lr2e5_eval_final.json",
+    "step_005_sft_v3_2ep_lr1e5_eval_final.json",
+    "step_006_continue_from_step2_eval_150.json",
+    "step_007_sft_v3_2ep_lr2e5_eval_150.json",
+    "step_007_sft_v3_2ep_lr2e5_eval_150_ckpt300.json"
+  ],
+  "excluded_archive_logs": [
+    "step_003_sft_v4_lr1e5_5ep.log",
+    "step_004_sft_v3_1ep_lr2e5.log",
+    "step_005_sft_v3_2ep_lr1e5.log",
+    "step_006_continue_from_step2.log",
+    "step_007_sft_v3_2ep_lr2e5.log"
+  ],
+  "not_restorable": [
+    "model weights (artifacts/steps/*/{output,final,checkpoint-*}, final_model/)",
+    "generated training data files",
+    "inspect-ai logs/ dumps"
+  ],
+  "warnings": []
+}

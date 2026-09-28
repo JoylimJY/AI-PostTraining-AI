@@ -1,0 +1,3 @@
+fork state: lines 1..1238 of trajectory.jsonl
+restored 7 file(s), 3 eval output(s), 2 training log(s), 2 step dir(s)
+excluded (after the cut): scripts=['prepare_data_v4.py'] evals=13 logs=['step_003_sft_v4_lr1e5_5ep.log', 'step_004_sft_v3_1ep_lr2e5.log', 'step_005_sft_v3_2ep_lr1e5.log', 'step_006_continue_from_step2.log', 'step_007_sft_v3_2ep_lr2e5.log']
