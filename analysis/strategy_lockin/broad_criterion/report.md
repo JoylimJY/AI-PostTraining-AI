@@ -55,6 +55,15 @@ the authors for review and are not included in the mechanical totals.
   (1.5%), OpenCode 5/1,411 (0.4%), GLM-X 1/3, Qwen3Max 0/68. Data-source changes
   are concentrated in the Claude family (35/38), consistent with its
   data-intensive behaviour.
+
+  > **Mapping to the paper's Table 1.** The paper groups these five harness
+  > families into three *agent frameworks*: GLM-X and Qwen3Max are Claude Code
+  > configurations, so Claude Code is 53 + 1 + 0 = 54 changes over
+  > 1,132 + 3 + 68 = 1,203 pairs (4.5%), against Codex CLI 14/943 and OpenCode
+  > 5/1,411. Codex CLI's Table 1 figure is 15/943 rather than 14/943: the extra
+  > change is the adjudicated stage-structure candidate below, which this
+  > mechanical pass does not include. This note is editorial; the numbers above
+  > are the script's output, left as it ran.
 - Direction: `curated`→`self` 18, `self`→`curated` 12, `mixed`↔`curated` 8.
   Changes are round-trips rather than one-way, at most 4 in a single trajectory.
 

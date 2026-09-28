@@ -1,0 +1,5 @@
+agent_framework,n_trajectories,n_recognized_initial,default_strategy,default_strategy_count,kappa,strategy_changes,recognized_pairs,rho
+Claude Code,575,231,Full SFT,166,0.7186147186147186,54,1203,0.04488778054862843
+Codex CLI,369,306,LoRA/PEFT,274,0.8954248366013072,15,943,0.015906680805938492
+OpenCode,394,277,Full SFT,184,0.6642599277978339,5,1411,0.003543586109142452
+Overall,1338,814,per-agent modal strategy,624,0.7665847665847666,74,3557,0.020804048355355636

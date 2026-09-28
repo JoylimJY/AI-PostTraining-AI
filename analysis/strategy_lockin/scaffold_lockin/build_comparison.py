@@ -41,6 +41,37 @@ METHOD_LABELS = {
 }
 RESOURCE_LABEL = "1x NVIDIA H100 80GB"
 
+# --- the paper's Table 1 ---------------------------------------------------
+# The tables above group by `harness_family` and score the *executed* commands
+# of trajectories that trained.  Table 1 is a different quantity: it groups the
+# five harness families into three agent frameworks, and its denominator is the
+# 814 recognized initial strategies -- which includes trajectories that stated
+# a strategy without ever launching it.  Both are reported; see
+# ../README.md#two-denominators.
+FRAMEWORK = {
+    "Claude": "Claude Code",
+    "GLM-X": "Claude Code",
+    "Qwen3Max": "Claude Code",
+    "Codex": "Codex CLI",
+    "OpenCode": "OpenCode",
+}
+FRAMEWORKS = ("Claude Code", "Codex CLI", "OpenCode")
+# `no_parameter_update` marks a trajectory that never trained and never stated a
+# plan; `other_unknown` marks one whose state could not be resolved.  Excluding
+# both is what produces the 814.
+INITIAL_SENTINELS = ("no_parameter_update", "other_unknown")
+# Table 1 as printed: default strategy, its count, the framework's share of the
+# 814, strategy changes, and recognized pairs.
+PAPER_TABLE_1 = {
+    "Claude Code": ("full_sft", 166, 231, 54, 1203),
+    "Codex CLI": ("peft_sft", 274, 306, 15, 943),
+    "OpenCode": ("full_sft", 184, 277, 5, 1411),
+}
+PAPER_TABLE_1_OVERALL = (624, 814, 74, 3557)
+# One of the two flagged stage-structure candidates was accepted on review; the
+# mechanical pass in broad_criterion/ does not include it.
+ADJUDICATED_STAGE_CHANGE = "c8fd5fbb5f110a978afb"
+
 
 def parse_int(value: Any) -> int:
     if value in (None, "", "None"):
@@ -242,6 +273,97 @@ def build_cell_consistency(
     return rows
 
 
+def build_framework_lockin(
+    trajectories: list[dict[str, str]],
+    transitions: list[dict[str, str]] | None,
+) -> list[dict[str, Any]]:
+    """Table 1: default-strategy concentration and switch rate per framework.
+
+    `kappa` is computed over the recognized initial strategies, *not* over the
+    trajectories that trained -- an agent that commits to a strategy and then
+    fails to execute it has still made the strategy-level decision, and dropping
+    those runs would bias the concentration toward the agents that get further.
+
+    The switch-rate columns are filled only when the broad-criterion transition
+    table is available; it ships with the repository, so the default path
+    resolves in a checkout.
+    """
+    rows: list[dict[str, Any]] = []
+    framework_of = {
+        row["trajectory_id"]: FRAMEWORK[row["harness_family"]] for row in trajectories
+    }
+    pairs: Counter[str] = Counter()
+    changes: Counter[str] = Counter()
+    if transitions is not None:
+        for row in transitions:
+            framework = framework_of[row["trajectory_id"]]
+            pairs[framework] += 1
+            if row["broad_change_mechanical"] in ("1", "True", "true"):
+                changes[framework] += 1
+        changes[framework_of[ADJUDICATED_STAGE_CHANGE]] += 1
+
+    def recognized_initial(framework: str) -> list[dict[str, str]]:
+        return [
+            row
+            for row in trajectories
+            if framework_of[row["trajectory_id"]] == framework
+            and row["initial_strategy_family"] in METHODS
+        ]
+
+    for framework in FRAMEWORKS + ("Overall",):
+        if framework == "Overall":
+            selected = trajectories
+            recognized = [row for name in FRAMEWORKS for row in recognized_initial(name)]
+            # kappa pools each agent's own modal mass.  Taking the corpus mode
+            # instead would hide that the two defaults differ, which is the
+            # finding.
+            default = "per-agent modal strategy"
+            default_n = sum(
+                Counter(
+                    row["initial_strategy_family"] for row in recognized_initial(name)
+                ).most_common(1)[0][1]
+                for name in FRAMEWORKS
+            )
+        else:
+            selected = [
+                row for row in trajectories if framework_of[row["trajectory_id"]] == framework
+            ]
+            recognized = recognized_initial(framework)
+            counts = Counter(row["initial_strategy_family"] for row in recognized)
+            default, default_n = counts.most_common(1)[0]
+        n_pairs = sum(pairs.values()) if framework == "Overall" else pairs[framework]
+        n_changes = sum(changes.values()) if framework == "Overall" else changes[framework]
+
+        expected = (
+            PAPER_TABLE_1_OVERALL
+            if framework == "Overall"
+            else PAPER_TABLE_1[framework][1:]
+        )
+        observed = (default_n, len(recognized), n_changes, n_pairs)
+        if transitions is None:
+            expected, observed = expected[:2], observed[:2]
+        if observed != tuple(expected):
+            raise ValueError(
+                f"Table 1 mismatch for {framework}: recomputed {observed}, "
+                f"paper reports {tuple(expected)}"
+            )
+
+        rows.append(
+            {
+                "agent_framework": framework,
+                "n_trajectories": len(selected),
+                "n_recognized_initial": len(recognized),
+                "default_strategy": METHOD_LABELS.get(default, default),
+                "default_strategy_count": default_n,
+                "kappa": safe_rate(default_n, len(recognized)),
+                "strategy_changes": n_changes if transitions is not None else "",
+                "recognized_pairs": n_pairs if transitions is not None else "",
+                "rho": safe_rate(n_changes, n_pairs) if transitions is not None else "",
+            }
+        )
+    return rows
+
+
 def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
@@ -431,6 +553,17 @@ def main() -> None:
         default=Path("analysis/strategy_lockin/scaffold_lockin/output"),
         help="Output directory for supplementary tables and report.",
     )
+    parser.add_argument(
+        "--broad-transitions",
+        type=Path,
+        default=Path(
+            "analysis/strategy_lockin/broad_criterion/output/broad_transitions.csv"
+        ),
+        help=(
+            "Released broad-criterion pair table, used for Table 1's switch-rate "
+            "columns. Those columns are left empty if it is absent."
+        ),
+    )
     args = parser.parse_args()
 
     trajectory_path = args.pilot_root / "tables" / "trajectory_analysis.csv"
@@ -557,6 +690,14 @@ def main() -> None:
                 )
                 row["base_model"] = base_model
                 controlled_detailed_cells.append(row)
+    transitions: list[dict[str, str]] | None = None
+    if args.broad_transitions.exists():
+        with args.broad_transitions.open(newline="", encoding="utf-8") as handle:
+            transitions = list(csv.DictReader(handle))
+    write_csv(
+        args.output / "tables" / "framework_lockin.csv",
+        build_framework_lockin(trajectories, transitions),
+    )
     write_csv(args.output / "tables" / "cross_scaffold_comparison.csv", comparison)
     write_csv(args.output / "tables" / "all_seven_task_summary.csv", aggregate)
     write_csv(args.output / "tables" / "all_cell_consistency.csv", cells)

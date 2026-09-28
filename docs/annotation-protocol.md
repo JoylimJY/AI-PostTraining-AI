@@ -21,18 +21,29 @@ configuration. 5,111 such experiments were extracted from the 1,338 trajectories
 Each experiment carries a strategy state
 
 ```
-s = (k, d, g)
+s = (p, d, g)
 ```
 
-- **k — training strategy.** What optimization the job performs.
+- **p — training algorithm.** What optimization the job performs.
 - **d — data source.** Where the training data came from.
 - **g — stage structure.** How many training stages the trajectory chains, and in what order.
 
 A **strategy change** is a transition between temporally adjacent experiments in the same
 trajectory where `s` differs in at least one component. There are 3,557 such adjacent pairs in the
-corpus, and 74 of them (2.1%) are strategy changes.
+corpus, and 74 of them (2.1%) are strategy changes: 35 algorithm, 38 data-source, 1 stage. No pair
+changes more than one dimension.
 
-### k — training strategy labels
+The three components are annotated from **separate evidence**: `p` from the executed trainer and
+loss, `d` from file provenance and the commands that create the data, `g` from checkpoint
+initialization. All other transitions — learning-rate tuning, reward shaping within the same
+algorithm, data formatting, checkpoint selection, implementation repair — are execution-level
+adjustments (`s_{t+1} = s_t`, `x_{t+1} ≠ x_t`).
+
+The algorithm is recognized for **4,378 of the 5,111** verified experiments; the other **733**
+remain unlabeled. Every switch rate is computed over the **3,557** recognized adjacent training
+pairs.
+
+### p — training algorithm labels
 
 | Label | Executed evidence required |
 |---|---|
@@ -66,10 +77,10 @@ objective-conditioned statistics rather than folded into a majority class.
 | **self-generated** | Data sampled from the model under training (rejection sampling, self-distillation, on-policy rollouts) |
 | **mixed** | Both, combined in a single training set |
 
-Data source is identifiable for **1,801 of 4,344** strategy-labeled experiments (41.5%). The
-remaining experiments train on files whose provenance the trajectory does not establish. They are
-left unlabeled. Data-source change counts in the paper are therefore computed over adjacent pairs
-where *both* sides carry a data-source label.
+The dimension applies to the **4,344** experiments with a supervised objective. Provenance is
+identifiable for **1,801** of them (1,327 curated, 424 self-generated, 50 mixed); the rest train on
+files whose origin the trajectory does not establish and are left unlabeled. Data-source change
+counts are therefore computed over the **1,401** recognized pairs where *both* sides carry a label.
 
 ### g — stage structure
 
@@ -83,10 +94,39 @@ change occurs. Agents pick a pipeline shape in their first hour and keep it for 
 
 ### Initial strategy
 
-900 of the 1,338 trajectories launch at least one training job. Of those, the **initial strategy** —
-the strategy state of the first launched experiment — is recognized for **783**. The remaining 117
-launch a job whose configuration cannot be resolved to a complete state. Initial-strategy
-convergence (`C_G`, see [metrics.md](metrics.md)) is computed over the 783.
+900 of the 1,338 trajectories launch at least one training job. The **initial strategy** is
+recognized for **814** of the 1,338 — the strategy state of the first launched experiment where
+one was launched, and, for trajectories that never launch training, a strategy the agent explicitly
+states it plans to run. Including the latter is deliberate: an agent that commits to a strategy and
+then fails to execute it has still made the strategy-level decision this analysis is about, and
+excluding those runs would bias `κ_a` toward the agents that happen to get further.
+
+The remaining 524 either resolve to no complete state or never state one. Default-strategy
+concentration (`κ_a`, see [metrics.md](metrics.md)) is computed over the 814, which split
+231 / 306 / 277 across Claude Code, Codex CLI and OpenCode.
+
+In the released table this is the `initial_strategy_family` column of
+`analysis/annotations/strategy_level/tables/trajectory_analysis.csv`, with the two sentinel values
+`no_parameter_update` (never trained and never stated a plan) and `other_unknown` excluded:
+
+```python
+import csv, collections
+FW = {"Claude": "Claude Code", "GLM-X": "Claude Code", "Qwen3Max": "Claude Code",
+      "Codex": "Codex CLI", "OpenCode": "OpenCode"}
+SKIP = {"no_parameter_update", "other_unknown"}
+
+per = collections.defaultdict(collections.Counter)
+with open("analysis/annotations/strategy_level/tables/trajectory_analysis.csv") as fh:
+    for row in csv.DictReader(fh):
+        s = row["initial_strategy_family"]
+        if s not in SKIP:
+            per[FW[row["harness_family"]]][s] += 1
+
+for framework, dist in per.items():
+    strategy, n = dist.most_common(1)[0]
+    print(framework, strategy, n, sum(dist.values()))
+# Claude Code full_sft 166 231   |   Codex CLI peft_sft 274 306   |   OpenCode full_sft 184 277
+```
 
 ---
 
@@ -103,7 +143,7 @@ is doing, using eight phases:
 | **RL/GRPO** | Running reinforcement learning |
 | **Evaluation** | Scoring a checkpoint or interpreting a score |
 | **Debugging** | Diagnosing a crash, a hang, or a silent failure |
-| **Journal/Skill** | Writing journal entries or authoring skills |
+| **Journal/Skill** | Writing journal entries or consulting the skill library |
 | **Checkpoint/Waiting** | Blocked on a running job or a pending evaluation |
 
 Phase labels are what make "the agent spent its budget on X" answerable, and they are the basis
@@ -128,7 +168,7 @@ Training-objective labels per experiment, plus derived summary tables:
 
 Full strategy-state labels:
 
-- `episode_annotations.jsonl` — per-experiment `(k, d, g)` labels
+- `episode_annotations.jsonl` — per-experiment `(p, d, g)` labels
 - `tables/trajectory_analysis.csv` — per-trajectory rollup
 
 ### They are passes, not versions
