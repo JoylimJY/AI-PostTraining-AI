@@ -1,0 +1,221 @@
+{
+  "archive": "/home/user/ptb/opus46/trajectories_opus46/autonomous_humaneval_7d7f21b3",
+  "source_run_id": "claude_opus46_humaneval_qwen3_1_7b_20260902_114122",
+  "cut_after_line": 4687,
+  "fork_state_ends_at_line": 4693,
+  "generated_at": "2026-09-24T02:38:26+00:00",
+  "path_rewrites": [
+    {
+      "from": "/home/user/new/PostTrainBench/.runtime/results/claude_opus46_humaneval_qwen3_1_7b_20260902_114122/workspace",
+      "to": "/home/user/ptb/.runtime/results/claude_opus46_humaneval_qwen3_1_7b_20260902_114122_fork_run8_20260924_103824/workspace"
+    },
+    {
+      "from": "/home/user/new/PostTrainBench/.runtime/results/claude_opus46_humaneval_qwen3_1_7b_20260902_114122",
+      "to": "/home/user/ptb/.runtime/results/claude_opus46_humaneval_qwen3_1_7b_20260902_114122_fork_run8_20260924_103824"
+    },
+    {
+      "from": "/home/user/models/Qwen3-1.7B-Base",
+      "to": "/home/user/models/Qwen3-1.7B-Base"
+    },
+    {
+      "from": "/home/user",
+      "to": "/home/user"
+    }
+  ],
+  "restored_files": [
+    {
+      "path": "accelerate_config.yaml",
+      "source": "replay",
+      "last_recorded_write_line": 1605
+    },
+    {
+      "path": "combine_data.py",
+      "source": "archive",
+      "last_recorded_write_line": 4140
+    },
+    {
+      "path": "combine_final.py",
+      "source": "archive",
+      "last_recorded_write_line": 4665
+    },
+    {
+      "path": "gen_data_part1.py",
+      "source": "archive",
+      "last_recorded_write_line": 4099
+    },
+    {
+      "path": "gen_data_part2.py",
+      "source": "archive",
+      "last_recorded_write_line": 4110
+    },
+    {
+      "path": "gen_data_part3.py",
+      "source": "archive",
+      "last_recorded_write_line": 4121
+    },
+    {
+      "path": "gen_data_thinking.py",
+      "source": "archive",
+      "last_recorded_write_line": 4648
+    },
+    {
+      "path": "prepare_data.py",
+      "source": "archive",
+      "last_recorded_write_line": 1365
+    },
+    {
+      "path": "prepare_data_v2.py",
+      "source": "archive",
+      "last_recorded_write_line": 1913
+    },
+    {
+      "path": "summary.md",
+      "source": "replay",
+      "last_recorded_write_line": 2012
+    },
+    {
+      "path": "train_sft.py",
+      "source": "archive",
+      "last_recorded_write_line": 1480
+    },
+    {
+      "path": "train_sft_v2.py",
+      "source": "archive",
+      "last_recorded_write_line": 1594
+    },
+    {
+      "path": "train_sft_v3.py",
+      "source": "archive",
+      "last_recorded_write_line": 1937
+    },
+    {
+      "path": "train_sft_v4.py",
+      "source": "archive",
+      "last_recorded_write_line": 2084
+    }
+  ],
+  "restored_step_dirs": [
+    "step_000_baseline",
+    "step_001_sft_data",
+    "step_001_sft_train",
+    "step_002_improved_data",
+    "step_002_sft_v2",
+    "step_003_continued",
+    "step_004_more_epochs",
+    "step_005_continued_v2",
+    "step_006_synth_data",
+    "step_006_train",
+    "step_007_continued",
+    "step_008_final_train"
+  ],
+  "restored_eval_outputs": [
+    {
+      "path": "artifacts/steps/step_000_baseline/eval_results.json",
+      "archived_as": "step_000_baseline_eval_results.json",
+      "command_line": 263
+    },
+    {
+      "path": "artifacts/steps/step_000_baseline/eval_results.json",
+      "archived_as": "step_000_baseline_eval_results.json",
+      "command_line": 893
+    },
+    {
+      "path": "artifacts/steps/step_001_sft_train/eval_results_20.json",
+      "archived_as": "step_001_sft_train_eval_results_20.json",
+      "command_line": 1667
+    },
+    {
+      "path": "artifacts/steps/step_002_sft_v2/eval_results_30.json",
+      "archived_as": "step_002_sft_v2_eval_results_30.json",
+      "command_line": 1972
+    },
+    {
+      "path": "artifacts/steps/step_003_continued/eval_results_30.json",
+      "archived_as": "step_003_continued_eval_results_30.json",
+      "command_line": 2118
+    },
+    {
+      "path": "artifacts/steps/step_004_more_epochs/eval_results_30.json",
+      "archived_as": "step_004_more_epochs_eval_results_30.json",
+      "command_line": 2310
+    },
+    {
+      "path": "artifacts/steps/step_003_continued/eval_results_150.json",
+      "archived_as": "step_003_continued_eval_results_150.json",
+      "command_line": 2360
+    },
+    {
+      "path": "artifacts/steps/step_003_continued/eval_results_150.json",
+      "archived_as": "step_003_continued_eval_results_150.json",
+      "command_line": 2468
+    },
+    {
+      "path": "artifacts/steps/step_005_continued_v2/eval_results_150.json",
+      "archived_as": "step_005_continued_v2_eval_results_150.json",
+      "command_line": 2671
+    },
+    {
+      "path": "artifacts/steps/step_006_train/eval_results.json",
+      "archived_as": "step_006_train_eval_results.json",
+      "command_line": 4191
+    },
+    {
+      "path": "artifacts/steps/step_007_continued/eval_results.json",
+      "archived_as": "step_007_continued_eval_results.json",
+      "command_line": 4235
+    },
+    {
+      "path": "artifacts/steps/step_005_continued_v2/eval_results_164_8k.json",
+      "archived_as": "step_005_continued_v2_eval_results_164_8k.json",
+      "command_line": 4309
+    },
+    {
+      "path": "artifacts/steps/step_005_continued_v2/eval_results_164.json",
+      "archived_as": "step_005_continued_v2_eval_results_164.json",
+      "command_line": 4348
+    },
+    {
+      "path": "artifacts/steps/step_003_continued/eval_results_164.json",
+      "archived_as": "step_003_continued_eval_results_164.json",
+      "command_line": 4385
+    },
+    {
+      "path": "artifacts/steps/step_008_final_train/eval_results.json",
+      "archived_as": "step_008_final_train_eval_results.json",
+      "command_line": 4687
+    }
+  ],
+  "restored_train_logs": [],
+  "checkpoint_labels_before_cut": [
+    {
+      "line": 2023,
+      "label": "2-sft-v2-66pct"
+    }
+  ],
+  "excluded_archive_scripts": [
+    "combine_synth_only.py"
+  ],
+  "excluded_archive_evals": [
+    "eval_greedy.json",
+    "eval_log_summary.json",
+    "step_008_final_train_eval2.json",
+    "step_008_final_train_eval_run_1.json",
+    "step_008_final_train_eval_run_2.json",
+    "step_008_final_train_eval_run_3.json",
+    "step_009_eval2.json",
+    "step_009_eval_run_1.json",
+    "step_009_eval_run_2.json",
+    "step_009_eval_run_3.json",
+    "step_009_from_step3_eval_results.json",
+    "step_010_eval.json"
+  ],
+  "excluded_archive_logs": [],
+  "not_restorable": [
+    "model weights (artifacts/steps/*/{output,final,checkpoint-*}, final_model/)",
+    "generated training data files",
+    "inspect-ai logs/ dumps"
+  ],
+  "warnings": [
+    "line 217: write summary.md: tool call reported an error; not replayed"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "total": 6105,
+  "source": "step_008_math_data filtered",
+  "min_reasoning": 1200,
+  "max_reasoning": 6000,
+  "answers": "integers 0-999 only"
+}

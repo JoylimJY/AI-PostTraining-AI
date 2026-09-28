@@ -1,0 +1,62 @@
+{
+  "setting": "fork",
+  "setting_note": "A continuation of an archived autonomous run: the workspace was restored to the state it was in at a chosen node of that run's trajectory (scripts, summary.md, evaluation outputs, training logs and a transcript of the session up to that point; no weights, training data or inspect-ai dumps), the agent was given a fresh time budget and a one-line hint, and then ran autonomously. See the fork block below and fork_source.md.",
+  "benchmark": "GSM8K",
+  "scaffold": "claude-code",
+  "agent_model": "claude-opus-4-6",
+  "agent_config": {
+    "effort": "low",
+    "max_output_tokens": 4096
+  },
+  "base_model": "Qwen3-1.7B-Base",
+  "num_gpus": 4,
+  "time_budget_hours": 7,
+  "elapsed": "06:51:27",
+  "elapsed_seconds": 24687,
+  "start": "2026-09-24T16:59:49Z",
+  "end": "2026-09-24T23:51:16Z",
+  "termination": "agent stopped on its own (exit 0, stop_reason end_turn) with about 8 minutes left on the budget",
+  "final_metrics": {
+    "accuracy": 0.46626231993934797,
+    "stderr": 0.013741096412226721
+  },
+  "source_run_id": "claude_opus46_gsm8k_qwen3_1_7b_20260902_005050_fork_run2_20260925_005947",
+  "fork": {
+    "source_run_id": "claude_opus46_gsm8k_qwen3_1_7b_20260902_005050",
+    "source_archive": "trajectories_opus46/autonomous_gsm8k_886c6165",
+    "source_archive_id": "886c6165",
+    "source_run_final_metrics": {
+      "accuracy": 0.47763457164518575,
+      "stderr": 0.01375869948591185
+    },
+    "fork_node": "Run 2 (step_002_sft_rawtext: raw-text SFT, 42% on 50 samples) and its checkpoint (about 2h51m into the source run)",
+    "cut_after_line": 1234,
+    "fork_state_ends_at_line": 1238,
+    "forked_at": "2026-09-24T16:59:49Z",
+    "hint": "Please evaluate whether the current strategy needs adjustment.",
+    "restored_step_dirs": [
+      "step_001_sft_gsm8k_full",
+      "step_002_sft_rawtext"
+    ],
+    "restored_files": [
+      "ds_config_z2.json",
+      "prepare_data.py",
+      "prepare_data_v2.py",
+      "prepare_data_v3.py",
+      "summary.md",
+      "train_sft.py",
+      "train_sft_v2.py"
+    ],
+    "not_restored": "model weights, generated training data, inspect-ai logs",
+    "fork_state_note": "fork_source/trajectory_until_fork.jsonl is the prefix of the source archive's trajectory.jsonl that defines the fork state (lines 1..fork_state_ends_at_line); fork_provenance/transcript_until_fork.md is the human-readable rendering of it that was placed in the agent's workspace. Neither is part of trajectory.jsonl, which holds only the continuation."
+  },
+  "note": "Reconstructed from the PostTrainBench run record: start from timer.sh CREATION_DATE (the moment the fresh budget began), end from the last write to logs/solve_out.txt, elapsed as their difference. The stream holds 2 agent session start(s) under a single session_id (the harness resumed the same session); this harness does not stamp wall-clock times into the stream.",
+  "harness_validation": {
+    "agent_exit_code": 0,
+    "final_eval_exit_code": 0,
+    "final_model_validation_exit_code": 0,
+    "summary_validation_exit_code": 0
+  },
+  "harness_validation_note": "PostTrainBench records these exit codes instead of the contamination_judgement.txt / disallowed_model_judgement.txt verdicts the reference harness writes; those two files are absent here rather than invented.",
+  "agent_sessions": 2
+}

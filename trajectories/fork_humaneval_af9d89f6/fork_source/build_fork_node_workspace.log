@@ -1,0 +1,4 @@
+fork state: lines 1..4693 of trajectory.jsonl
+restored 14 file(s), 15 eval output(s), 0 training log(s), 12 step dir(s)
+excluded (after the cut): scripts=['combine_synth_only.py'] evals=12 logs=[]
+warning: line 217: write summary.md: tool call reported an error; not replayed

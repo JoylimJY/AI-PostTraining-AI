@@ -1,0 +1,16 @@
+Loading OpenR1-Math-220k...
+  total 93733
+  candidates 13927
+Loading NuminaMath-CoT...
+  candidates 799700
+Loading MetaMathQA...
+  candidates 119753
+Loading Orca-Math-200k...
+  candidates 67
+
+Total: 23067
+  openr1_math_220k: 11000
+  numina_cot: 8000
+  metamathqa: 4000
+  orca_math: 67
+Saved artifacts/steps/step_008_math_data/train_data.json

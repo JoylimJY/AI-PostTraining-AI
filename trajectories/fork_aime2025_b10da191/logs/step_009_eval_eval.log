@@ -1,0 +1,105 @@
+Unexpected exception loading entrypoints from 'inspect_evals._registry': [Errno 2] No such file or directory: '/usr/local/lib/python3.10/dist-packages/inspect_evals/coconot/data/refusal_evaluation_rubric.json'
+[09/24/26 10:47:01] WARNING  vLLM server config has missing          vllm.py:119
+                             prerequisites ERROR: Unable to                     
+                             initialise vLLM client                             
+                                                                                
+                             No                                                 
+                             [bold][blue]VLLM_API_KEY[/blue][/bold]             
+                             defined in the environment.. Starting              
+                             new server for                                     
+                             artifacts/steps/step_008_math_train/out            
+                             put/final.                                         
+[09/24/26 10:49:56] ERROR    Server process exited           local_server.py:248
+                             unexpectedly with code 1. Try                      
+                             rerunning with '--log-level                        
+                             debug' to see the full                             
+                             traceback. Alternatively, you                      
+                             can run the following launch                       
+                             command manually to see the                        
+                             full traceback:                                    
+                                                                                
+                             vllm serve                                         
+                             artifacts/steps/step_008_math_t                    
+                             rain/output/final --host                           
+                             0.0.0.0 --api-key inspectai                        
+                             --gpu-memory-utilization 0.45                      
+                             --chat-template                                    
+                             templates/qwen3.jinja --port                       
+                             39797                                              
+                                                                                
+                                                                                
+kill: (10617): No such process
+[09/24/26 10:49:57] WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_util/local_server.py", line 323, in start_local_server
+    wait_for_server(
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_util/local_server.py", line 249, in wait_for_server
+    raise RuntimeError(error_msg)
+RuntimeError: Server process exited unexpectedly with code 1. Try rerunning with '--log-level debug' to see the full traceback. Alternatively, you can run the following launch command manually to see the full traceback:
+
+vllm serve artifacts/steps/step_008_math_train/output/final --host 0.0.0.0 --api-key inspectai --gpu-memory-utilization 0.45 --chat-template templates/qwen3.jinja --port 39797
+
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/ptb/src/eval/tasks/aime2025/evaluate.py", line 140, in <module>
+    main()
+  File "/home/user/ptb/src/eval/tasks/aime2025/evaluate.py", line 76, in main
+    eval_out = inspect_eval(
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_eval/eval.py", line 275, in eval
+    return task_display().run_task_app(run_task_app)
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_display/plain/display.py", line 50, in run_task_app
+    return anyio.run(main, backend=configured_async_backend())
+  File "/usr/local/lib/python3.10/dist-packages/anyio/_core/_eventloop.py", line 83, in run
+    return async_backend.run(func, args, {}, backend_options)
+  File "/usr/local/lib/python3.10/dist-packages/anyio/_backends/_asyncio.py", line 2548, in run
+    return runner.run(wrapper())
+  File "/usr/local/lib/python3.10/dist-packages/anyio/_backends/_asyncio.py", line 216, in run
+    return self._loop.run_until_complete(task)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/anyio/_backends/_asyncio.py", line 2531, in wrapper
+    return await func(*args)
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_eval/eval.py", line 223, in run_task_app
+    return await eval_async(
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_eval/eval.py", line 453, in eval_async
+    raise inner_exception(ex)
+  File "/usr/local/lib/python3.10/dist-packages/anyio/_core/_tasks.py", line 327, in _run_coro
+    retval = await self._coro
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_eval/eval.py", line 400, in run
+    result = await _eval_async_inner(
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_eval/eval.py", line 732, in _eval_async_inner
+    raise e
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_eval/eval.py", line 535, in _eval_async_inner
+    model = eval_init(
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_eval/eval.py", line 1157, in eval_init
+    models = resolve_models(model, model_base_url, model_args, generate_config)
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/model/_model.py", line 1218, in resolve_models
+    return [resolve_model(m) for m in model]
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/model/_model.py", line 1218, in <listcomp>
+    return [resolve_model(m) for m in model]
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/model/_model.py", line 1206, in resolve_model
+    return get_model(
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/model/_model.py", line 1148, in get_model
+    modelapi_instance = modelapi_type(
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/model/_registry.py", line 56, in model_wrapper
+    model = model_type(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/model/_providers/vllm.py", line 132, in __init__
+    base_url, api_key = self._start_server(
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/model/_providers/vllm.py", line 183, in _start_server
+    base_url, self.server_process, self.port = start_local_server(
+  File "/usr/local/lib/python3.10/dist-packages/inspect_ai/_util/local_server.py", line 338, in start_local_server
+    raise RuntimeError(f"Failed to start {server_type} server: {str(e)}") from e
+RuntimeError: Failed to start vLLM server: Server process exited unexpectedly with code 1. Try rerunning with '--log-level debug' to see the full traceback. Alternatively, you can run the following launch command manually to see the full traceback:
+
+vllm serve artifacts/steps/step_008_math_train/output/final --host 0.0.0.0 --api-key inspectai --gpu-memory-utilization 0.45 --chat-template templates/qwen3.jinja --port 39797
+
+

@@ -1,0 +1,42 @@
+Running: /usr/bin/python3 evaluate.py --model-path final_model --limit 150 --max-tokens 4000 --max-connections 2 --json-output-file artifacts/final_eval/eval_final_150.json
+           
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+Steps: 150/150 100% | Samples: 150/150 | vllm:  0/ 2 | HTTP retries: 0
+
+---------------------------------------------------------                       
+gsm8k (150 samples): vllm/final_model                                           
+timeout: 18000000, attempt_timeout: 18000000, max_connections: 2, max_tokens:   
+4000, log_realtime: False, score_display: False, dataset: openai/gsm8k          
+                                                                                
+total time:              0:01:16                                                
+vllm/final_model         356,673 tokens [I: 332,762, O: 23,911]                 
+match                                                                           
+accuracy  0.413                                                                 
+stderr    0.040                                                                 
+Log: logs/2026-09-24T23-18-23+00-00_gsm8k_RX2uncvzhGehgvxFTwAXpu.json           
+---------------------------------------------------------                       
+                                                                                
+                    WARNING  Unexpected exception loading      entrypoints.py:34
+                             entrypoints from                                   
+                             'inspect_evals._registry': [Errno                  
+                             2] No such file or directory:                      
+                             '/usr/local/lib/python3.10/dist-p                  
+                             ackages/inspect_evals/coconot/dat                  
+                             a/refusal_evaluation_rubric.json'                  
+
+RESULT artifacts/final_eval/eval_final_150.json: {"accuracy": 0.41333333333333333, "stderr": 0.04034156922218047} elapsed=171s

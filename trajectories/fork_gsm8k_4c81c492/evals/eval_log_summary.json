@@ -1,0 +1,226 @@
+[
+  {
+    "task": "inspect_evals/gsm8k",
+    "model": "vllm/artifacts/steps/step_003_diverse_sft/output",
+    "model_args": {
+      "gpu_memory_utilization": 0.3,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "fewshot": 10,
+      "fewshot_seed": 42,
+      "shuffle_fewshot": true
+    },
+    "dataset": {
+      "name": "openai/gsm8k",
+      "samples": 1319
+    },
+    "total_samples": 50,
+    "completed_samples": 50,
+    "scores": [
+      {
+        "name": "match",
+        "scored_samples": 50,
+        "metrics": {
+          "accuracy": 0.08,
+          "stderr": 0.03875617133214439
+        }
+      }
+    ],
+    "started_at": "2026-09-24T19:40:04+00:00",
+    "completed_at": "2026-09-24T19:41:24+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/gsm8k",
+    "model": "vllm/artifacts/steps/step_004_fewshot_aligned/output",
+    "model_args": {
+      "gpu_memory_utilization": 0.3,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "fewshot": 10,
+      "fewshot_seed": 42,
+      "shuffle_fewshot": true
+    },
+    "dataset": {
+      "name": "openai/gsm8k",
+      "samples": 1319
+    },
+    "total_samples": 50,
+    "completed_samples": 50,
+    "scores": [
+      {
+        "name": "match",
+        "scored_samples": 50,
+        "metrics": {
+          "accuracy": 0.42,
+          "stderr": 0.07050835816716038
+        }
+      }
+    ],
+    "started_at": "2026-09-24T21:53:13+00:00",
+    "completed_at": "2026-09-24T21:53:42+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/gsm8k",
+    "model": "vllm/artifacts/steps/step_004_fewshot_aligned/output",
+    "model_args": {
+      "gpu_memory_utilization": 0.3,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "fewshot": 10,
+      "fewshot_seed": 42,
+      "shuffle_fewshot": true
+    },
+    "dataset": {
+      "name": "openai/gsm8k",
+      "samples": 1319
+    },
+    "total_samples": 150,
+    "completed_samples": 150,
+    "scores": [
+      {
+        "name": "match",
+        "scored_samples": 150,
+        "metrics": {
+          "accuracy": 0.48,
+          "stderr": 0.04092881363092387
+        }
+      }
+    ],
+    "started_at": "2026-09-24T21:58:53+00:00",
+    "completed_at": "2026-09-24T22:00:25+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/gsm8k",
+    "model": "vllm/artifacts/steps/step_005_refine/output",
+    "model_args": {
+      "gpu_memory_utilization": 0.3,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "fewshot": 10,
+      "fewshot_seed": 42,
+      "shuffle_fewshot": true
+    },
+    "dataset": {
+      "name": "openai/gsm8k",
+      "samples": 1319
+    },
+    "total_samples": 150,
+    "completed_samples": 150,
+    "scores": [
+      {
+        "name": "match",
+        "scored_samples": 150,
+        "metrics": {
+          "accuracy": 0.4666666666666667,
+          "stderr": 0.04087046889188094
+        }
+      }
+    ],
+    "started_at": "2026-09-24T23:08:25+00:00",
+    "completed_at": "2026-09-24T23:09:43+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/gsm8k",
+    "model": "vllm/final_model",
+    "model_args": {
+      "gpu_memory_utilization": 0.3,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "fewshot": 10,
+      "fewshot_seed": 42,
+      "shuffle_fewshot": true
+    },
+    "dataset": {
+      "name": "openai/gsm8k",
+      "samples": 1319
+    },
+    "total_samples": 150,
+    "completed_samples": 150,
+    "scores": [
+      {
+        "name": "match",
+        "scored_samples": 150,
+        "metrics": {
+          "accuracy": 0.41333333333333333,
+          "stderr": 0.04034156922218047
+        }
+      }
+    ],
+    "started_at": "2026-09-24T23:18:23+00:00",
+    "completed_at": "2026-09-24T23:19:39+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/gsm8k",
+    "model": "vllm/final_model",
+    "model_args": {
+      "gpu_memory_utilization": 0.3,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "fewshot": 10,
+      "fewshot_seed": 42,
+      "shuffle_fewshot": true
+    },
+    "dataset": {
+      "name": "openai/gsm8k",
+      "samples": 1319
+    },
+    "total_samples": 150,
+    "completed_samples": 150,
+    "scores": [
+      {
+        "name": "match",
+        "scored_samples": 150,
+        "metrics": {
+          "accuracy": 0.46,
+          "stderr": 0.040830308521485996
+        }
+      }
+    ],
+    "started_at": "2026-09-24T23:27:19+00:00",
+    "completed_at": "2026-09-24T23:28:44+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/gsm8k",
+    "model": "vllm/final_model",
+    "model_args": {
+      "gpu_memory_utilization": 0.3,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {
+      "fewshot": 10,
+      "fewshot_seed": 42,
+      "shuffle_fewshot": true
+    },
+    "dataset": {
+      "name": "openai/gsm8k",
+      "samples": 1319
+    },
+    "total_samples": 10,
+    "completed_samples": 10,
+    "scores": [
+      {
+        "name": "match",
+        "scored_samples": 10,
+        "metrics": {
+          "accuracy": 0.5,
+          "stderr": 0.16666666666666666
+        }
+      }
+    ],
+    "started_at": "2026-09-24T23:46:08+00:00",
+    "completed_at": "2026-09-24T23:46:13+00:00",
+    "status": "success"
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "task": "inspect_evals/aime2025",
+    "model": "vllm/artifacts/steps/step_008_math_train/output/final",
+    "model_args": {
+      "gpu_memory_utilization": 0.8,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {},
+    "dataset": {
+      "name": "math-ai/aime25",
+      "samples": 30
+    },
+    "total_samples": 30,
+    "completed_samples": 30,
+    "scores": [
+      {
+        "name": "aime_scorer",
+        "scored_samples": 30,
+        "metrics": {
+          "accuracy": 0.03333333333333333,
+          "stderr": 0.033333333333333326
+        }
+      }
+    ],
+    "started_at": "2026-09-24T10:55:57+00:00",
+    "completed_at": "2026-09-24T10:56:59+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/aime2025",
+    "model": "vllm/final_model",
+    "model_args": {
+      "gpu_memory_utilization": 0.8,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {},
+    "dataset": {
+      "name": "math-ai/aime25",
+      "samples": 30
+    },
+    "total_samples": 30,
+    "completed_samples": 30,
+    "scores": [
+      {
+        "name": "aime_scorer",
+        "scored_samples": 30,
+        "metrics": {
+          "accuracy": 0.03333333333333333,
+          "stderr": 0.033333333333333326
+        }
+      }
+    ],
+    "started_at": "2026-09-24T11:35:52+00:00",
+    "completed_at": "2026-09-24T11:41:27+00:00",
+    "status": "success"
+  },
+  {
+    "task": "inspect_evals/aime2025",
+    "model": "vllm/artifacts/steps/step_013_hard_train/output/merged",
+    "model_args": {
+      "gpu_memory_utilization": 0.8,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {},
+    "dataset": {
+      "name": "math-ai/aime25",
+      "samples": 30
+    },
+    "total_samples": null,
+    "completed_samples": null,
+    "scores": [],
+    "started_at": "2026-09-24T12:34:04+00:00",
+    "completed_at": "2026-09-24T12:34:09+00:00",
+    "status": "error",
+    "error": "Error code: 404 - {'error': {'message': 'The model `artifacts/steps/step_013_hard_train/output/merged` does not exist.', 'type': 'NotFoundError', 'param': None, 'code': 404}}"
+  },
+  {
+    "task": "inspect_evals/aime2025",
+    "model": "vllm/artifacts/steps/step_013_hard_train/output/merged",
+    "model_args": {
+      "gpu_memory_utilization": 0.8,
+      "chat_template": "templates/qwen3.jinja"
+    },
+    "task_args": {},
+    "dataset": {
+      "name": "math-ai/aime25",
+      "samples": 30
+    },
+    "total_samples": 30,
+    "completed_samples": 30,
+    "scores": [
+      {
+        "name": "aime_scorer",
+        "scored_samples": 30,
+        "metrics": {
+          "accuracy": 0.03333333333333333,
+          "stderr": 0.033333333333333326
+        }
+      }
+    ],
+    "started_at": "2026-09-24T12:37:59+00:00",
+    "completed_at": "2026-09-24T12:44:33+00:00",
+    "status": "success"
+  }
+]
